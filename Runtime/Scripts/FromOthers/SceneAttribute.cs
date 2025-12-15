@@ -130,5 +130,5 @@ namespace ECDA.VRTutorialKit
 			EditorGUI.EndProperty();
 		}
 	}
-}
 #endif
+}

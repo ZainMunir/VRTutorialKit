@@ -11,5 +11,12 @@
   "author": {
     "name": "ECDA",
     "url": "https://ecda.eur.nl/"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "Sample 1",
+      "description": "Sample 1",
+      "path": "Samples~/Sample1"
+    }
+  ]
 }

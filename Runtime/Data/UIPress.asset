@@ -16,5 +16,6 @@ MonoBehaviour:
   stepDescription: You can use the triggers on either hand to interact with UI Elements
   mediaPath: 
   interactionPrefab: {fileID: 0}
-  tooltipPrefab: {fileID: 0}
+  tooltipPrefabs:
+  - {fileID: 2218924964502400796, guid: 74e8a1a4803dcc04da3de449718d8314, type: 3}
   tooltipHand: 2

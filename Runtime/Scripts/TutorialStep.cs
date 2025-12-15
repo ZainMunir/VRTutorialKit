@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ECDA.VRTutorialKit
@@ -16,7 +17,7 @@ namespace ECDA.VRTutorialKit
         public GameObject interactionPrefab;
 
         [Header("Tooltip Settings")]
-        public GameObject tooltipPrefab;
+        public List<GameObject> tooltipPrefabs = new List<GameObject>();
         public enum TooltipHand { Left, Right, Both }
         public TooltipHand tooltipHand;
     }

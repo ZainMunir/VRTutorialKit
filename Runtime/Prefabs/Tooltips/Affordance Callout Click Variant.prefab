@@ -233,9 +233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.Callout
   m_LazyTooltip: {fileID: 2218924964000576928}
   m_Curve: {fileID: 8449227162129216205}
-  m_DwellTime: 1
-  m_Unparent: 1
-  m_TurnOffAtStart: 1
+  m_DwellTime: 0
+  m_Unparent: 0
+  m_TurnOffAtStart: 0
 --- !u!1 &8449227162129216205 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 540699126476666104, guid: 048249d9a15aa3c459399751e860bde7, type: 3}

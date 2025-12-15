@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ECDA.VRTutorialKit
@@ -11,11 +12,8 @@ namespace ECDA.VRTutorialKit
             m_CalloutGazeController = GetComponent<CalloutGazeController>();
         }
 
-        public void AddTooltip(GameObject tooltipPrefab)
+        void AddTooltip(GameObject tooltipPrefab)
         {
-            if (tooltipPrefab == null)
-                return;
-
             var instance = Instantiate(tooltipPrefab, transform);
             Callout callout = instance.GetComponent<Callout>();
             if (callout == null)
@@ -32,5 +30,35 @@ namespace ECDA.VRTutorialKit
             }
         }
 
+        public void AddTooltips(List<GameObject> tooltipPrefabs)
+        {
+            if (tooltipPrefabs == null)
+                return;
+
+            foreach (var prefab in tooltipPrefabs)
+            {
+                AddTooltip(prefab);
+            }
+        }
+
+        public void RemoveAllTooltips()
+        {
+            foreach (Transform child in transform)
+            {
+                Callout callout = child.GetComponent<Callout>();
+                if (callout != null && m_CalloutGazeController != null)
+                {
+                    m_CalloutGazeController.facingEntered.RemoveListener(callout.GazeHoverStart);
+                    m_CalloutGazeController.facingExited.RemoveListener(callout.GazeHoverEnd);
+                }
+                Destroy(child.gameObject);
+            }
+        }
+
+        public void ReplaceTooltip(List<GameObject> tooltipPrefabs)
+        {
+            RemoveAllTooltips();
+            AddTooltips(tooltipPrefabs);
+        }
     }
 }

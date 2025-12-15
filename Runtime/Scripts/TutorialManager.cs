@@ -1,4 +1,8 @@
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+
 
 namespace ECDA.VRTutorialKit
 {
@@ -10,22 +14,62 @@ namespace ECDA.VRTutorialKit
         public TooltipController leftTooltipController;
         public TooltipController rightTooltipController;
 
+        [SerializeField] private InputActionReference _leftActivateAction;
+        [SerializeField] private InputActionReference _rightActivateAction;
+
+
         private int currentStepIndex = 0;
 
         void Start()
         {
             LoadCurrentStep();
 
+            _leftActivateAction.action.performed += ctx => CycleStep();
+            _rightActivateAction.action.performed += ctx => FinishTutorial();
         }
+
         void LoadCurrentStep()
         {
             TutorialStep step = tutorialConfig.tutorialSteps[currentStepIndex];
 
-            if (step.tooltipHand == TutorialStep.TooltipHand.Left || step.tooltipHand == TutorialStep.TooltipHand.Both)
-                leftTooltipController.AddTooltip(step.tooltipPrefab);
+            switch (step.tooltipHand)
+            {
+                case TutorialStep.TooltipHand.Left:
+                    leftTooltipController.ReplaceTooltip(step.tooltipPrefabs);
+                    rightTooltipController.RemoveAllTooltips();
+                    break;
+                case TutorialStep.TooltipHand.Right:
+                    rightTooltipController.ReplaceTooltip(step.tooltipPrefabs);
+                    leftTooltipController.RemoveAllTooltips();
+                    break;
+                case TutorialStep.TooltipHand.Both:
+                    leftTooltipController.ReplaceTooltip(step.tooltipPrefabs);
+                    rightTooltipController.ReplaceTooltip(step.tooltipPrefabs);
+                    break;
+            }
+        }
 
-            if (step.tooltipHand == TutorialStep.TooltipHand.Right || step.tooltipHand == TutorialStep.TooltipHand.Both)
-                rightTooltipController.AddTooltip(step.tooltipPrefab);
+        [ContextMenu("Complete Step")]
+        void CompleteStep()
+        {
+            currentStepIndex++;
+            if (currentStepIndex < tutorialConfig.tutorialSteps.Count)
+            {
+                LoadCurrentStep();
+            }
+        }
+
+        [ContextMenu("Finish Tutorial")]
+        void FinishTutorial()
+        {
+            Debug.Log("Tutorial Finished!");
+            SceneManager.LoadScene(tutorialConfig.startingScene);
+        }
+
+        void CycleStep()
+        {
+            currentStepIndex = (currentStepIndex + 1) % tutorialConfig.tutorialSteps.Count;
+            LoadCurrentStep();
         }
     }
 }

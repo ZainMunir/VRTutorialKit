@@ -17,4 +17,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b073f2ccbb691134982a46cef9aae091, type: 2}
   - {fileID: 11400000, guid: 02ffe84cc32d8cf4dae1320e96d0eb19, type: 2}
   - {fileID: 11400000, guid: 51371b1ffa8d25147b4da976779a6307, type: 2}
-  startingScene: Assets/Samples/VRTutorialKitSamples/TutorialAssets/PlaceholderScene.unity
+  startingScene: Assets/Samples/VRTutorialKitSamples/TutorialAssets/ExitPlaceholder.unity

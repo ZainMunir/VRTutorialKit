@@ -1,0 +1,42 @@
+:root {
+    color: rgb(255, 255, 255);
+}
+
+.title {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+}
+
+.button {
+    flex-shrink: 1;
+    flex-grow: 1;
+    aspect-ratio: 2;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: rgb(100, 141, 255);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    transition-duration: 0.2s;
+}
+
+.button:hover {
+    background-color: rgb(37, 32, 255);
+}
+
+.subtitle {
+    font-size: 25px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+}
+
+.description {
+    font-size: 20px;
+    flex-grow: 1;
+    white-space: normal;
+}
+
+.button:disabled {
+    background-color: rgb(72, 72, 72);
+}

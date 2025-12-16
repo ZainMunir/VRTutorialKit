@@ -6,10 +6,54 @@ namespace ECDA.VRTutorialKit
     [RequireComponent(typeof(CalloutGazeController))]
     public class TooltipController : MonoBehaviour
     {
+        public TutorialStep.TooltipHand handSide;
+
         CalloutGazeController m_CalloutGazeController;
+        TutorialManager tutorialManager;
+
         void Awake()
         {
             m_CalloutGazeController = GetComponent<CalloutGazeController>();
+        }
+
+        void Start()
+        {
+            tutorialManager = TutorialManager.Instance;
+            if (tutorialManager != null)
+            {
+                tutorialManager.OnTutorialStepChanged += OnTutorialStepChanged;
+                UpdateTooltips();
+            }
+        }
+
+        void OnDestroy()
+        {
+            if (tutorialManager != null)
+            {
+                tutorialManager.OnTutorialStepChanged -= OnTutorialStepChanged;
+            }
+        }
+
+        void OnTutorialStepChanged(bool stepCompleted)
+        {
+            UpdateTooltips();
+        }
+
+        void UpdateTooltips()
+        {
+            if (tutorialManager == null) return;
+
+            var step = tutorialManager.GetCurrentStep();
+            if (step == null) return;
+
+            if (step.tooltipHand == TutorialStep.TooltipHand.Both || step.tooltipHand == handSide)
+            {
+                ReplaceTooltip(step.tooltipPrefabs);
+            }
+            else
+            {
+                RemoveAllTooltips();
+            }
         }
 
         void AddTooltip(GameObject tooltipPrefab)

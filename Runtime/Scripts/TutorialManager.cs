@@ -30,11 +30,6 @@ namespace ECDA.VRTutorialKit
 
         public TutorialConfig tutorialConfig;
 
-        public TooltipController leftTooltipController;
-        public TooltipController rightTooltipController;
-
-        [SerializeField] private InputActionReference _leftActivateAction;
-        [SerializeField] private InputActionReference _rightActivateAction;
         private int currentStepIndex = 0;
 
         private bool[] stepsCompleted;
@@ -88,29 +83,11 @@ namespace ECDA.VRTutorialKit
 
             LoadCurrentStep();
 
-            _leftActivateAction.action.performed += ctx => CycleStep();
-            _rightActivateAction.action.performed += ctx => FinishTutorial();
         }
 
         void LoadCurrentStep()
         {
-            TutorialStep step = GetCurrentStep();
-
-            switch (step.tooltipHand)
-            {
-                case TutorialStep.TooltipHand.Left:
-                    leftTooltipController.ReplaceTooltip(step.tooltipPrefabs);
-                    rightTooltipController.RemoveAllTooltips();
-                    break;
-                case TutorialStep.TooltipHand.Right:
-                    rightTooltipController.ReplaceTooltip(step.tooltipPrefabs);
-                    leftTooltipController.RemoveAllTooltips();
-                    break;
-                case TutorialStep.TooltipHand.Both:
-                    leftTooltipController.ReplaceTooltip(step.tooltipPrefabs);
-                    rightTooltipController.ReplaceTooltip(step.tooltipPrefabs);
-                    break;
-            }
+            // Tooltips are now handled by TooltipController listening to events
         }
 
         bool CheckBounds(int index)
@@ -123,11 +100,11 @@ namespace ECDA.VRTutorialKit
         {
             if (CheckBounds(currentStepIndex))
             {
-                if (stepsCompleted[currentStepIndex])
+                if (IsCurrentStepCompleted)
                     return;
                 stepsCompleted[currentStepIndex] = true;
                 OnStepCompleted?.Invoke(true);
-                if (currentStepIndex == TotalSteps() - 1)
+                if (!HasNextStep)
                 {
                     OnTutorialFinished?.Invoke(true);
                 }
@@ -136,27 +113,27 @@ namespace ECDA.VRTutorialKit
 
         public void PreviousStep()
         {
-            if (currentStepIndex <= 0)
+            if (!HasPreviousStep)
                 return;
             currentStepIndex--;
             if (CheckBounds(currentStepIndex))
             {
                 LoadCurrentStep();
-                OnTutorialStepChanged?.Invoke(stepsCompleted[currentStepIndex]);
+                OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
             }
         }
 
         public void NextStep()
         {
-            if (currentStepIndex >= TotalSteps() - 1)
+            if (!HasNextStep)
                 return;
-            if (!stepsCompleted[currentStepIndex])
+            if (!IsCurrentStepCompleted)
                 return;
             currentStepIndex++;
             if (CheckBounds(currentStepIndex))
             {
                 LoadCurrentStep();
-                OnTutorialStepChanged?.Invoke(stepsCompleted[currentStepIndex]);
+                OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
             }
         }
 
@@ -166,12 +143,6 @@ namespace ECDA.VRTutorialKit
         {
             Debug.Log("Tutorial Finished!");
             SceneManager.LoadScene(tutorialConfig.startingScene);
-        }
-
-        void CycleStep()
-        {
-            currentStepIndex = (currentStepIndex + 1) % TotalSteps();
-            LoadCurrentStep();
         }
     }
 }

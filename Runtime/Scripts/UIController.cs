@@ -1,9 +1,12 @@
 using ECDA.VRTutorialKit;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.Video;
 
 namespace ECDA.VRTutorialKit
 {
+    [RequireComponent(typeof(UIDocument))]
+    [RequireComponent(typeof(VideoPlayer))]
     public class UIController : MonoBehaviour
     {
         TutorialManager tutorialManager;
@@ -14,6 +17,13 @@ namespace ECDA.VRTutorialKit
         Button previousButton;
         Button nextButton;
         Button finishButton;
+
+        VideoPlayer videoPlayer;
+
+        void Awake()
+        {
+            videoPlayer = GetComponent<VideoPlayer>();
+        }
 
         void Start()
         {
@@ -68,6 +78,18 @@ namespace ECDA.VRTutorialKit
 
             stepTitleLabel.text = step.stepTitle;
             stepDescriptionLabel.text = step.stepDescription;
+
+            if (step.videoClip != null)
+            {
+                videoPlayer.Stop();
+                videoPlayer.clip = step.videoClip;
+                videoPlayer.Play();
+            }
+            else
+            {
+                videoPlayer.Stop();
+                videoPlayer.clip = null;
+            }
 
             previousButton.SetEnabled(tutorialManager.HasPreviousStep);
             nextButton.SetEnabled(tutorialManager.IsCurrentStepCompleted && tutorialManager.HasNextStep);

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Snap Movement
   stepDescription: Instructions for this step.
-  mediaPath: 
+  videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
   interactionPrefab: {fileID: 0}
   tooltipPrefabs:
   - {fileID: 6800351992558788412, guid: 5854712de1e1d90499ef2fa2aa214317, type: 3}

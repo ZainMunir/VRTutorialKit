@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialStep
   stepTitle: Interact with UI
   stepDescription: You can use the triggers on either hand to interact with UI Elements
-  mediaPath: 
+  videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
   interactionPrefab: {fileID: 0}
   tooltipPrefabs:
   - {fileID: 2218924964502400796, guid: 74e8a1a4803dcc04da3de449718d8314, type: 3}

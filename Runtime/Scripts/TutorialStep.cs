@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 namespace ECDA.VRTutorialKit
 {
@@ -11,7 +12,7 @@ namespace ECDA.VRTutorialKit
         public string stepTitle = "New Lesson";
         [TextArea(3, 10)]
         public string stepDescription = "Instructions for this step.";
-        public string mediaPath;
+        public VideoClip videoClip;
 
         [Header("Interaction Settings")]
         public GameObject interactionPrefab;

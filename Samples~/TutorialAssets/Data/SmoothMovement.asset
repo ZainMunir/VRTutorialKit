@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Smooth Movement
   stepDescription: Instructions for this step.
-  mediaPath: 
+  videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
   interactionPrefab: {fileID: 0}
   tooltipPrefabs:
   - {fileID: 4464025568652493865, guid: 6b055bade88ea314dbd71675e904d6e0, type: 3}

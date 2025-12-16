@@ -14,9 +14,9 @@
   },
   "samples": [
     {
-      "displayName": "Sample 1",
-      "description": "Sample 1",
-      "path": "Samples~/Sample1"
+      "displayName": "Tutorial Assets",
+      "description": "Tutorial Assets",
+      "path": "Samples~/TutorialAssets"
     }
   ]
 }

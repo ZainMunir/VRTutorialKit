@@ -19,11 +19,13 @@ namespace ECDA.VRTutorialKit
         void Start()
         {
             tutorialManager = TutorialManager.Instance;
-            if (tutorialManager != null)
+            if (tutorialManager == null)
             {
-                tutorialManager.OnTutorialStepChanged += OnTutorialStepChanged;
-                UpdateTooltips();
+                Debug.LogError("TutorialManager instance not found.");
+                return;
             }
+            tutorialManager.OnTutorialStepChanged += OnTutorialStepChanged;
+            UpdateTooltips();
         }
 
         void OnDestroy()
@@ -41,8 +43,6 @@ namespace ECDA.VRTutorialKit
 
         void UpdateTooltips()
         {
-            if (tutorialManager == null) return;
-
             var step = tutorialManager.GetCurrentStep();
             if (step == null) return;
 

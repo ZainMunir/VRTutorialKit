@@ -1,5 +1,6 @@
 using ECDA.VRTutorialKit;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UIElements;
 using UnityEngine.Video;
 
@@ -13,12 +14,11 @@ namespace ECDA.VRTutorialKit
 
         Label stepTitleLabel;
         Label stepDescriptionLabel;
+        VideoPlayer videoPlayer;
 
         Button previousButton;
         Button nextButton;
         Button finishButton;
-
-        VideoPlayer videoPlayer;
 
         void Awake()
         {
@@ -44,7 +44,6 @@ namespace ECDA.VRTutorialKit
 
             finishButton.SetEnabled(false);
 
-
             stepTitleLabel = root.Q<Label>("StepTitle");
             stepDescriptionLabel = root.Q<Label>("StepDescription");
 
@@ -53,11 +52,21 @@ namespace ECDA.VRTutorialKit
             nextButton.clicked += NextStep;
             finishButton.clicked += FinishTutorial;
 
-            tutorialManager.OnStepCompleted += (bool completed) => UpdateStepUI();
-            tutorialManager.OnTutorialStepChanged += (bool changed) => UpdateStepUI();
-            tutorialManager.OnTutorialFinished += (bool finished) => finishButton.SetEnabled(finished);
+            tutorialManager.OnStepCompleted += UpdateStepUI;
+            tutorialManager.OnTutorialStepChanged += UpdateStepUI;
+            tutorialManager.OnTutorialFinished += EnabledFinishButton;
 
             UpdateStepUI();
+        }
+
+        void OnDestroy()
+        {
+            if (tutorialManager != null)
+            {
+                tutorialManager.OnStepCompleted -= UpdateStepUI;
+                tutorialManager.OnTutorialStepChanged -= UpdateStepUI;
+                tutorialManager.OnTutorialFinished -= EnabledFinishButton;
+            }
         }
 
         void NextStep()
@@ -69,6 +78,8 @@ namespace ECDA.VRTutorialKit
         {
             tutorialManager.PreviousStep();
         }
+
+        void UpdateStepUI(bool ignored) => UpdateStepUI();
 
         void UpdateStepUI()
         {
@@ -95,9 +106,15 @@ namespace ECDA.VRTutorialKit
             nextButton.SetEnabled(tutorialManager.IsCurrentStepCompleted && tutorialManager.HasNextStep);
         }
 
+        void EnabledFinishButton(bool enabled)
+        {
+            finishButton.SetEnabled(enabled);
+        }
+
         void FinishTutorial()
         {
             tutorialManager.FinishTutorial();
         }
+
     }
 }

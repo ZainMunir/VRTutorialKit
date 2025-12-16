@@ -40,26 +40,6 @@ namespace ECDA.VRTutorialKit
 
         public Action<bool> OnTutorialStepChanged;
 
-        public bool HasPreviousStep => currentStepIndex > 0;
-        public bool HasNextStep => currentStepIndex < TotalSteps() - 1;
-        public bool IsCurrentStepCompleted => stepsCompleted != null && CheckBounds(currentStepIndex) && stepsCompleted[currentStepIndex];
-
-        public TutorialStep GetCurrentStep()
-        {
-            if (tutorialConfig == null || TotalSteps() == 0)
-                return null;
-
-            return tutorialConfig.tutorialSteps[currentStepIndex];
-        }
-
-        public int TotalSteps()
-        {
-            if (tutorialConfig == null)
-                return 0;
-
-            return tutorialConfig.tutorialSteps.Count;
-        }
-
 
         void Awake()
         {
@@ -80,20 +60,40 @@ namespace ECDA.VRTutorialKit
             {
                 stepsCompleted = new bool[TotalSteps()];
             }
-
-            LoadCurrentStep();
-
         }
 
-        void LoadCurrentStep()
+        void OnDestroy()
         {
-            // Tooltips are now handled by TooltipController listening to events
+            if (_instance == this)
+            {
+                _instance = null;
+            }
+        }
+
+        public int TotalSteps()
+        {
+            if (tutorialConfig == null)
+                return 0;
+
+            return tutorialConfig.tutorialSteps.Count;
         }
 
         bool CheckBounds(int index)
         {
             return index >= 0 && index < TotalSteps();
         }
+
+        public TutorialStep GetCurrentStep()
+        {
+            if (tutorialConfig == null || TotalSteps() == 0)
+                return null;
+
+            return tutorialConfig.tutorialSteps[currentStepIndex];
+        }
+
+        public bool HasPreviousStep => currentStepIndex > 0;
+        public bool HasNextStep => currentStepIndex < TotalSteps() - 1;
+        public bool IsCurrentStepCompleted => stepsCompleted != null && CheckBounds(currentStepIndex) && stepsCompleted[currentStepIndex];
 
         [ContextMenu("Complete Step")]
         public void CompleteStep()
@@ -118,7 +118,6 @@ namespace ECDA.VRTutorialKit
             currentStepIndex--;
             if (CheckBounds(currentStepIndex))
             {
-                LoadCurrentStep();
                 OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
             }
         }
@@ -132,11 +131,9 @@ namespace ECDA.VRTutorialKit
             currentStepIndex++;
             if (CheckBounds(currentStepIndex))
             {
-                LoadCurrentStep();
                 OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
             }
         }
-
 
         [ContextMenu("Finish Tutorial")]
         public void FinishTutorial()

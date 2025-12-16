@@ -16,7 +16,7 @@ MonoBehaviour:
   stepDescription: You can use the grips on either hand to grab objects or interacts
     with doors
   videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
-  interactionPrefab: {fileID: 0}
+  interactionPrefab: {fileID: 8015947867209236510, guid: 8237d87c9aac1b246b2088d4e1b1fa84, type: 3}
   tooltipPrefabs:
   - {fileID: 8765200585084022647, guid: 294cd0bc9a9d53e4aa18734f1aa25e75, type: 3}
   tooltipHand: 2

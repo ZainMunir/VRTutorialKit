@@ -21,7 +21,6 @@ namespace ECDA.VRTutorialKit
                     {
                         GameObject singletonObject = new GameObject("TutorialManager");
                         _instance = singletonObject.AddComponent<TutorialManager>();
-                        DontDestroyOnLoad(singletonObject);
                     }
                 }
                 return _instance;
@@ -46,7 +45,6 @@ namespace ECDA.VRTutorialKit
             if (_instance == null)
             {
                 _instance = this;
-                DontDestroyOnLoad(gameObject);
             }
             else if (_instance != this)
             {
@@ -139,7 +137,12 @@ namespace ECDA.VRTutorialKit
         public void FinishTutorial()
         {
             Debug.Log("Tutorial Finished!");
-            SceneManager.LoadScene(tutorialConfig.startingScene);
+            var transitionController = FindAnyObjectByType<SceneTransitionController>();
+            if (transitionController != null)
+            {
+                transitionController.GoToScene(tutorialConfig.startingScene);
+            }
+
         }
     }
 }

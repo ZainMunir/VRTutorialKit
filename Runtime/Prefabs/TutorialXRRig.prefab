@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 5968413171064840470, guid: 6f70fd83109951a409af49f2d725a234, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248618678934346619, guid: 6f70fd83109951a409af49f2d725a234, type: 3}
       propertyPath: m_Name
       value: TransitionController
@@ -263,7 +267,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1717954561962503725, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
       propertyPath: m_Name
-      value: TutorialXRRig Variant
+      value: TutorialXRRig
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
       propertyPath: m_LocalPosition.x

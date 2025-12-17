@@ -40,3 +40,8 @@
 .button:disabled {
     background-color: rgb(72, 72, 72);
 }
+
+.background {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.39);
+}

@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 3535752620498033634, guid: 95a807d36cb112b41b4df6b59af4e726, type: 3}
   - {fileID: 6681292975738862885, guid: 93b4c0c641ff37d449ee3903fdf81634, type: 3}
   tooltipHand: 1
+  immediateCompletion: 1

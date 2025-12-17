@@ -21,5 +21,7 @@ namespace ECDA.VRTutorialKit
         public List<GameObject> tooltipPrefabs = new List<GameObject>();
         public enum TooltipHand { Left, Right, Both }
         public TooltipHand tooltipHand;
+
+        public bool immediateCompletion = false;
     }
 }

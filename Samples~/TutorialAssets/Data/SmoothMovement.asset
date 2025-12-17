@@ -20,3 +20,4 @@ MonoBehaviour:
   - {fileID: 4464025568652493865, guid: 6b055bade88ea314dbd71675e904d6e0, type: 3}
   - {fileID: 6342025152729614452, guid: 63336d130d4aa65418c7a65a0f5eb2ba, type: 3}
   tooltipHand: 0
+  immediateCompletion: 1

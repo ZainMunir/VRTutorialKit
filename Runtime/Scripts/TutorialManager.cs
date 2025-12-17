@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
 using System;
 
 
@@ -57,6 +55,7 @@ namespace ECDA.VRTutorialKit
             if (tutorialConfig != null)
             {
                 stepsCompleted = new bool[TotalSteps()];
+                CheckImmediateCompletion();
             }
         }
 
@@ -92,6 +91,15 @@ namespace ECDA.VRTutorialKit
         public bool HasPreviousStep => currentStepIndex > 0;
         public bool HasNextStep => currentStepIndex < TotalSteps() - 1;
         public bool IsCurrentStepCompleted => stepsCompleted != null && CheckBounds(currentStepIndex) && stepsCompleted[currentStepIndex];
+
+        void CheckImmediateCompletion()
+        {
+            var step = GetCurrentStep();
+            if (step != null && step.immediateCompletion)
+            {
+                CompleteStep();
+            }
+        }
 
         [ContextMenu("Complete Step")]
         public void CompleteStep()
@@ -130,6 +138,7 @@ namespace ECDA.VRTutorialKit
             if (CheckBounds(currentStepIndex))
             {
                 OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
+                CheckImmediateCompletion();
             }
         }
 

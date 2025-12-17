@@ -1,12 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/Samples/VRTutorialKitSamples/TutorialAssets/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3#style"/>
-    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.39);">
+    <ui:VisualElement class="background">
         <ui:VisualElement name="Header" style="flex-grow: 1; max-height: 15%;">
             <ui:Label text="VR Controls Tutorial" name="title" class="title"/>
         </ui:VisualElement>
         <ui:VisualElement name="Dynamic" style="flex-grow: 1;">
             <ui:Label text="Step Title" name="StepTitle" class="subtitle"/>
-            <ui:Image name="StepVideo" style="aspect-ratio: 1.777778; background-image: url(&quot;project://database/Assets/Samples/VRTutorialKitSamples/TutorialAssets/Data/testvideo.renderTexture?fileID=8400000&amp;guid=596fd5743ad1b4b46b1b1325e3b7353b&amp;type=2#testvideo&quot;);"/>
+            <ui:Image name="StepVideo" style="aspect-ratio: 1.777778; background-image: url(&quot;project://database/Assets/Samples/VRTutorialKitSamples/TutorialAssets/UI/VideoRenderTexture.renderTexture?fileID=8400000&amp;guid=596fd5743ad1b4b46b1b1325e3b7353b&amp;type=2#VideoRenderTexture&quot;);"/>
             <ui:Label text="Step Description" name="StepDescription" class="description"/>
         </ui:VisualElement>
         <ui:VisualElement name="Controls" style="flex-grow: 1; max-height: 15%; flex-direction: row;">

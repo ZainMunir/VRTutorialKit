@@ -19,3 +19,4 @@ MonoBehaviour:
   tooltipPrefabs:
   - {fileID: 2218924964502400796, guid: 74e8a1a4803dcc04da3de449718d8314, type: 3}
   tooltipHand: 2
+  immediateCompletion: 1

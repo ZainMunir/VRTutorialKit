@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
-  m_Name: SnapMovement
+  m_Name: TeleportationMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Snap Movement
+  stepTitle: Teleportation
   stepDescription: Instructions for this step.
   videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
   interactionPrefab: {fileID: 0}
+  immediateCompletion: 1
   tooltipPrefabs:
   - {fileID: 6800351992558788412, guid: 5854712de1e1d90499ef2fa2aa214317, type: 3}
   - {fileID: 3535752620498033634, guid: 95a807d36cb112b41b4df6b59af4e726, type: 3}
   - {fileID: 6681292975738862885, guid: 93b4c0c641ff37d449ee3903fdf81634, type: 3}
   tooltipHand: 1
-  immediateCompletion: 1
+  enableSnapTurn: 0
+  leftHandLocomotion: 0
+  rightHandLocomotion: 0

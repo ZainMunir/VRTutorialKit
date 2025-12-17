@@ -16,12 +16,25 @@ namespace ECDA.VRTutorialKit
 
         [Header("Interaction Settings")]
         public GameObject interactionPrefab;
+        public bool immediateCompletion = false;
+
 
         [Header("Tooltip Settings")]
         public List<GameObject> tooltipPrefabs = new List<GameObject>();
         public enum TooltipHand { Left, Right, Both }
         public TooltipHand tooltipHand;
 
-        public bool immediateCompletion = false;
+        [Header("Control Settings")]
+        public bool enableSnapTurn = false;
+        public enum LocomotionMode
+        {
+            None,
+            Smooth,
+            Teleport
+        }
+        public LocomotionMode leftHandLocomotion = LocomotionMode.None;
+        public LocomotionMode rightHandLocomotion = LocomotionMode.None;
+
+
     }
 }

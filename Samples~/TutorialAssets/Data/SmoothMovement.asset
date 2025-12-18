@@ -16,8 +16,11 @@ MonoBehaviour:
   stepDescription: Instructions for this step.
   videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
   interactionPrefab: {fileID: 0}
+  immediateCompletion: 1
   tooltipPrefabs:
   - {fileID: 4464025568652493865, guid: 6b055bade88ea314dbd71675e904d6e0, type: 3}
   - {fileID: 6342025152729614452, guid: 63336d130d4aa65418c7a65a0f5eb2ba, type: 3}
   tooltipHand: 0
-  immediateCompletion: 1
+  enableSnapTurn: 0
+  leftHandLocomotion: 1
+  rightHandLocomotion: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1927969485833991189}
   - component: {fileID: 6467820831732025872}
   m_Layer: 0
-  m_Name: Completer
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,6 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d751567bcedede43955fb0fd8ee9dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStepCompleter
+  subSteps: []
+  isOrdered: 1
+  onStepCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6456873471466563128
 GameObject:
   m_ObjectHideFlags: 0

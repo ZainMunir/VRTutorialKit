@@ -94,6 +94,7 @@ public class RigController : MonoBehaviour
         switch (mode)
         {
             case TutorialStep.LocomotionMode.None:
+                SetSmoothMotion(false, manager);
                 break;
             case TutorialStep.LocomotionMode.Smooth:
                 SetTeleportation(false, manager, rayInteractor);

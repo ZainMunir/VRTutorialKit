@@ -34,7 +34,5 @@ namespace ECDA.VRTutorialKit
         }
         public LocomotionMode leftHandLocomotion = LocomotionMode.None;
         public LocomotionMode rightHandLocomotion = LocomotionMode.None;
-
-
     }
 }

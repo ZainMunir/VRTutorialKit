@@ -379,3 +379,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a3ecd17aa8ef14ca2871146f0f48d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::RigController
+  leftControllerInputActionManager: {fileID: 0}
+  rightControllerInputActionManager: {fileID: 0}
+  leftTeleportRayInteractor: {fileID: 0}
+  rightTeleportRayInteractor: {fileID: 0}
+  snapTurnProvider: {fileID: 0}
+  dynamicMoveProvider: {fileID: 0}
+  leftHandLocomotion: 0
+  rightHandLocomotion: 0
+  enableSnapTurn: 0

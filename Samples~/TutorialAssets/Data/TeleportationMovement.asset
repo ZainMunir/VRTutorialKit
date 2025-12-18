@@ -24,4 +24,4 @@ MonoBehaviour:
   tooltipHand: 1
   enableSnapTurn: 0
   leftHandLocomotion: 0
-  rightHandLocomotion: 0
+  rightHandLocomotion: 2

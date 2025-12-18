@@ -51,14 +51,5 @@ namespace ECDA.VRTutorialKit
                 m_Completer.OnSubStepCompleted(this);
             }
         }
-
-        public void ResetStep()
-        {
-            m_IsCompleted = false;
-            if (manageGameObjectActiveState)
-            {
-                gameObject.SetActive(false);
-            }
-        }
     }
 }

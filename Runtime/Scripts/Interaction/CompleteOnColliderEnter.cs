@@ -1,15 +1,14 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace ECDA.VRTutorialKit
 {
     [RequireComponent(typeof(Collider))]
-    [RequireComponent(typeof(TutorialSubStep))]
     public class CompleteOnColliderEnter : MonoBehaviour
     {
         private Collider m_collider;
-        private TutorialSubStep subStep;
+        [SerializeField] private TutorialSubStep subStep;
 
+        [SerializeField] private GameObject targetObject;
 
         void Awake()
         {
@@ -19,18 +18,20 @@ namespace ECDA.VRTutorialKit
                 Debug.LogWarning("Collider is not set as Trigger. Setting isTrigger to true.");
                 m_collider.isTrigger = true;
             }
-
-            subStep = GetComponent<TutorialSubStep>();
+            if (subStep == null)
+            {
+                Debug.LogError("TutorialSubStep reference is not set on CompleteOnColliderEnter.");
+            }
         }
 
         void OnTriggerEnter(Collider other)
         {
-            XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
-            if (grabInteractable != null)
+            if (other.gameObject == targetObject)
             {
-
-                subStep.Complete();
-
+                if (subStep != null)
+                {
+                    subStep.Complete();
+                }
             }
         }
     }

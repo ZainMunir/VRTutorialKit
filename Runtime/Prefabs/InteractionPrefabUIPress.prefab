@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractionPrefabUIPress
       objectReference: {fileID: 0}
+    - target: {fileID: 6467820831732025872, guid: fe677d46cdecaef4e8096771a7cb5020, type: 3}
+      propertyPath: subSteps.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467820831732025872, guid: fe677d46cdecaef4e8096771a7cb5020, type: 3}
+      propertyPath: 'subSteps.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6866959535931319975}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -193,6 +201,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5481525149749646259, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6866959535931319975}
     - targetCorrespondingSourceObject: {fileID: 3927579247218649798, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5778182502132144000}
@@ -208,6 +219,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
   m_PrefabInstance: {fileID: 8484562913134225004}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4156104547949032927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5481525149749646259, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+  m_PrefabInstance: {fileID: 8484562913134225004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6866959535931319975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4156104547949032927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d70ce9bd3b1634ea4d8669c5ec0b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialSubStep
+  manageGameObjectActiveState: 1
+  OnSubStepActive:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSubStepCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4845496616560905386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3927579247218649798, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
@@ -337,3 +372,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6963930d26475a94eaf3a6e0725bcd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::UIPressStepController
+  tutorialSubStep: {fileID: 6866959535931319975}

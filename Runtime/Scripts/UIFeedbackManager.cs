@@ -27,9 +27,15 @@ namespace ECDA.VRTutorialKit
             audioSource = GetComponent<AudioSource>();
         }
 
+        void OnEnable()
+        {
+            root = GetComponent<UIDocument>().rootVisualElement;
+        }
+
 
         public void RegisterButton(string buttonName, Func<bool> action)
         {
+            root = GetComponent<UIDocument>().rootVisualElement;
             Button btn = root.Q<Button>(buttonName);
             if (btn == null) return;
 

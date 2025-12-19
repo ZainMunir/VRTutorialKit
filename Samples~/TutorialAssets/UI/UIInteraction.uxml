@@ -18,9 +18,9 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 1;">
-            <ui:Label text="Toggles are used to turn on or off things" class="description"/>
+            <ui:Label text="Toggles are used to turn on or off continous actions" class="description"/>
             <ui:VisualElement style="flex-grow: 1; align-items: center;">
-                <ui:Toggle value="false" class="IconToggle"/>
+                <ui:Toggle value="false" name="ExampleToggle" class="IconToggle"/>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

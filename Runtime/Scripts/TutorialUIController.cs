@@ -8,7 +8,7 @@ namespace ECDA.VRTutorialKit
 {
     [RequireComponent(typeof(UIDocument))]
     [RequireComponent(typeof(VideoPlayer))]
-    public class UIController : MonoBehaviour
+    public class TutorialUIController : MonoBehaviour
     {
         TutorialManager tutorialManager;
 

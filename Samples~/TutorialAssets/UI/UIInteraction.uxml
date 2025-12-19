@@ -1,0 +1,27 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Samples/VRTutorialKitSamples/TutorialAssets/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3#style"/>
+    <ui:VisualElement class="background" style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 1; max-height: 15%;">
+            <ui:Label text="Click around below" class="title"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="" style="flex-grow: 1; flex-shrink: 1;">
+            <ui:Label text="Buttons can be clicked and do various &quot;one time&quot; actions" class="description"/>
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; justify-content: center;">
+                <ui:Button text="Success" name="SuccessButton" class="button"/>
+                <ui:Button text="Error" name="ErrorButton" class="button"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="" style="flex-grow: 1; flex-shrink: 1;">
+            <ui:Label text="Grayed out buttons are disabled, and cannot be interacted with" class="description"/>
+            <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: center;">
+                <ui:Button text="Inactive" enabled="false" name="InactiveButton" class="button"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:Label text="Toggles are used to turn on or off things" class="description"/>
+            <ui:VisualElement style="flex-grow: 1; align-items: center;">
+                <ui:Toggle value="false" class="IconToggle"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

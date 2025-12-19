@@ -10,6 +10,7 @@ namespace ECDA.VRTutorialKit
 
         [SerializeField] private GameObject targetObject;
 
+        [SerializeField] private Component component;
         void Awake()
         {
             m_collider = GetComponent<Collider>();
@@ -31,6 +32,16 @@ namespace ECDA.VRTutorialKit
                 if (subStep != null)
                 {
                     subStep.Complete();
+                }
+            }
+            else if (component != null)
+            {
+                if (other.GetComponent(component.GetType()) != null)
+                {
+                    if (subStep != null)
+                    {
+                        subStep.Complete();
+                    }
                 }
             }
         }

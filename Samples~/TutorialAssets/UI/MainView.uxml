@@ -9,7 +9,7 @@
             <ui:Image name="StepVideo" style="aspect-ratio: 1.777778; background-image: url(&quot;project://database/Assets/Samples/VRTutorialKitSamples/TutorialAssets/UI/VideoRenderTexture.renderTexture?fileID=8400000&amp;guid=596fd5743ad1b4b46b1b1325e3b7353b&amp;type=2#VideoRenderTexture&quot;);"/>
             <ui:Label text="Step Description" name="StepDescription" class="description"/>
         </ui:VisualElement>
-        <ui:VisualElement name="Controls" style="flex-grow: 1; max-height: 15%; flex-direction: row;">
+        <ui:VisualElement name="Controls" style="flex-grow: 1; max-height: 15%; flex-direction: row; justify-content: center; align-self: auto; align-items: stretch;">
             <ui:Button text="Previous" name="PreviousButton" class="button"/>
             <ui:Button text="Next" name="NextButton" class="button"/>
             <ui:Button text="Finish" name="FinishButton" class="button"/>

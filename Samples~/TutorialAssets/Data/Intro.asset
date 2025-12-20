@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
-  m_Name: UIPress
+  m_Name: Intro
   m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialStep
-  stepTitle: Interact with UI
-  stepDescription: UI elements might be used for various purposes. Try some out on
-    the other screen
+  stepTitle: Introduction
+  stepDescription: This tutorial aims to familiarise you with some common VR controls
+    that you might need in the following VR experiences. To start, you can use the
+    triggers on either hand to interact with UI Elements. Click "Next" to continue
   videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
-  interactionPrefab: {fileID: 662919140329301054, guid: 3201e24bf65c1dc408a012d6280fb5ce, type: 3}
-  immediateCompletion: 0
+  interactionPrefab: {fileID: 0}
+  immediateCompletion: 1
   tooltipPrefabs:
   - {fileID: 2218924964502400796, guid: 74e8a1a4803dcc04da3de449718d8314, type: 3}
   tooltipHand: 2

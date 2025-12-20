@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
-  m_Name: Grab
+  m_Name: Sockets
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Grab Objects
-  stepDescription: You can use the grips on either hand to grab objects. Try picking
-    the ones in front of you up and placing them on the red platforms
+  stepTitle: Sockets
+  stepDescription: Some objects might fit into specific shapes called sockets. They
+    can be put in and taken back out
   videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
-  interactionPrefab: {fileID: 8015947867209236510, guid: 8237d87c9aac1b246b2088d4e1b1fa84, type: 3}
-  immediateCompletion: 0
+  interactionPrefab: {fileID: 0}
+  immediateCompletion: 1
   tooltipPrefabs:
   - {fileID: 8765200585084022647, guid: 294cd0bc9a9d53e4aa18734f1aa25e75, type: 3}
   tooltipHand: 2

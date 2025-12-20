@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: SmoothMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Smooth Movement
-  stepDescription: Instructions for this step.
+  stepDescription: 'You can move around smoothly with the left stick. Be careful
+    as this can make you feel nauseous if you are not used to it '
   videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
-  interactionPrefab: {fileID: 0}
-  immediateCompletion: 1
+  interactionPrefab: {fileID: 6400019320946754940, guid: 154b3a61571915349a7b3b34de1432d1, type: 3}
+  immediateCompletion: 0
   tooltipPrefabs:
   - {fileID: 4464025568652493865, guid: 6b055bade88ea314dbd71675e904d6e0, type: 3}
   - {fileID: 6342025152729614452, guid: 63336d130d4aa65418c7a65a0f5eb2ba, type: 3}

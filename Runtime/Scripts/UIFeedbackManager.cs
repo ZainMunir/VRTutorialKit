@@ -11,7 +11,6 @@ namespace ECDA.VRTutorialKit
         [Header("Audio")]
         public AudioClip successSound;
         public AudioClip failSound;
-
         private VisualElement root;
         private AudioSource audioSource;
 

@@ -9,8 +9,12 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private TutorialSubStep subStep;
 
         [SerializeField] private GameObject targetObject;
+        [SerializeField] private string targetTag;
 
-        [SerializeField] private Component component;
+        [Tooltip("Time in seconds to wait after enabling before checking for collisions. Prevents triggering on spawn.")]
+        [SerializeField] private float startDelay = 0.5f;
+        private float m_TimeEnabled;
+
         void Awake()
         {
             m_collider = GetComponent<Collider>();
@@ -25,8 +29,15 @@ namespace ECDA.VRTutorialKit
             }
         }
 
+        void OnEnable()
+        {
+            m_TimeEnabled = Time.time;
+        }
+
         void OnTriggerEnter(Collider other)
         {
+            if (Time.time < m_TimeEnabled + startDelay) return;
+
             if (other.gameObject == targetObject)
             {
                 if (subStep != null)
@@ -34,9 +45,9 @@ namespace ECDA.VRTutorialKit
                     subStep.Complete();
                 }
             }
-            else if (component != null)
+            else if (!string.IsNullOrEmpty(targetTag))
             {
-                if (other.GetComponent(component.GetType()) != null)
+                if (other.CompareTag(targetTag))
                 {
                     if (subStep != null)
                     {

@@ -8,7 +8,6 @@ public class UIPressStepController : MonoBehaviour
     Button successButton;
     Button errorButton;
     Toggle toggle;
-
     [SerializeField] private TutorialSubStep tutorialSubStep;
 
     bool successClicked = false;

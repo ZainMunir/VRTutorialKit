@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialXRRig
       objectReference: {fileID: 0}
+    - target: {fileID: 1717954561962503725, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+      propertyPath: m_TagString
+      value: TutorialXRRig
+      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -342,11 +346,66 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1940152457836145501}
   m_SourcePrefab: {fileID: 100100000, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+--- !u!114 &386775747440523964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5663893676086941514, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+  m_PrefabInstance: {fileID: 5459536150774672886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ac216f0eb04754b1d938aac6380b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &687842434559391383 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4778211696441940833, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+  m_PrefabInstance: {fileID: 5459536150774672886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ac216f0eb04754b1d938aac6380b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3331926143794825213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7347985736721345035, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+  m_PrefabInstance: {fileID: 5459536150774672886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9f365cf844c03449bc8973eead2c3c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5325267853620242487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 153982007679157697, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+  m_PrefabInstance: {fileID: 5459536150774672886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1e8c997df241c1a67045eeac79b41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5459536150708108006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 202364688, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
   m_PrefabInstance: {fileID: 5459536150774672886}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5459536151825766142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1319746312, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+  m_PrefabInstance: {fileID: 5459536150774672886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5459536152411109895 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1670256625, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
@@ -379,12 +438,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a3ecd17aa8ef14ca2871146f0f48d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::RigController
-  leftControllerInputActionManager: {fileID: 0}
-  rightControllerInputActionManager: {fileID: 0}
-  leftTeleportRayInteractor: {fileID: 0}
-  rightTeleportRayInteractor: {fileID: 0}
-  snapTurnProvider: {fileID: 0}
-  dynamicMoveProvider: {fileID: 0}
+  leftControllerInputActionManager: {fileID: 687842434559391383}
+  rightControllerInputActionManager: {fileID: 386775747440523964}
+  leftTeleportRayInteractor: {fileID: 5459536151825766142}
+  rightTeleportRayInteractor: {fileID: 7654799261501436647}
+  snapTurnProvider: {fileID: 3331926143794825213}
+  dynamicMoveProvider: {fileID: 5325267853620242487}
   leftHandLocomotion: 0
   rightHandLocomotion: 0
   enableSnapTurn: 0
+--- !u!114 &7654799261501436647 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2449787133337329425, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+  m_PrefabInstance: {fileID: 5459536150774672886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

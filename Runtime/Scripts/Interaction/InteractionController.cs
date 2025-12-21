@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace ECDA.VRTutorialKit
 {
     public class InteractionController : MonoBehaviour
     {
         TutorialManager tutorialManager;
+        private List<GameObject> instantiatedObjects = new List<GameObject>();
 
 
         void Start()
@@ -36,16 +38,25 @@ namespace ECDA.VRTutorialKit
             GameObject interactionPrefab = step.interactionPrefab;
             if (interactionPrefab != null)
             {
-                Instantiate(interactionPrefab, transform);
+                GameObject instance = Instantiate(interactionPrefab, transform);
+                Transform[] allTransforms = instance.GetComponentsInChildren<Transform>(true);
+                foreach (Transform t in allTransforms)
+                {
+                    instantiatedObjects.Add(t.gameObject);
+                }
             }
         }
 
         void RemoveAllPrefabs()
         {
-            foreach (Transform child in transform)
+            foreach (var obj in instantiatedObjects)
             {
-                Destroy(child.gameObject);
+                if (obj != null)
+                {
+                    Destroy(obj);
+                }
             }
+            instantiatedObjects.Clear();
         }
     }
 }

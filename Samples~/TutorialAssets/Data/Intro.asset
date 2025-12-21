@@ -17,7 +17,7 @@ MonoBehaviour:
     that you might need in the following VR experiences. To start, you can use the
     triggers on either hand to interact with UI Elements. Click "Next" to continue
   videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
-  interactionPrefab: {fileID: 0}
+  interactionPrefab: {fileID: 6932860894398028169, guid: 47c045728f1fa8f4daa5168bf2aa0d53, type: 3}
   immediateCompletion: 1
   tooltipPrefabs:
   - {fileID: 2218924964502400796, guid: 74e8a1a4803dcc04da3de449718d8314, type: 3}

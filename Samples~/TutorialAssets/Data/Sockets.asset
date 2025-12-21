@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Sockets
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Sockets
-  stepDescription: Some objects might fit into specific shapes called sockets. They
-    can be put in and sometimes taken back out
+  stepDescription: 'Some objects might snap into specific positions called sockets.
+    They can be put in and sometimes taken back out. '
   videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
-  interactionPrefab: {fileID: 0}
-  immediateCompletion: 1
+  interactionPrefab: {fileID: 7526973094371630708, guid: 85535440fbddb5c409cc9593bc5b49aa, type: 3}
+  immediateCompletion: 0
   tooltipPrefabs:
   - {fileID: 8765200585084022647, guid: 294cd0bc9a9d53e4aa18734f1aa25e75, type: 3}
   tooltipHand: 2

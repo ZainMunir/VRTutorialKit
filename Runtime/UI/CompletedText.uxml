@@ -1,9 +1,0 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Samples/VRTutorialKitSamples/TutorialAssets/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3#style"/>
-    <ui:VisualElement class="background" style="flex-grow: 1;">
-        <ui:VisualElement style="flex-grow: 1;">
-            <ui:Label text="The Tutorial is Done!" name="Title" class="title"/>
-        </ui:VisualElement>
-        <ui:Label text="If you&#39;re seeing this, you should let the person helping you know you&#39;re done, and they&#39;ll tell you what to do next" name="Subtitle" class="subtitle description"/>
-    </ui:VisualElement>
-</ui:UXML>

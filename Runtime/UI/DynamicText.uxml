@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.ecda.vrtutorialkit/Runtime/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3#style"/>
+    <ui:VisualElement class="background" style="flex-grow: 1;">
+        <ui:VisualElement name="VisualElement" style="max-height: 25%;">
+            <ui:Label text="Title" name="Title" class="title" style="flex-wrap: wrap;"/>
+        </ui:VisualElement>
+        <ui:Label text="Description" name="Description" class="description"/>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1387,4 +1387,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnColliderEnter
   subStep: {fileID: 4200542113864533447}
   targetObject: {fileID: 0}
-  targetTag: Player
+  targetTag: TutorialXRRig
+  startDelay: 0.5

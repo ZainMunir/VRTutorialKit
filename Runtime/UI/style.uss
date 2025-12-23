@@ -97,7 +97,7 @@ Toggle:hover #unity-checkmark {
 }
 
 Toggle.IconToggle:checked #unity-checkmark {
-    background-image: url("project://database/Assets/Samples/VRTutorialKitSamples/TutorialAssets/Assets/Checkmark.png");
+    background-image: url("project://database/Packages/com.ecda.vrtutorialkit/Runtime/UI/Checkmark.png");
     background-size: 50% 50%;
 }
 

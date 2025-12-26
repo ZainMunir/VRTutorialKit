@@ -21,7 +21,7 @@ MonoBehaviour:
   immediateCompletion: 0
   tooltipPrefabs:
   - {fileID: 8765200585084022647, guid: 294cd0bc9a9d53e4aa18734f1aa25e75, type: 3}
-  tooltipHand: 1
+  tooltipHand: 2
   enableSnapTurn: 1
   leftHandLocomotion: 0
   rightHandLocomotion: 0

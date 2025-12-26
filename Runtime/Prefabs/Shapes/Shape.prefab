@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 6957000769822834729}
   - component: {fileID: 6957000769822834730}
   - component: {fileID: 7758657608288277187}
+  - component: {fileID: -8230707300246142760}
   m_Layer: 0
   m_Name: Shape
   m_TagString: Untagged
@@ -344,3 +345,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c43262f1d8c9da4aa014cf7402f12d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HoverVisual
+--- !u!114 &-8230707300246142760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6957000769822834733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005dc6ce222dd99449c628bdf8cdb888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.RespawnableObject
+  m_SpawnPointOverride: {fileID: 0}

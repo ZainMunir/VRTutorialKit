@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: Outline
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Doors
+  stepTitle: Outlined Objects
   stepDescription: Objects of particular importance may be highlighted with an outline
-    and have a silhoutte that can be seen through objects. These usually are important
-    for progression
+    and have a silhoutte that can be seen through objects. These are important for
+    progression, so be sure to look out for them
   videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
   interactionPrefab: {fileID: 7139929060093845269, guid: f48f39bf5b2117547bbe4741a7fd77f1, type: 3}
   immediateCompletion: 0

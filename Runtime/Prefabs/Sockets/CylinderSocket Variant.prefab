@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4739375469308723444
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1383039175912364851}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: baec3d057c2d23a46bf1ebdf1d0a374a, type: 2}
+    - target: {fileID: 919132149155446097, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      propertyPath: m_Name
+      value: SocketCylinder
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8719837061125224817}
+  m_SourcePrefab: {fileID: 100100000, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+--- !u!4 &5066300663678740255 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+  m_PrefabInstance: {fileID: 4739375469308723444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5549786250851253669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e80d2b1437f36c4c84bde39fe74efe4, type: 3}
+  m_PrefabInstance: {fileID: 4739375469308723444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8719837061125224817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5549786250851253669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3121338581892444288baa5e21698c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ChangeMaterialOnComplete
+  newMaterial: {fileID: 2100000, guid: 197ff8ca9b6e5d0429613ba4b4e8f275, type: 2}
+  subStep: {fileID: 0}
+--- !u!1001 &5356138813722139363
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 106093692981118498, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_Name
+      value: CylinderSocket Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6441652780047499728, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5066300663678740255}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 106093692981118498, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6853389413052057587}
+  m_SourcePrefab: {fileID: 100100000, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+--- !u!4 &1383039175912364851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6441652780047499728, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+  m_PrefabInstance: {fileID: 5356138813722139363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5416766547057941697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 106093692981118498, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+  m_PrefabInstance: {fileID: 5356138813722139363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6853389413052057587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416766547057941697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ed7acf0de897544bf5efadd7b9de68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnSocketEnter
+  subStep: {fileID: 0}
+  targetObject: {fileID: 0}

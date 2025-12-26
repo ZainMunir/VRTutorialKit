@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 6957000769822834729}
   - component: {fileID: 6957000769822834730}
   m_Layer: 0
-  m_Name: SocketShape
+  m_Name: Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

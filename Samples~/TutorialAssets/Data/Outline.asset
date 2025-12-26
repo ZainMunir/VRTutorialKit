@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Outline
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Doors
-  stepDescription: Some doors may be interactable in different ways, using the "Grab"
-    trigger. Try it out with the doors on the right
+  stepDescription: Objects of particular importance may be highlighted with an outline
+    and have a silhoutte that can be seen through objects. These usually are important
+    for progression
   videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
-  interactionPrefab: {fileID: 8261944132838956729, guid: 8cc070baab5b2934ba0979abd8750dc8, type: 3}
+  interactionPrefab: {fileID: 7139929060093845269, guid: f48f39bf5b2117547bbe4741a7fd77f1, type: 3}
   immediateCompletion: 0
   tooltipPrefabs:
   - {fileID: 8765200585084022647, guid: 294cd0bc9a9d53e4aa18734f1aa25e75, type: 3}
   tooltipHand: 1
-  enableSnapTurn: 0
+  enableSnapTurn: 1
   leftHandLocomotion: 0
-  rightHandLocomotion: 2
+  rightHandLocomotion: 0

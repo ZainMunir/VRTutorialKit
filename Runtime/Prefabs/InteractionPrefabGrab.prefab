@@ -862,6 +862,7 @@ GameObject:
   - component: {fileID: 8049031568632224103}
   - component: {fileID: 2422475786615856268}
   - component: {fileID: 4806843219559830037}
+  - component: {fileID: 3783249085122125965}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -919,7 +920,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnColliderEnter
   subStep: {fileID: 1967440987733756391}
   targetObject: {fileID: 2860007551299867555}
-  component: {fileID: 0}
+  targetTag: 
+  startDelay: 0.5
+--- !u!114 &3783249085122125965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414884527412905866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ac59cb83d851b448503e5441fc6bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnTriggerObject
+  subStep: {fileID: 1967440987733756391}
+  startDelay: 0.5
+  targetObject: {fileID: 2860007551299867555}
 --- !u!1 &7292810088127766301
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +1000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8724299335627789532}
   - component: {fileID: 5495737435492856608}
-  - component: {fileID: 1955256399740351322}
+  - component: {fileID: 3560053938867952968}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -1027,7 +1044,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.0651784, z: 1}
   m_Center: {x: 0, y: 0.032589175, z: 0}
---- !u!114 &1955256399740351322
+--- !u!114 &3560053938867952968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1036,12 +1053,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8588567317026748781}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad1e1d57fc4abd4bb4337ac5c41f1b8, type: 3}
+  m_Script: {fileID: 11500000, guid: c1ac59cb83d851b448503e5441fc6bb0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnColliderEnter
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnTriggerObject
   subStep: {fileID: 3541086162734076756}
+  startDelay: 0.5
   targetObject: {fileID: 5322864655438417563}
-  component: {fileID: 0}
 --- !u!1001 &526839657201818253
 PrefabInstance:
   m_ObjectHideFlags: 0

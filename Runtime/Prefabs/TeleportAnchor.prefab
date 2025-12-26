@@ -1326,7 +1326,7 @@ PrefabInstance:
       addedObject: {fileID: 5978789717584471749}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83053866027bda94da06cb09ab527394, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5754132580187028643}
+      addedObject: {fileID: 4307869881499169550}
   m_SourcePrefab: {fileID: 100100000, guid: 83053866027bda94da06cb09ab527394, type: 3}
 --- !u!4 &8190249361585705908 stripped
 Transform:
@@ -1373,7 +1373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ChangeMaterialOnComplete
   newMaterial: {fileID: 2100000, guid: 197ff8ca9b6e5d0429613ba4b4e8f275, type: 2}
   subStep: {fileID: 4200542113864533447}
---- !u!114 &5754132580187028643
+--- !u!114 &4307869881499169550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1382,10 +1382,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8854724248126605582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad1e1d57fc4abd4bb4337ac5c41f1b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d460f0a04e7532438f4d781e2044b03, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnColliderEnter
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnTriggerTag
   subStep: {fileID: 4200542113864533447}
-  targetObject: {fileID: 0}
-  targetTag: TutorialXRRig
   startDelay: 0.5
+  targetTag: TutorialXRRig

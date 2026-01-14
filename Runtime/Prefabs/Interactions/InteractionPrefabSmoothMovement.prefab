@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6456873471466563128, guid: fe677d46cdecaef4e8096771a7cb5020, type: 3}
       propertyPath: m_Name
-      value: InteractionPrefabSmoothMovement Variant
+      value: InteractionPrefabSmoothMovement
       objectReference: {fileID: 0}
     - target: {fileID: 6467820831732025872, guid: fe677d46cdecaef4e8096771a7cb5020, type: 3}
       propertyPath: subSteps.Array.size
@@ -205,8 +205,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 4020872806957535234}
     m_Modifications:
     - target: {fileID: 8425025080159190811, guid: 9bd15eeaa14efd2469164410693b0fa2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425025080159190811, guid: 9bd15eeaa14efd2469164410693b0fa2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 70.000015
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425025080159190811, guid: 9bd15eeaa14efd2469164410693b0fa2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8425025080159190811, guid: 9bd15eeaa14efd2469164410693b0fa2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -218,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425025080159190811, guid: 9bd15eeaa14efd2469164410693b0fa2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.552
       objectReference: {fileID: 0}
     - target: {fileID: 8425025080159190811, guid: 9bd15eeaa14efd2469164410693b0fa2, type: 3}
       propertyPath: m_LocalRotation.w

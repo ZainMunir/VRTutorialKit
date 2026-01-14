@@ -151,7 +151,19 @@ namespace ECDA.VRTutorialKit
             {
                 transitionController.GoToScene(tutorialConfig.startingScene);
             }
+        }
 
+        [ContextMenu("SkipToNextStep")]
+        public void SkipToNextStep()
+        {
+            if (!HasNextStep)
+                return;
+            currentStepIndex++;
+            if (CheckBounds(currentStepIndex))
+            {
+                OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
+                CheckImmediateCompletion();
+            }
         }
     }
 }

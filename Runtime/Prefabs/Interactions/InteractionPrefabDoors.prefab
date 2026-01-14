@@ -49,7 +49,19 @@ MonoBehaviour:
   manageGameObjectActiveState: 1
   OnSubStepActive:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4453907125160904768}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+        m_MethodName: Highlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnSubStepCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -1040,14 +1052,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7190408328412301729, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2685974854355071073}
+      addedObject: {fileID: 4453907125160904768}
   m_SourcePrefab: {fileID: 100100000, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
 --- !u!1 &1737114231358666629 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7190408328412301729, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
   m_PrefabInstance: {fileID: 8922209718914399780}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2685974854355071073
+--- !u!114 &4453907125160904768
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1056,15 +1068,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1737114231358666629}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7318f3d3c6d4e3842aec7820191a09f7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Outline
-  outlineMode: 3
-  outlineColor: {r: 1, g: 0.97204345, b: 0, a: 1}
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HighlightObject
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
+  outlineMode: 3
 --- !u!4 &5470111065331121891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3475568898065072327, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}

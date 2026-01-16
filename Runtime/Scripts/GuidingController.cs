@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class VRPeripheralManager : MonoBehaviour
+public class GuidingController : MonoBehaviour
 {
     [Header("Targets")]
     [SerializeField] private Transform currentTarget;
@@ -17,7 +17,7 @@ public class VRPeripheralManager : MonoBehaviour
     {
         if (leftArrow == null || rightArrow == null)
         {
-            Debug.LogError("GuidingArrow components not assigned in VRPeripheralManager");
+            Debug.LogError($"{nameof(leftArrow)} or {nameof(rightArrow)} components not assigned in {nameof(GuidingController)}");
             enabled = false;
             return;
         }
@@ -64,5 +64,13 @@ public class VRPeripheralManager : MonoBehaviour
     public void SetNewTarget(Transform newTarget)
     {
         currentTarget = newTarget;
+    }
+
+    public void RemoveTarget(Transform targetToRemove)
+    {
+        if (currentTarget == targetToRemove)
+        {
+            currentTarget = null;
+        }
     }
 }

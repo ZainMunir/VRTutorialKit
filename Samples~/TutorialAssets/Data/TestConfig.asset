@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1760e2931b97704ca2dc44bc768c4cf, type: 3}
+  m_Name: TestConfig
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialConfig
+  tutorialSteps:
+  - {fileID: 11400000, guid: 1db6a6d53afa20347ac12987acfe6d0d, type: 2}
+  - {fileID: 11400000, guid: 31cd7c619824f2d4291b174b73fadd0b, type: 2}
+  startingScene: Assets/Samples/VRTutorialKitSamples/TutorialAssets/ExitPlaceholder.unity

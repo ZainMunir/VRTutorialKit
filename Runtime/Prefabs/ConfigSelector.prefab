@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &221628386147105701
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1961351108226525195, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: fad02be65339cb645b6b575e73103bf4, type: 3}
+    - target: {fileID: 1961351108226525195, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_WorldSpaceWidth
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961351108226525195, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_WorldSpaceHeight
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820674406516298226, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_PokeCollider
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481525149749646259, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_Name
+      value: ConfigSelector
+      objectReference: {fileID: 0}
+    - target: {fileID: 5897628828326932340, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5897628828326932340, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242857085696009294, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242857085696009294, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_Center.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01836
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.941
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.431
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3927579247218649798, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4989512636628722476}
+    - targetCorrespondingSourceObject: {fileID: 3927579247218649798, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7161438410803094620}
+  m_SourcePrefab: {fileID: 100100000, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+--- !u!1 &3860413173384941923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3927579247218649798, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
+  m_PrefabInstance: {fileID: 221628386147105701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4989512636628722476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3860413173384941923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a53e9ca81e9d8645969b5f114de6657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.DynamicUIText
+  title: Config Selector
+  description: Do not change the selected option unless instructed to
+--- !u!114 &7161438410803094620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3860413173384941923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9607953d421e4f4a8f24c7e4e990510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ConfigUIController
+  configOptions:
+  - {fileID: 11400000, guid: 87e46813680251d4ab2f1fcd8d167959, type: 2}
+  - {fileID: 11400000, guid: 6176cf47c6af66f49a5e34a9f37a91d7, type: 2}

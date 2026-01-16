@@ -74,8 +74,6 @@ Toggle #unity-checkmark {
     min-height: 60px;
 }
 
-
-
 Toggle.IconToggle #unity-checkmark {
     background-color: rgb(255, 100, 100);
     border-top-left-radius: 50%;
@@ -97,11 +95,9 @@ Toggle:hover #unity-checkmark {
 }
 
 Toggle.IconToggle:checked #unity-checkmark {
-    background-image: url("project://database/Packages/com.ecda.vrtutorialkit/Runtime/UI/Checkmark.png");
+    background-image: url("project://database/Packages/com.ecda.vrtutorialkit/Runtime/UI/Checkmark.png?fileID=21300000&guid=6d01a95258c81bb43983788b7792c961&type=3#Checkmark");
     background-size: 50% 50%;
 }
-
-
 
 Toggle:checked #unity-checkmark {
     background-image: none;
@@ -111,4 +107,7 @@ Toggle:checked #unity-checkmark {
 Toggle:active #unity-checkmark {
     background-image: none;
     background-color: rgb(88, 176, 246);
+}
+
+.unity-radio-button-group {
 }

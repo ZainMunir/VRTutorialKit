@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: Gaze
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Grab Objects
+  stepTitle: Looking Around
   stepDescription: VR allows you to look around the room in every direction. Follow
     the arrows and look at every target to get used to this
   videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}

@@ -165,5 +165,16 @@ namespace ECDA.VRTutorialKit
                 CheckImmediateCompletion();
             }
         }
+
+        public void SetTutorialConfig(TutorialConfig config)
+        {
+            tutorialConfig = config;
+            currentStepIndex = 0;
+            if (tutorialConfig != null)
+            {
+                stepsCompleted = new bool[TotalSteps()];
+                CheckImmediateCompletion();
+            }
+        }
     }
 }

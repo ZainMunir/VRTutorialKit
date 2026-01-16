@@ -908,16 +908,6 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
---- !u!20 &1595157118 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3700803405172065375, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
-  m_PrefabInstance: {fileID: 6560639162042947428}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &1642927331 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 318146670255625648, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
-  m_PrefabInstance: {fileID: 6560639162042947428}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1825385462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,14 +1159,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2548362589077601211, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
-      propertyPath: 'm_Cameras.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1642927331}
-    - target: {fileID: 2548362589077601211, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
-      propertyPath: 'm_Cameras.Array.data[1]'
-      value: 
-      objectReference: {fileID: 1595157118}
     - target: {fileID: 6634732053140767704, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

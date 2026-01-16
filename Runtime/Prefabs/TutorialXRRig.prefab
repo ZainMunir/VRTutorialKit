@@ -349,11 +349,11 @@ PrefabInstance:
     - target: {fileID: 7537250554189092429, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
       propertyPath: 'm_Cameras.Array.data[0]'
       value: 
-      objectReference: {fileID: 3700803405172065375}
+      objectReference: {fileID: 318146670255625648}
     - target: {fileID: 7537250554189092429, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
       propertyPath: 'm_Cameras.Array.data[1]'
       value: 
-      objectReference: {fileID: 318146670255625648}
+      objectReference: {fileID: 3700803405172065375}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-    public class CompleteOnGaze : MonoBehaviour
+    public class CompleteOnGaze : ProgressProvider
     {
         [Header("Gaze Completion Settings")]
         [SerializeField] private TutorialSubStep subStep;
@@ -11,6 +11,8 @@ namespace ECDA.VRTutorialKit
 
         private float gazeTimer = 0f;
         private Camera playerCamera;
+
+        public override float Progress => Mathf.Clamp01(gazeTimer / gazeDuration);
 
         private void Awake()
         {

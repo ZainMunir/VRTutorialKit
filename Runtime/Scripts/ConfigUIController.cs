@@ -40,7 +40,7 @@ namespace ECDA.VRTutorialKit
                 int selectedIndex = evt.newValue;
                 if (selectedIndex >= 0 && selectedIndex < configOptions.Count)
                 {
-                    tutorialManager.tutorialConfig = configOptions[selectedIndex];
+                    tutorialManager.SetTutorialConfig(configOptions[selectedIndex]);
                 }
             };
 

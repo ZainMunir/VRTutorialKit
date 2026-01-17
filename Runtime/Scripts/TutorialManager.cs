@@ -174,6 +174,8 @@ namespace ECDA.VRTutorialKit
             {
                 stepsCompleted = new bool[TotalSteps()];
                 CheckImmediateCompletion();
+                OnTutorialFinished?.Invoke(false);
+                OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
             }
         }
     }

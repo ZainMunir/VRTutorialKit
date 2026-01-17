@@ -18,9 +18,9 @@ MonoBehaviour:
   videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
   interactionPrefab: {fileID: 4880692150062475949, guid: 0a122c7200292eb47a6e0c4f1c26f362, type: 3}
   immediateCompletion: 0
-  tooltipPrefabs:
+  leftTooltipPrefabs: []
+  rightTooltipPrefabs:
   - {fileID: 2073685619059571023, guid: 611edc01511d6814ab66d73fa6e5b02b, type: 3}
-  tooltipHand: 1
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 0

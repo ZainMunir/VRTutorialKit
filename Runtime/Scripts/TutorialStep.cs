@@ -8,6 +8,8 @@ namespace ECDA.VRTutorialKit
 
     public class TutorialStep : ScriptableObject
     {
+        public enum TooltipHand { Left, Right }
+
         [Header("UI Settings")]
         public string stepTitle = "New Lesson";
         [TextArea(3, 10)]
@@ -20,9 +22,8 @@ namespace ECDA.VRTutorialKit
 
 
         [Header("Tooltip Settings")]
-        public List<GameObject> tooltipPrefabs = new List<GameObject>();
-        public enum TooltipHand { Left, Right, Both }
-        public TooltipHand tooltipHand;
+        public List<GameObject> leftTooltipPrefabs = new List<GameObject>();
+        public List<GameObject> rightTooltipPrefabs = new List<GameObject>();
 
         [Header("Control Settings")]
         public bool enableSnapTurn = false;

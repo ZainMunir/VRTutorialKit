@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
-  m_Name: SmoothMovementBoth
+  m_Name: BothMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Smooth Movement
-  stepDescription: You can move around smoothly with the stick on either controller.
-    Be careful as this can make you feel nauseous if you are not used to it. Try
-    walking around and going through the red targets as they appear
+  stepTitle: Smooth Movement and Teleportation
+  stepDescription: You can move around smoothly with the left stick, or teleport
+    by holding the right stick forward and releasing it once the arrow is where you
+    want it. We recommend you use Teleportation
   videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
   interactionPrefab: {fileID: 6400019320946754940, guid: 154b3a61571915349a7b3b34de1432d1, type: 3}
   immediateCompletion: 0
@@ -23,8 +23,8 @@ MonoBehaviour:
   - {fileID: 4464025568652493865, guid: 6b055bade88ea314dbd71675e904d6e0, type: 3}
   - {fileID: 6342025152729614452, guid: 63336d130d4aa65418c7a65a0f5eb2ba, type: 3}
   rightTooltipPrefabs:
-  - {fileID: 4464025568652493865, guid: 6b055bade88ea314dbd71675e904d6e0, type: 3}
-  - {fileID: 6342025152729614452, guid: 63336d130d4aa65418c7a65a0f5eb2ba, type: 3}
+  - {fileID: 6681292975738862885, guid: 93b4c0c641ff37d449ee3903fdf81634, type: 3}
+  - {fileID: 6800351992558788412, guid: 5854712de1e1d90499ef2fa2aa214317, type: 3}
   enableSnapTurn: 0
   leftHandLocomotion: 1
-  rightHandLocomotion: 1
+  rightHandLocomotion: 2

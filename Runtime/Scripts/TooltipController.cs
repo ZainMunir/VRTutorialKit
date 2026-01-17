@@ -46,9 +46,19 @@ namespace ECDA.VRTutorialKit
             var step = tutorialManager.GetCurrentStep();
             if (step == null) return;
 
-            if (step.tooltipHand == TutorialStep.TooltipHand.Both || step.tooltipHand == handSide)
+            List<GameObject> prefabs = null;
+            if (handSide == TutorialStep.TooltipHand.Left)
             {
-                ReplaceTooltip(step.tooltipPrefabs);
+                prefabs = step.leftTooltipPrefabs;
+            }
+            else if (handSide == TutorialStep.TooltipHand.Right)
+            {
+                prefabs = step.rightTooltipPrefabs;
+            }
+
+            if (prefabs != null && prefabs.Count > 0)
+            {
+                ReplaceTooltip(prefabs);
             }
             else
             {

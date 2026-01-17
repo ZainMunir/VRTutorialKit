@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 namespace ECDA.VRTutorialKit
@@ -32,6 +33,7 @@ namespace ECDA.VRTutorialKit
 
         Coroutine m_StartCo;
         Coroutine m_EndCo;
+
 
         void Start()
         {
@@ -94,6 +96,43 @@ namespace ECDA.VRTutorialKit
                 m_LazyTooltip.gameObject.SetActive(false);
             if (m_Curve != null)
                 m_Curve.SetActive(false);
+        }
+
+        public void SetHandSide(TutorialStep.TooltipHand handSide)
+        {
+            if (handSide == TutorialStep.TooltipHand.Right)
+                return;
+
+            // Flip various parts of the callout for left hand
+            // If there is a curve, the curve factor end should be negated
+            if (m_Curve != null)
+            {
+                BezierCurve curve = m_Curve.GetComponent<BezierCurve>();
+                if (curve != null)
+                {
+                    curve.FlipCurve();
+                }
+            }
+
+            // Flip children along the X axis and position
+            foreach (Transform child in transform)
+            {
+                Vector3 localScale = child.localScale;
+                localScale.x = -localScale.x;
+                child.localScale = localScale;
+                Vector3 localPosition = child.localPosition;
+                localPosition.x = -localPosition.x;
+                child.localPosition = localPosition;
+            }
+
+            // Flip any text meshes 
+            TextMeshProUGUI[] textMeshes = GetComponentsInChildren<TextMeshProUGUI>();
+            foreach (TextMeshProUGUI textMesh in textMeshes)
+            {
+                Vector3 localScale = textMesh.rectTransform.localScale;
+                localScale.x = -localScale.x;
+                textMesh.rectTransform.localScale = localScale;
+            }
         }
     }
 }

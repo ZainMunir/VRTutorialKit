@@ -65,6 +65,7 @@ namespace ECDA.VRTutorialKit
                 Debug.LogWarning("Tooltip prefab does not contain a Callout component.");
                 return;
             }
+            callout.SetHandSide(handSide);
 
             // Attach GazeHoverStart and GazeHoverEnd to the CalloutGazeController events
             if (m_CalloutGazeController != null)

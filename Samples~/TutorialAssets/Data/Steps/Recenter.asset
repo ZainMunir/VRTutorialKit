@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
+  m_Name: Recenter
+  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialStep
+  stepTitle: Re-centering your view
+  stepDescription: At any point, you can hold down the indented button the right
+    controller to reposition the scene to where you are looking
+  videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
+  interactionPrefab: {fileID: 0}
+  immediateCompletion: 0
+  tooltipPrefabs:
+  - {fileID: 5483095356557832448, guid: 93078033c7970bf46ac90f045ae0aa7f, type: 3}
+  tooltipHand: 1
+  enableSnapTurn: 0
+  leftHandLocomotion: 0
+  rightHandLocomotion: 0

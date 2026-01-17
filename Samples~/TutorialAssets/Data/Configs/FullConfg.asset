@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialConfig
   tutorialSteps:
   - {fileID: 11400000, guid: 1db6a6d53afa20347ac12987acfe6d0d, type: 2}
+  - {fileID: 11400000, guid: c111689789bbc344ca7c82df509b95f7, type: 2}
   - {fileID: 11400000, guid: bcf6e4c4de04d7e4bb9de45c97bf67c6, type: 2}
   - {fileID: 11400000, guid: b073f2ccbb691134982a46cef9aae091, type: 2}
   - {fileID: 11400000, guid: 3693dce5d3f26fa41b9482a7c54f5045, type: 2}

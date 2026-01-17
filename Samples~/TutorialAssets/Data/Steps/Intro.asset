@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
+  m_Name: Intro
+  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialStep
+  stepTitle: Introduction
+  stepDescription: This tutorial aims to familiarise you with some common VR controls
+    that you might need in the following VR experiences. To start, you can use the
+    triggers on either hand to interact with UI Elements. Click "Next" to continue
+  videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
+  interactionPrefab: {fileID: 6932860894398028169, guid: 47c045728f1fa8f4daa5168bf2aa0d53, type: 3}
+  immediateCompletion: 1
+  tooltipPrefabs:
+  - {fileID: 2218924964502400796, guid: 74e8a1a4803dcc04da3de449718d8314, type: 3}
+  tooltipHand: 2
+  enableSnapTurn: 0
+  leftHandLocomotion: 0
+  rightHandLocomotion: 0

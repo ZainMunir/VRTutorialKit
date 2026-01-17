@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: BothMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Smooth Movement and Teleportation
+  stepTitle: Movement
   stepDescription: You can move around smoothly with the left stick, or teleport
     by holding the right stick forward and releasing it once the arrow is where you
     want it. We recommend you use Teleportation

@@ -10,18 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
-  m_Name: FarGrab
+  m_Name: GrabMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Grab from a Distance
-  stepDescription: You can also grab objects that are far away from a distance by
-    aiming the line in from of the controllers at them
+  stepTitle: Moving with Objects
+  stepDescription: After you grab an object, it's still possible to move or teleport
+    with it. Try going and retrieving the object on the other side of the wall while
+    holding it the entire time
   videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
-  interactionPrefab: {fileID: 2781056083990958088, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+  interactionPrefab: {fileID: 99521517084585602, guid: ea0eb0ac63b6e8c44805731784eabc20, type: 3}
   immediateCompletion: 0
   leftTooltipPrefabs:
   - {fileID: 8765200585084022647, guid: 294cd0bc9a9d53e4aa18734f1aa25e75, type: 3}
   rightTooltipPrefabs:
   - {fileID: 8765200585084022647, guid: 294cd0bc9a9d53e4aa18734f1aa25e75, type: 3}
+  - {fileID: 6681292975738862885, guid: 93b4c0c641ff37d449ee3903fdf81634, type: 3}
+  - {fileID: 6800351992558788412, guid: 5854712de1e1d90499ef2fa2aa214317, type: 3}
   enableSnapTurn: 0
   leftHandLocomotion: 0
-  rightHandLocomotion: 0
+  rightHandLocomotion: 2

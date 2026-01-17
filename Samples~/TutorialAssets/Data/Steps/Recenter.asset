@@ -19,7 +19,7 @@ MonoBehaviour:
   interactionPrefab: {fileID: 4880692150062475949, guid: 0a122c7200292eb47a6e0c4f1c26f362, type: 3}
   immediateCompletion: 0
   tooltipPrefabs:
-  - {fileID: 5483095356557832448, guid: 93078033c7970bf46ac90f045ae0aa7f, type: 3}
+  - {fileID: 2073685619059571023, guid: 611edc01511d6814ab66d73fa6e5b02b, type: 3}
   tooltipHand: 1
   enableSnapTurn: 0
   leftHandLocomotion: 0

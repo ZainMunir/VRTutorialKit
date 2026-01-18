@@ -1,5 +1,81 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1112366401137196680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7363179062521688384}
+    m_Modifications:
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022174160417482522, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: m_Name
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2914806025649369286}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+--- !u!114 &1128408648283202507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+  m_PrefabInstance: {fileID: 1112366401137196680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d70ce9bd3b1634ea4d8669c5ec0b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialSubStep
+--- !u!4 &7725840579625763400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+  m_PrefabInstance: {fileID: 1112366401137196680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5811971479499883014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59,13 +135,13 @@ PrefabInstance:
     - target: {fileID: 6467820831732025872, guid: fe677d46cdecaef4e8096771a7cb5020, type: 3}
       propertyPath: 'subSteps.Array.data[0]'
       value: 
-      objectReference: {fileID: 6866959535931319975}
+      objectReference: {fileID: 1128408648283202507}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3929110419934294854, guid: fe677d46cdecaef4e8096771a7cb5020, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2914806025649369286}
+      addedObject: {fileID: 7725840579625763400}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe677d46cdecaef4e8096771a7cb5020, type: 3}
 --- !u!4 &7363179062521688384 stripped
@@ -79,7 +155,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7363179062521688384}
+    m_TransformParent: {fileID: 7725840579625763400}
     m_Modifications:
     - target: {fileID: 1961351108226525195, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       propertyPath: sourceAsset
@@ -143,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.40000004
       objectReference: {fileID: 0}
     - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       propertyPath: m_LocalScale.y
@@ -151,7 +227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4
+      value: 0.40000004
       objectReference: {fileID: 0}
     - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -171,7 +247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       propertyPath: m_LocalRotation.y
@@ -179,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -201,9 +277,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5481525149749646259, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6866959535931319975}
     - targetCorrespondingSourceObject: {fileID: 3927579247218649798, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5778182502132144000}
@@ -219,30 +292,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6758849327301269162, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
   m_PrefabInstance: {fileID: 8484562913134225004}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4156104547949032927 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5481525149749646259, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
-  m_PrefabInstance: {fileID: 8484562913134225004}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6866959535931319975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4156104547949032927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7d70ce9bd3b1634ea4d8669c5ec0b2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialSubStep
-  manageGameObjectActiveState: 1
-  OnSubStepActive:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSubStepCompleted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4845496616560905386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3927579247218649798, guid: 37da0fce02245bc4b9aaed31c352f4b7, type: 3}
@@ -372,4 +421,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6963930d26475a94eaf3a6e0725bcd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::UIPressStepController
-  tutorialSubStep: {fileID: 6866959535931319975}
+  tutorialSubStep: {fileID: 1128408648283202507}

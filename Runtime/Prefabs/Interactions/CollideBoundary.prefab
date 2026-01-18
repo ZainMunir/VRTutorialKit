@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c8fa501ac229714b8651f15bda35ef4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.22484016
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c8fa501ac229714b8651f15bda35ef4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c8fa501ac229714b8651f15bda35ef4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.09306002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c8fa501ac229714b8651f15bda35ef4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -81,9 +81,6 @@ PrefabInstance:
       addedObject: {fileID: 3288431329075125513}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c8fa501ac229714b8651f15bda35ef4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3528488556549208898}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c8fa501ac229714b8651f15bda35ef4, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 354150851682534995}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c8fa501ac229714b8651f15bda35ef4, type: 3}
       insertIndex: -1
@@ -115,25 +112,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.02000001, z: 0.12943974}
   m_Center: {x: 0, y: 8.942208e-18, z: -0.014719791}
---- !u!114 &3528488556549208898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9196459293628786081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7d70ce9bd3b1634ea4d8669c5ec0b2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialSubStep
-  manageGameObjectActiveState: 1
-  OnSubStepActive:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSubStepCompleted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &354150851682534995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ChangeMaterialOnComplete
   newMaterial: {fileID: 2100000, guid: 7772d9d65219c934d999e969395fedc8, type: 2}
-  subStep: {fileID: 3528488556549208898}
+  subStep: {fileID: 0}
 --- !u!114 &2982748245256046658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d460f0a04e7532438f4d781e2044b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnTriggerTag
-  subStep: {fileID: 3528488556549208898}
+  subStep: {fileID: 0}
   startDelay: 0.5
   targetTag: TutorialXRRig

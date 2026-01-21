@@ -113,6 +113,5 @@ namespace ECDA.VRTutorialKit
         {
             tutorialManager.FinishTutorial();
         }
-
     }
 }

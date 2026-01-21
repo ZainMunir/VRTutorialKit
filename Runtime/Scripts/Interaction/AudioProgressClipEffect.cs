@@ -23,7 +23,6 @@ namespace ECDA.VRTutorialKit
         {
             if (audioSource == null) return;
 
-            // 1. If progress is reset to 0, stop the sound so it can restart later
             if (progress <= 0)
             {
                 if (audioSource.isPlaying)
@@ -33,14 +32,11 @@ namespace ECDA.VRTutorialKit
                 return;
             }
 
-            // 2. If progress starts and we aren't playing yet, Play!
             if (progress >= startThreshold && !audioSource.isPlaying)
             {
                 audioSource.Play();
             }
 
-            // 3. Optional: Stop the sound immediately if they finish 
-            // (Standard if you have a separate "Success" chime that plays at 1.0)
             if (progress >= 1f && audioSource.isPlaying)
             {
                 audioSource.Stop();

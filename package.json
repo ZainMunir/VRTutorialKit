@@ -1,12 +1,13 @@
 {
   "name": "com.ecda.vrtutorialkit",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "displayName": "VR Tutorial Kit",
   "description": "A modular VR tutorial package for basic interactions.",
   "unity": "6000.3",
   "dependencies": {
     "com.unity.xr.interaction.toolkit": "3.3.0",
-    "com.unity.inputsystem": "1.16.0"
+    "com.unity.inputsystem": "1.16.0",
+    "com.unity.xr.core-utils": "2.5.3"
   },
   "author": {
     "name": "ECDA",

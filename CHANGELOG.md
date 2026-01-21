@@ -19,10 +19,35 @@ like
 git log v0.0.0..HEAD --oneline --no-decorate
 ```
 
+## v0.3.0
+Guiding arrows, new steps (gaze, recenter, variations of movement and grab) and reworked tooltips
+
+### Commits
+```
+13b3e0d add: color interpolation effect for gaze step
+c676a46 add: grab movement step
+e522f28 add: change how tooltips are handled
+a0862a8 add: make all tooltips right handed and flip for left instead
+7667336 add: basic both controller movement steps
+2da800c add: re-center step
+18dd70f add: recenter tooltip
+3fdbd70 add: far grab step
+7c755d7 add: changed navigation between scenes
+10421fd add: tutorial config selector ui
+41926f0 refactor: file locations
+1b97e68 add: gaze interaction step
+d25705b add: guiding arrows based on target position
+98075c5 add: locomotion endings closer to table
+463bbba add: new table
+193f6f9 fix: outline stuff unconnected
+06ca15a changelog: entry v0.2.0
+```
+
 ## v0.2.0
 First versions of many vr interactions with placeholder video visuals, tested in other project
 
 ### Commits
+```
 6825a9c fix: regenerate guids for quickoutline
 157a842 refactor: move quickoutline into package
 224664f add: respawn objects if far away
@@ -63,11 +88,14 @@ a00d8c1 fix: namespace curly brace wrong indentation
 aeabee4 add: dynamic tooltip based on tutorial step
 5ad4f3c init: main scene
 ce9b9b1 changelog: entry v0.1.0
+```
 
 ## v0.1.0
 Basic package structure following unity documentation and import tested in other project via git url
 
 ### Commits
+```
 b7c169a change: version and add author
 a181c37 add: more structure from unity website
 decbc73 init: structure
+```

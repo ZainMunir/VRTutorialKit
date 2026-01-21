@@ -12,10 +12,22 @@ PrefabInstance:
       propertyPath: subStep
       value: 
       objectReference: {fileID: 9147500928141794257}
+    - target: {fileID: 4307869881499169550, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5978789717584471749, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
       propertyPath: subStep
       value: 
       objectReference: {fileID: 9147500928141794257}
+    - target: {fileID: 5978789717584471749, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053394279983507675, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: baec3d057c2d23a46bf1ebdf1d0a374a, type: 2}
     - target: {fileID: 8134302614855669005, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
       propertyPath: m_Name
       value: TeleportAnchor
@@ -63,13 +75,77 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8854724248126605582, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2791507596264446599}
+    - targetCorrespondingSourceObject: {fileID: 8854724248126605582, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 821612167426018434}
+    - targetCorrespondingSourceObject: {fileID: 8854724248126605582, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8200577196144882964}
   m_SourcePrefab: {fileID: 100100000, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
 --- !u!4 &2567688242726340416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8134302614855669011, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
   m_PrefabInstance: {fileID: 5998966207064461907}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3000196908011068253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8854724248126605582, guid: 4b46c13f778871745a83a68e6ffea008, type: 3}
+  m_PrefabInstance: {fileID: 5998966207064461907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2791507596264446599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000196908011068253}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &821612167426018434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000196908011068253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3121338581892444288baa5e21698c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ChangeMaterialOnComplete
+  newMaterial: {fileID: 2100000, guid: 197ff8ca9b6e5d0429613ba4b4e8f275, type: 2}
+  subStep: {fileID: 9147500928141794257}
+--- !u!114 &8200577196144882964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000196908011068253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d460f0a04e7532438f4d781e2044b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnTriggerTag
+  subStep: {fileID: 9147500928141794257}
+  startDelay: 0.5
+  targetTag: TutorialXRRig
 --- !u!1001 &9094299637426685586
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,10 @@ namespace ECDA.VRTutorialKit
         void Awake()
         {
             objectRenderer = GetComponent<Renderer>();
+            if (subStep == null)
+            {
+                Debug.LogWarning($"TutorialSubStep reference is not set on ChangeMaterialOnComplete on {name}.");
+            }
         }
 
         void OnEnable()

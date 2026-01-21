@@ -22,7 +22,7 @@ namespace ECDA.VRTutorialKit
             }
             if (subStep == null)
             {
-                Debug.LogError($"TutorialSubStep reference is not set on {GetType().Name} on {name}.");
+                Debug.LogWarning($"TutorialSubStep reference is not set on {GetType().Name} on {name}.");
             }
         }
 

@@ -15,7 +15,7 @@ MonoBehaviour:
   stepTitle: Re-centering your view
   stepDescription: At any point, you can hold down the indented button on the right
     controller to reposition the scene to where you are looking
-  videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
+  videoClip: {fileID: 32900000, guid: 9dd395bf33eb7d148bcf0d5392589801, type: 3}
   interactionPrefab: {fileID: 4880692150062475949, guid: 0a122c7200292eb47a6e0c4f1c26f362, type: 3}
   immediateCompletion: 0
   leftTooltipPrefabs: []

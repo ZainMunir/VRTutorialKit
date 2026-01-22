@@ -16,7 +16,7 @@ MonoBehaviour:
   stepDescription: You can move around smoothly with the left stick, or teleport
     by holding the right stick forward and releasing it once the arrow is where you
     want it. We recommend you use Teleportation
-  videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
+  videoClip: {fileID: 32900000, guid: f410ec199940453479e05e451fd18005, type: 3}
   interactionPrefab: {fileID: 6400019320946754940, guid: 154b3a61571915349a7b3b34de1432d1, type: 3}
   immediateCompletion: 0
   leftTooltipPrefabs:

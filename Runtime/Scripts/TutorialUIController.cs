@@ -82,17 +82,23 @@ namespace ECDA.VRTutorialKit
         void UpdateStepUI()
         {
             TutorialStep step = tutorialManager.GetCurrentStep();
-            if (step == null)
-                return;
+            if (step == null) return;
 
             stepTitleLabel.text = step.stepTitle;
             stepDescriptionLabel.text = step.stepDescription;
 
             if (step.videoClip != null)
             {
-                videoPlayer.Stop();
-                videoPlayer.clip = step.videoClip;
-                videoPlayer.Play();
+                if (videoPlayer.clip != step.videoClip)
+                {
+                    videoPlayer.Stop();
+                    videoPlayer.clip = step.videoClip;
+                    videoPlayer.Play();
+                }
+                else if (!videoPlayer.isPlaying)
+                {
+                    videoPlayer.Play();
+                }
             }
             else
             {

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
-  m_Name: FinishInfo
+  m_Name: Finish
   m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialStep
   stepTitle: Finished!
   stepDescription: That's all you need to know from this tutorial. Hit "Finish" and
     you'll have access to whatever comes next
-  videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
+  videoClip: {fileID: 32900000, guid: 7b298984c8dea54439abcf4cf370ed89, type: 3}
   interactionPrefab: {fileID: 0}
   immediateCompletion: 1
   leftTooltipPrefabs:

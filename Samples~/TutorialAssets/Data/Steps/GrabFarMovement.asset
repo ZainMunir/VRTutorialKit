@@ -16,7 +16,7 @@ MonoBehaviour:
   stepDescription: After you grab an object, it's still possible to move or teleport
     with it. Try going and retrieving the object on the other side of the wall while
     holding it the entire time
-  videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
+  videoClip: {fileID: 32900000, guid: b8864acd000902a49ad03b5d2798abca, type: 3}
   interactionPrefab: {fileID: 6575817973684982583, guid: 0745ab0e6f44dda46854e5c3de10e068, type: 3}
   immediateCompletion: 0
   leftTooltipPrefabs:

@@ -16,7 +16,7 @@ MonoBehaviour:
   stepDescription: You can move around smoothly with the stick on either controller.
     Be careful as this can make you feel nauseous if you are not used to it. Try
     walking around and going through the red targets as they appear
-  videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
+  videoClip: {fileID: 32900000, guid: 0af0ec0fbe8cae54bb50937de6a99ec1, type: 3}
   interactionPrefab: {fileID: 6400019320946754940, guid: 154b3a61571915349a7b3b34de1432d1, type: 3}
   immediateCompletion: 0
   leftTooltipPrefabs:

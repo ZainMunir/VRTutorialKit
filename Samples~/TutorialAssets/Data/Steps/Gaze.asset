@@ -15,11 +15,11 @@ MonoBehaviour:
   stepTitle: Looking Around
   stepDescription: VR allows you to look around the room in every direction. Follow
     the arrows and look at every target to get used to this
-  videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
+  videoClip: {fileID: 32900000, guid: eed17c617bf82ad44bc396c837285574, type: 3}
   interactionPrefab: {fileID: 6276379440539089896, guid: cd80cad200afaa548b6477ab95dca921, type: 3}
   immediateCompletion: 0
-  tooltipPrefabs: []
-  tooltipHand: 2
+  leftTooltipPrefabs: []
+  rightTooltipPrefabs: []
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 0

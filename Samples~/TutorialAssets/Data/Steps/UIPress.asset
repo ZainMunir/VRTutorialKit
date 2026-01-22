@@ -15,7 +15,7 @@ MonoBehaviour:
   stepTitle: Interact with UI
   stepDescription: UI elements might be used for various purposes. Try some out on
     the other screen
-  videoClip: {fileID: 32900000, guid: 22e1e4c3766681942bfd60f6a4c267ad, type: 3}
+  videoClip: {fileID: 32900000, guid: d7560d4f6d0bc7f4b9e397ec3b562aed, type: 3}
   interactionPrefab: {fileID: 662919140329301054, guid: 3201e24bf65c1dc408a012d6280fb5ce, type: 3}
   immediateCompletion: 0
   leftTooltipPrefabs:

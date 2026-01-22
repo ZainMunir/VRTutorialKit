@@ -15,7 +15,7 @@ MonoBehaviour:
   stepTitle: Doors
   stepDescription: Some doors may be interactable in different ways, using the "Grab"
     trigger. Try it out with the doors on the right
-  videoClip: {fileID: 32900000, guid: 6b6d636cdcfb47541b5e523dfc7ee28f, type: 3}
+  videoClip: {fileID: 32900000, guid: ff875c3b5e169004dbe30ade292968a5, type: 3}
   interactionPrefab: {fileID: 8261944132838956729, guid: 8cc070baab5b2934ba0979abd8750dc8, type: 3}
   immediateCompletion: 0
   leftTooltipPrefabs:

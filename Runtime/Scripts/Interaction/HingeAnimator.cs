@@ -11,7 +11,10 @@ namespace ECDA.VRTutorialKit
         public Transform hinge;
         public float openAngle = 90f;
         public float speed = 2f;
+
+        public bool useYAxis = true;
         public bool useXAxis = false;
+        public bool useZAxis = false;
 
         [Header("Events")]
         public UnityEvent OnOpened;
@@ -39,7 +42,10 @@ namespace ECDA.VRTutorialKit
             float duration = 1f / speed;
             float elapsed = 0f;
 
-            Vector3 axis = useXAxis ? Vector3.right : Vector3.up;
+            Vector3 axis = Vector3.zero;
+            if (useYAxis) axis += Vector3.up;
+            if (useXAxis) axis += Vector3.right;
+            if (useZAxis) axis += Vector3.forward;
 
             while (elapsed < duration)
             {

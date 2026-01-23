@@ -8,8 +8,8 @@ namespace ECDA.VRTutorialKit
     {
         private class RendererData
         {
-            public Material material;
-            public Color originalColor;
+            public Renderer renderer;
+            public List<Color> originalColors;
         }
 
         private List<RendererData> _renderers = new List<RendererData>();
@@ -19,11 +19,15 @@ namespace ECDA.VRTutorialKit
             var renderers = GetComponentsInChildren<Renderer>();
             foreach (var renderer in renderers)
             {
-                var mat = renderer.material;
+                var originalColors = new List<Color>();
+                foreach (var mat in renderer.materials)
+                {
+                    originalColors.Add(mat.color);
+                }
                 _renderers.Add(new RendererData
                 {
-                    material = mat,
-                    originalColor = mat.color
+                    renderer = renderer,
+                    originalColors = originalColors
                 });
             }
         }
@@ -32,9 +36,9 @@ namespace ECDA.VRTutorialKit
         {
             foreach (var data in _renderers)
             {
-                if (data.material != null)
+                for (int i = 0; i < data.renderer.materials.Length; i++)
                 {
-                    data.material.color = isHovered ? data.originalColor * 1.2f : data.originalColor;
+                    data.renderer.materials[i].color = isHovered ? data.originalColors[i] * 1.2f : data.originalColors[i];
                 }
             }
         }

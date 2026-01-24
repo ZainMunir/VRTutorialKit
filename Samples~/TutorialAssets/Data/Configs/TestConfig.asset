@@ -15,4 +15,5 @@ MonoBehaviour:
   tutorialSteps:
   - {fileID: 11400000, guid: 1db6a6d53afa20347ac12987acfe6d0d, type: 2}
   - {fileID: 11400000, guid: 0e9377b49b3de2a48940a027986d92c6, type: 2}
+  - {fileID: 11400000, guid: 721dce7c48a096640907540c741b915a, type: 2}
   startingScene: Assets/Samples/VRTutorialKitSamples/TutorialAssets/ExitPlaceholder.unity

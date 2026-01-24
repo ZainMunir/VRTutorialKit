@@ -169,6 +169,10 @@ namespace ECDA.VRTutorialKit
         materials.Remove(outlineMaskMaterial);
         materials.Remove(outlineFillMaterial);
 
+        // Extra fallback based on name
+        materials.RemoveAll(mat => mat != null && (mat.name.Contains("OutlineMask (Instance)") || mat.name.Contains("OutlineFill (Instance)")));
+
+
         renderer.materials = materials.ToArray();
       }
     }

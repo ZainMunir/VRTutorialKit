@@ -59,7 +59,6 @@ namespace ECDA.VRTutorialKit
 
                 if (active) highlightable.Highlight();
                 else highlightable.Unhighlight();
-
             }
         }
     }

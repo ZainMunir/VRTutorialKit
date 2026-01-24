@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace ECDA.VRTutorialKit
@@ -7,7 +8,9 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private Color highlightColor = Color.yellow;
         [SerializeField, Range(0f, 10f)] private float outlineWidth = 10f;
         [SerializeField] private Outline.Mode outlineMode = Outline.Mode.OutlineAndSilhouette;
+        [SerializeField] private bool startHighlighted = false;
         private Outline m_Outline;
+
 
         private void Awake()
         {
@@ -19,9 +22,22 @@ namespace ECDA.VRTutorialKit
             }
         }
 
+        private void Start()
+        {
+            if (startHighlighted)
+            {
+                // Wait 1 second to ensure all components are initialized
+                StartCoroutine(WaitAndHighlight());
+            }
+        }
+
+        IEnumerator WaitAndHighlight()
+        {
+            yield return new WaitForSeconds(1f);
+            Highlight();
+        }
         public void Highlight()
         {
-
             m_Outline.OutlineColor = highlightColor;
             m_Outline.OutlineWidth = outlineWidth;
             m_Outline.OutlineMode = outlineMode;

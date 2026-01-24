@@ -230,8 +230,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: manageGameObjectActiveState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.size
@@ -241,10 +245,6 @@ PrefabInstance:
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
-      propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 846358561913679117}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
@@ -333,6 +333,7 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   outlineWidth: 10
   outlineMode: 3
+  startHighlighted: 1
 --- !u!114 &2308098693862836807 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}

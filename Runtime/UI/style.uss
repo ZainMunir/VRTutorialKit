@@ -52,6 +52,10 @@ Button.btn-feedback--fail {
     font-size: 20px;
     flex-grow: 0;
     white-space: normal;
+    padding-top: 0;
+    padding-right: 10px;
+    padding-bottom: 0;
+    padding-left: 10px;
 }
 
 .background {

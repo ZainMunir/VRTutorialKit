@@ -6,7 +6,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 5459536152454858405}
+    m_TransformParent: {fileID: 5459536152229239428}
     m_Modifications:
     - target: {fileID: 2486521786163440286, guid: 6f70fd83109951a409af49f2d725a234, type: 3}
       propertyPath: m_LocalPosition.x
@@ -50,11 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5968413171064840470, guid: 6f70fd83109951a409af49f2d725a234, type: 3}
       propertyPath: m_Name
-      value: FadeCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 5968413171064840470, guid: 6f70fd83109951a409af49f2d725a234, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: FadeOverlay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -292,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
       propertyPath: m_TagString
-      value: TutorialXRRig
+      value: XRRig
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -357,8 +353,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1680501587, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
-      insertIndex: 1
+    - targetCorrespondingSourceObject: {fileID: 1767192434, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1006467941752099828}
     - targetCorrespondingSourceObject: {fileID: 1767192434, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
       insertIndex: -1
@@ -442,11 +438,6 @@ Transform:
 --- !u!4 &5459536152411109895 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1670256625, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
-  m_PrefabInstance: {fileID: 5459536150774672886}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5459536152454858405 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1680501587, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
   m_PrefabInstance: {fileID: 5459536150774672886}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6176948478950932623 stripped

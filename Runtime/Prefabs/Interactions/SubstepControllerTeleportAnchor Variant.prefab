@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnTriggerTag
   subStep: {fileID: 9147500928141794257}
   startDelay: 0.5
-  targetTag: TutorialXRRig
+  targetTag: XRRig
 --- !u!1001 &9094299637426685586
 PrefabInstance:
   m_ObjectHideFlags: 0

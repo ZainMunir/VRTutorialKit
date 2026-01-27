@@ -119,17 +119,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &154973433 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5589723892298332842, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
-  m_PrefabInstance: {fileID: 1724228136}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b630dd5a32528a499b8adf246012d7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::SceneTransitionController
+--- !u!1001 &85756701
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.18987
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.36053
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614836780190640397, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708365773024052323, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 1724228137}
+    - target: {fileID: 9132142212063818386, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
+      propertyPath: m_Name
+      value: SceneTransitionController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc85c630ae8c6ad4c8d9fbe7727970ee, type: 3}
 --- !u!1 &207505256
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +464,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &457688189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457688191}
+  - component: {fileID: 457688190}
+  m_Layer: 0
+  m_Name: TransitionTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &457688190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457688189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3d966a16f50384395c8992361b066d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TransitionTrigger
+  targetSceneName: Assets/Samples/VRTutorialKitSamples/TutorialAssets/MainScene.unity
+--- !u!4 &457688191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457688189}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.29268, y: 0, z: 2.34525}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &688237187
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +735,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a00cff961714664a0cb9bc68a41d6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.XRUIToolkitManager
+--- !u!1001 &1571563178
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352107842328975328, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262266850012478439, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50889ce3f679cb640887d2e774ab2d29, type: 3}
 --- !u!1 &1679529163
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +895,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
+--- !u!114 &1724228137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4187679488746063216, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
+  m_PrefabInstance: {fileID: 1724228136}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005c68984e979c34381e534094d1aef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::FadeScreen
 --- !u!1 &1776915170
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,10 +1086,10 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 154973433}
-        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.SceneTransitionController, ecda.vrtutorialkit
-        m_MethodName: GoToScene
-        m_Mode: 5
+      - m_Target: {fileID: 457688190}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.TransitionTrigger, ecda.vrtutorialkit
+        m_MethodName: ExecuteTransition
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1079,6 +1242,9 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 85756701}
+  - {fileID: 1571563178}
+  - {fileID: 457688191}
   - {fileID: 890454680}
   - {fileID: 412044141}
   - {fileID: 1776915173}

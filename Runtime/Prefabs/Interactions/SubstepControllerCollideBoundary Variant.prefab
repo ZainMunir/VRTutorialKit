@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: subStep
       value: 
       objectReference: {fileID: 1432064493855538171}
+    - target: {fileID: 2982748245256046658, guid: 9bd15eeaa14efd2469164410693b0fa2, type: 3}
+      propertyPath: targetTag
+      value: XRRig
+      objectReference: {fileID: 0}
     - target: {fileID: 8425025080159190811, guid: 9bd15eeaa14efd2469164410693b0fa2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.22484016

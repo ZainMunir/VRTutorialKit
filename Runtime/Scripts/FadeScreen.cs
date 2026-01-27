@@ -23,19 +23,12 @@ namespace ECDA.VRTutorialKit
                 FadeIn();
         }
 
-        public void FadeIn()
-        {
-            Fade(1, 0);
-        }
+        public Coroutine FadeIn() => Fade(1, 0);
+        public Coroutine FadeOut() => Fade(0, 1);
 
-        public void FadeOut()
+        public Coroutine Fade(float alphaIn, float alphaOut)
         {
-            Fade(0, 1);
-        }
-
-        public void Fade(float alphaIn, float alphaOut)
-        {
-            StartCoroutine(FadeRoutine(alphaIn, alphaOut));
+            return StartCoroutine(FadeRoutine(alphaIn, alphaOut));
         }
 
         IEnumerator FadeRoutine(float alphaIn, float alphaOut)

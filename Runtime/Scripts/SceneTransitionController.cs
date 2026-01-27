@@ -4,28 +4,99 @@ using UnityEngine.SceneManagement;
 
 namespace ECDA.VRTutorialKit
 {
-
     public class SceneTransitionController : MonoBehaviour
     {
+        public static SceneTransitionController Instance { get; private set; }
         public FadeScreen fadeScreen;
+        [SerializeField] private bool _isTransitioning = false;
+
+        void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            if (fadeScreen == null)
+            {
+                fadeScreen = FindAnyObjectByType<FadeScreen>();
+            }
+        }
 
         public void GoToScene(string sceneName)
         {
+            if (_isTransitioning) return;
             StartCoroutine(GoToSceneRoutine(sceneName));
         }
 
         IEnumerator GoToSceneRoutine(string sceneName)
         {
-            fadeScreen.FadeOut();
+            _isTransitioning = true;
 
-            AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
-            operation.allowSceneActivation = false;
-            yield return new WaitForSeconds(fadeScreen.fadeDuration);
-            while (operation.progress < 0.9f)
+            try
             {
+                AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+                operation.allowSceneActivation = false;
+
+                if (fadeScreen != null) yield return fadeScreen.FadeOut();
+
+                while (operation.progress < 0.9f)
+                {
+                    yield return null;
+                }
+
+                operation.allowSceneActivation = true;
+
                 yield return null;
+
+                fadeScreen = FindAnyObjectByType<FadeScreen>(FindObjectsInactive.Include);
+
+                AlignPlayer();
+
+                if (fadeScreen != null)
+                {
+                    yield return fadeScreen.FadeIn();
+                }
             }
-            operation.allowSceneActivation = true;
+            finally
+            {
+                _isTransitioning = false;
+            }
+        }
+
+        private void AlignPlayer()
+        {
+            // 1. Find the new scene's components
+            GameObject spawnPoint = GameObject.FindWithTag("SpawnPoint");
+            // Most XR Origins are tagged "Player" or have the script XR Origin
+            GameObject xrOrigin = GameObject.FindWithTag("XRRig");
+
+            if (spawnPoint == null || xrOrigin == null)
+            {
+                Debug.LogWarning("Alignment failed: SpawnPoint or XR Origin missing in new scene.");
+                return;
+            }
+
+            Transform cameraTransform = Camera.main.transform;
+
+            // 2. Position Alignment
+            // Calculate the offset between the rig and the actual headset position
+            Vector3 distanceOffset = xrOrigin.transform.position - cameraTransform.position;
+            // Flatten y so we don't accidentally bury the player in the floor
+            distanceOffset.y = 0;
+            xrOrigin.transform.position = spawnPoint.transform.position + distanceOffset;
+
+            // 3. Rotation Alignment
+            float cameraYaw = cameraTransform.eulerAngles.y;
+            float rigYaw = xrOrigin.transform.eulerAngles.y;
+            float spawnYaw = spawnPoint.transform.eulerAngles.y;
+
+            // Formula: Adjust rig rotation so camera matches spawn rotation
+            float targetYaw = spawnYaw - (cameraYaw - rigYaw);
+            xrOrigin.transform.rotation = Quaternion.Euler(0, targetYaw, 0);
         }
     }
 }

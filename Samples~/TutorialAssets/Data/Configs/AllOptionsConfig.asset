@@ -26,7 +26,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e753c384c1f28041a347c8d99f3d8d2, type: 2}
   - {fileID: 11400000, guid: 7956f59c84d43d942942e693ed6bd187, type: 2}
   - {fileID: 11400000, guid: 53fab3a1776a3cc49a8c16a24f4aaa40, type: 2}
+  - {fileID: 11400000, guid: 1d1649c4f40af9f4f83fad3584c768e2, type: 2}
   - {fileID: 11400000, guid: 721dce7c48a096640907540c741b915a, type: 2}
   - {fileID: 11400000, guid: 0e9377b49b3de2a48940a027986d92c6, type: 2}
+  - {fileID: 11400000, guid: 4955721ec7ca8a141b9914a8aa373d20, type: 2}
   - {fileID: 11400000, guid: 826b1ef50ce57824fa35909811e057f7, type: 2}
   startingScene: Assets/Samples/VRTutorialKitSamples/TutorialAssets/ExitPlaceholder.unity

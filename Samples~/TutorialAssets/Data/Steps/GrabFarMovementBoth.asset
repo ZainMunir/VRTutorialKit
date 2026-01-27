@@ -10,20 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
-  m_Name: Doors
+  m_Name: GrabFarMovementBoth
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Doors
-  stepDescription: Some doors may be interactable in different ways, using the "Grab"
-    trigger. Try it out with the doors on the right
-  videoClip: {fileID: 32900000, guid: ff875c3b5e169004dbe30ade292968a5, type: 3}
-  interactionPrefab: {fileID: 8261944132838956729, guid: 8cc070baab5b2934ba0979abd8750dc8, type: 3}
+  stepTitle: Moving with Objects
+  stepDescription: After you grab an object, it's still possible to move or teleport
+    with it. Try going and retrieving the object on the other side of the wall while
+    holding it the entire time
+  videoClip: {fileID: 32900000, guid: b8864acd000902a49ad03b5d2798abca, type: 3}
+  interactionPrefab: {fileID: 6575817973684982583, guid: 0745ab0e6f44dda46854e5c3de10e068, type: 3}
   immediateCompletion: 0
   leftTooltipPrefabs:
   - {fileID: 8765200585084022647, guid: 294cd0bc9a9d53e4aa18734f1aa25e75, type: 3}
+  - {fileID: 6681292975738862885, guid: 93b4c0c641ff37d449ee3903fdf81634, type: 3}
+  - {fileID: 6800351992558788412, guid: 5854712de1e1d90499ef2fa2aa214317, type: 3}
   rightTooltipPrefabs:
   - {fileID: 8765200585084022647, guid: 294cd0bc9a9d53e4aa18734f1aa25e75, type: 3}
   - {fileID: 6681292975738862885, guid: 93b4c0c641ff37d449ee3903fdf81634, type: 3}
   - {fileID: 6800351992558788412, guid: 5854712de1e1d90499ef2fa2aa214317, type: 3}
   enableSnapTurn: 0
-  leftHandLocomotion: 0
+  leftHandLocomotion: 2
   rightHandLocomotion: 2

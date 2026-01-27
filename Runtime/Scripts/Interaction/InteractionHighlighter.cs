@@ -11,6 +11,11 @@ namespace ECDA.VRTutorialKit
 
         [SerializeField] private List<GameObject> linkedObjects = new List<GameObject>();
 
+        public List<GameObject> LinkedObjects
+        {
+            get => linkedObjects;
+            set => linkedObjects = value;
+        }
         private XRBaseInteractable m_Interactable;
 
         private void Awake()
@@ -61,5 +66,6 @@ namespace ECDA.VRTutorialKit
                 else highlightable.Unhighlight();
             }
         }
+
     }
 }

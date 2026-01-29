@@ -8,20 +8,43 @@ namespace ECDA.VRTutorialKit
     [RequireComponent(typeof(XRBaseInteractable))]
     public class InteractionHighlighter : MonoBehaviour
     {
-
         [SerializeField] private List<GameObject> linkedObjects = new List<GameObject>();
+        private XRBaseInteractable m_Interactable;
 
         public List<GameObject> LinkedObjects
         {
             get => linkedObjects;
-            set => linkedObjects = value;
         }
-        private XRBaseInteractable m_Interactable;
+
+        public void UpdateLinkedObjects(List<GameObject> newList)
+        {
+            if (m_Interactable == null || !m_Interactable.isSelected)
+            {
+                linkedObjects = newList;
+                return;
+            }
+
+            // unhighlight any removed objects
+            HashSet<GameObject> newSet = new HashSet<GameObject>(newList);
+            foreach (var oldObj in linkedObjects)
+            {
+                if (!newSet.Contains(oldObj))
+                {
+                    HighlightObject highlightable = oldObj.GetComponent<HighlightObject>();
+                    if (highlightable != null)
+                    {
+                        highlightable.Unhighlight();
+                    }
+                }
+            }
+
+            linkedObjects = newList;
+            SetHighlightState(true);
+        }
 
         private void Awake()
         {
             m_Interactable = GetComponent<XRBaseInteractable>();
-
         }
 
         private void OnEnable()
@@ -66,6 +89,5 @@ namespace ECDA.VRTutorialKit
                 else highlightable.Unhighlight();
             }
         }
-
     }
 }

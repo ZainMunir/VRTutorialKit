@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 734996079564348568}
   - component: {fileID: 728864242803681389}
   - component: {fileID: 5172308405717368139}
+  - component: {fileID: 5892832185039759866}
   m_Layer: 0
   m_Name: Socket
   m_TagString: Untagged
@@ -104,6 +105,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.2, z: 0.3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5892832185039759866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106093692981118498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4014ab3ce4d04e49956a2474c0b96fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.SocketFilterByTag
+  requiredTag: {fileID: 0}
+  onValidEntry:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &992896250728694134
 GameObject:
   m_ObjectHideFlags: 0

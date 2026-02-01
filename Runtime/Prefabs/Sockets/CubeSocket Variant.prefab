@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30,15 +30,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 734996079564348568, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -52,36 +52,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5892832185039759866, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: requiredTag
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ec44f026ffb0c34a8e5f44123f96ded, type: 2}
+    - target: {fileID: 5892832185039759866, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: onValidEntry.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892832185039759866, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: onValidEntry.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892832185039759866, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: onValidEntry.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892832185039759866, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: onValidEntry.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Complete
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892832185039759866, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: onValidEntry.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.TutorialSubStep, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892832185039759866, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
+      propertyPath: onValidEntry.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6441652780047499728, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5830274279314894923}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 106093692981118498, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 41417544127560993}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
---- !u!1 &1598235409877711966 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 106093692981118498, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}
-  m_PrefabInstance: {fileID: 1681805314535111292}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &41417544127560993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598235409877711966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3ed7acf0de897544bf5efadd7b9de68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnSocketEnter
-  subStep: {fileID: 0}
-  targetObject: {fileID: 0}
 --- !u!4 &5635023579869952940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6441652780047499728, guid: 37b620fce7a8822459a1794ecc78f023, type: 3}

@@ -4,7 +4,7 @@ using UnityEngine.Video;
 
 namespace ECDA.VRTutorialKit
 {
-    [CreateAssetMenu(fileName = "TutorialStep", menuName = "Tutorial/TutorialStep")]
+    [CreateAssetMenu(fileName = "TutorialStep", menuName = "VRTutorialKit/TutorialStep")]
 
     public class TutorialStep : ScriptableObject
     {

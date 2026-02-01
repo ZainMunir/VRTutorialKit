@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -18,7 +19,6 @@ namespace ECDA.VRTutorialKit
             if (m_Outline == null)
             {
                 m_Outline = gameObject.AddComponent<Outline>();
-                m_Outline.enabled = false;
             }
         }
 
@@ -27,15 +27,20 @@ namespace ECDA.VRTutorialKit
             if (startHighlighted)
             {
                 // Wait 1 second to ensure all components are initialized
-                StartCoroutine(WaitAndHighlight());
+                StartCoroutine(WaitAndHighlight(Highlight));
+            }
+            else
+            {
+                StartCoroutine(WaitAndHighlight(Unhighlight));
             }
         }
 
-        IEnumerator WaitAndHighlight()
+        IEnumerator WaitAndHighlight(Action function = null)
         {
             yield return new WaitForSeconds(1f);
-            Highlight();
+            function?.Invoke();
         }
+
         public void Highlight()
         {
             m_Outline.OutlineColor = highlightColor;

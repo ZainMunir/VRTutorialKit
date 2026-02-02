@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-    public class CompleteOnTriggerObject : CompleteOnTriggerBase
+    public class OnTriggerEnterEventObject : OnTriggerEnterEventBase
     {
         [SerializeField] private GameObject targetObject;
 

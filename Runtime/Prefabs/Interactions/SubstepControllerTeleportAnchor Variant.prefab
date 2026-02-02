@@ -143,8 +143,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d460f0a04e7532438f4d781e2044b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnTriggerTag
-  subStep: {fileID: 9147500928141794257}
   startDelay: 0.5
+  onTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9147500928141794257}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.TutorialSubStep, ecda.vrtutorialkit
+        m_MethodName: Complete
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   targetTag: XRRig
 --- !u!1001 &9094299637426685586
 PrefabInstance:

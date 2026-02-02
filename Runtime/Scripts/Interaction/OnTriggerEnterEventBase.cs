@@ -1,16 +1,18 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ECDA.VRTutorialKit
 {
     [RequireComponent(typeof(Collider))]
-    public abstract class CompleteOnTriggerBase : MonoBehaviour
+    public abstract class OnTriggerEnterEventBase : MonoBehaviour
     {
         private Collider m_collider;
-        [SerializeField] protected TutorialSubStep subStep;
 
         [Tooltip("Time in seconds to wait after enabling before checking for collisions. Prevents triggering on spawn.")]
         [SerializeField] private float startDelay = 0.5f;
         private float m_TimeEnabled;
+
+        public UnityEvent onTriggered;
 
         protected virtual void Awake()
         {
@@ -19,10 +21,6 @@ namespace ECDA.VRTutorialKit
             {
                 Debug.LogWarning($"Collider on {name} is not set as Trigger. Setting isTrigger to true.");
                 m_collider.isTrigger = true;
-            }
-            if (subStep == null)
-            {
-                Debug.LogWarning($"TutorialSubStep reference is not set on {GetType().Name} on {name}.");
             }
         }
 
@@ -37,10 +35,7 @@ namespace ECDA.VRTutorialKit
 
             if (Evaluate(other))
             {
-                if (subStep != null)
-                {
-                    subStep.Complete();
-                }
+                onTriggered?.Invoke();
             }
         }
 

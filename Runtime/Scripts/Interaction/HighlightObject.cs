@@ -10,9 +10,8 @@ namespace ECDA.VRTutorialKit
         [SerializeField, Range(0f, 10f)] private float outlineWidth = 10f;
         [SerializeField] private Outline.Mode outlineMode = Outline.Mode.OutlineAndSilhouette;
         [SerializeField] private bool startHighlighted = false;
-        [Tooltip("Delay in seconds before applying the highlight at start. (only used if Start Highlighted is true)")]
-        [SerializeField] private int highlightDelaySeconds = 1;
         [SerializeField] private bool startUnhighlighted = false;
+        [SerializeField] private int highlightDelaySeconds = 1;
         private Outline m_Outline;
 
         private void Awake()
@@ -22,21 +21,22 @@ namespace ECDA.VRTutorialKit
             {
                 m_Outline = gameObject.AddComponent<Outline>();
             }
+
         }
 
         private void Start()
         {
-            if (startHighlighted)
+            if (startHighlighted && startUnhighlighted)
             {
-                // Wait 1 second to ensure all components are initialized
-                StartCoroutine(WaitAndHighlight(Highlight, highlightDelaySeconds));
+                Debug.LogWarning("Both startHighlighted and startUnhighlighted are set to true. Object will start unhighlighted.");
+                startHighlighted = false;
             }
 
+            if (startHighlighted)
+                StartCoroutine(WaitAndHighlight(Highlight, highlightDelaySeconds));
+
             if (startUnhighlighted)
-            {
-                // Wait 1 second to ensure all components are initialized
-                StartCoroutine(WaitAndHighlight(Unhighlight, 1));
-            }
+                StartCoroutine(WaitAndHighlight(Unhighlight, highlightDelaySeconds));
         }
 
         IEnumerator WaitAndHighlight(Action function = null, int delaySeconds = 1)

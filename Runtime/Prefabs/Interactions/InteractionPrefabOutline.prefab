@@ -312,6 +312,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7503459990976185480, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 846358561913679117}
+    - targetCorrespondingSourceObject: {fileID: 7503459990976185480, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1911773643880704065}
   m_SourcePrefab: {fileID: 100100000, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
 --- !u!1 &540702879234251525 stripped
 GameObject:
@@ -334,6 +337,26 @@ MonoBehaviour:
   outlineWidth: 10
   outlineMode: 3
   startHighlighted: 1
+  startUnhighlighted: 0
+  highlightDelaySeconds: 1
+--- !u!114 &1911773643880704065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540702879234251525}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93364c3491af05842b58b61ceda10f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.Outline
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &2308098693862836807 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}

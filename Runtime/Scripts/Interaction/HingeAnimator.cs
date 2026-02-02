@@ -24,6 +24,19 @@ namespace ECDA.VRTutorialKit
         private bool isAnimating = false;
         private float currentAngle = 0f;
 
+        public void Start()
+        {
+            if (hinge == null)
+            {
+                Debug.LogWarning("Hinge Transform is not assigned. Using parent if available.");
+                hinge = transform.parent;
+                if (hinge == null)
+                {
+                    Debug.LogError("No parent found to use as hinge.");
+                }
+            }
+        }
+
         public void Toggle() => SetState(!isOpen);
 
         public void SetState(bool open)

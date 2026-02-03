@@ -11,3 +11,7 @@
 
 [Quick Outline](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488#reviews)
 - v1.1 is copied with slight modifications into the package
+
+
+## Render Settings
+Add the `Outline Fill` and `Outline Objects` to the existing render pipeline (`Assets/Settings/Project Configuration/Android Preset`)

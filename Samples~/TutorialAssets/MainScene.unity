@@ -1516,6 +1516,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 35497895747792144, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 2147483937
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459536151825766142, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 2147483937
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459536152229239425, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 311
+      objectReference: {fileID: 0}
     - target: {fileID: 6634732053140767704, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1559,6 +1571,10 @@ PrefabInstance:
     - target: {fileID: 6634732053140767707, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
       propertyPath: m_Name
       value: TutorialXRRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020721063608791951, guid: 17a429e007afbc144a1253ddbcbec3c4, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 2147483937
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

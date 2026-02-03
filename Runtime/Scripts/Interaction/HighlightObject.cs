@@ -7,55 +7,55 @@ namespace ECDA.VRTutorialKit
     public class HighlightObject : MonoBehaviour
     {
         [SerializeField] private Color highlightColor = Color.yellow;
-        [SerializeField, Range(0f, 10f)] private float outlineWidth = 10f;
-        [SerializeField] private Outline.Mode outlineMode = Outline.Mode.OutlineAndSilhouette;
+        [SerializeField, Range(0f, 20f)] private float outlineWidth = 10f;
         [SerializeField] private bool startHighlighted = false;
-        [SerializeField] private bool startUnhighlighted = false;
         [SerializeField] private int highlightDelaySeconds = 1;
-        private Outline m_Outline;
+        private SimpleOutline m_SimpleOutline;
+
+        private Coroutine m_HighlightCoroutine;
 
         private void Awake()
         {
-            m_Outline = GetComponent<Outline>();
-            if (m_Outline == null)
-            {
-                m_Outline = gameObject.AddComponent<Outline>();
-            }
-
+            m_SimpleOutline = GetComponent<SimpleOutline>() ?? gameObject.AddComponent<SimpleOutline>();
+            m_SimpleOutline.UpdateProperties(highlightColor, outlineWidth);
         }
 
         private void Start()
         {
-            if (startHighlighted && startUnhighlighted)
-            {
-                Debug.LogWarning("Both startHighlighted and startUnhighlighted are set to true. Object will start unhighlighted.");
-                startHighlighted = false;
-            }
-
             if (startHighlighted)
-                StartCoroutine(WaitAndHighlight(Highlight, highlightDelaySeconds));
-
-            if (startUnhighlighted)
-                StartCoroutine(WaitAndHighlight(Unhighlight, highlightDelaySeconds));
+                StartCoroutine(WaitAndExecute(Highlight, highlightDelaySeconds));
         }
 
-        IEnumerator WaitAndHighlight(Action function = null, int delaySeconds = 1)
+        private void OnValidate()
         {
-            yield return new WaitForSeconds(delaySeconds);
-            function?.Invoke();
+            if (m_SimpleOutline != null)
+                m_SimpleOutline.UpdateProperties(highlightColor, outlineWidth);
         }
 
-        public void Highlight()
+        private IEnumerator WaitAndExecute(Action action, int delay)
         {
-            m_Outline.OutlineColor = highlightColor;
-            m_Outline.OutlineWidth = outlineWidth;
-            m_Outline.OutlineMode = outlineMode;
-            m_Outline.enabled = true;
+            yield return new WaitForSeconds(delay);
+            action?.Invoke();
         }
 
-        public void Unhighlight()
+        public void HighlightAfterDelay(int delaySeconds)
         {
-            m_Outline.enabled = false;
+            m_HighlightCoroutine = StartCoroutine(WaitAndExecute(Highlight, delaySeconds));
         }
+
+        public void CancelHighlightAfterDelay()
+        {
+            if (m_HighlightCoroutine != null)
+            {
+                StopCoroutine(m_HighlightCoroutine);
+                m_HighlightCoroutine = null;
+            }
+        }
+
+
+        [ContextMenu("Highlight Object")]
+        public void Highlight() => m_SimpleOutline.SetOutlineActive(true);
+        [ContextMenu("Unhighlight Object")]
+        public void Unhighlight() => m_SimpleOutline.SetOutlineActive(false);
     }
 }

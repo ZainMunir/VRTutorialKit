@@ -1,9 +1,9 @@
 ﻿//
-//  OutlineFill.shader
-//  QuickOutline
+// OutlineFill.shader
+// QuickOutline
 //
-//  Created by Chris Nolet on 2/21/18.
-//  Copyright © 2018 Chris Nolet. All rights reserved.
+// Created by Chris Nolet on 2 / 21 / 18.
+// Copyright © 2018 Chris Nolet. All rights reserved.
 //
 
 Shader "Custom/Outline Fill" {
@@ -66,7 +66,7 @@ Shader "Custom/Outline Fill" {
         float3 viewPosition = UnityObjectToViewPos(input.vertex);
         float3 viewNormal = normalize(mul((float3x3)UNITY_MATRIX_IT_MV, normal));
 
-        output.position = UnityViewToClipPos(viewPosition + viewNormal * -viewPosition.z * _OutlineWidth / 1000.0);
+        output.position = UnityViewToClipPos(viewPosition + viewNormal * - viewPosition.z * _OutlineWidth / 1000.0);
         output.color = _OutlineColor;
 
         return output;

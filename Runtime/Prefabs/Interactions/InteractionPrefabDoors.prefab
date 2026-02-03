@@ -1293,9 +1293,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6314046295882885173, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2418224298752284397}
-    - targetCorrespondingSourceObject: {fileID: 6314046295882885173, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 212669709048123674}
   m_SourcePrefab: {fileID: 100100000, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}
 --- !u!1 &3202895084576722106 stripped
 GameObject:
@@ -1459,28 +1456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HighlightObject
   highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   outlineWidth: 10
-  outlineMode: 3
   startHighlighted: 1
-  startUnhighlighted: 0
-  highlightDelaySeconds: 1
---- !u!114 &212669709048123674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3202895084576722106}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93364c3491af05842b58b61ceda10f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.Outline
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
+  highlightDelaySeconds: 0
 --- !u!4 &8964343342105052004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}

@@ -52,18 +52,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 6770086137974757784, guid: 0264fe2e7938dd944bcf2b2f82cb3d02, type: 3}
-      propertyPath: m_Size.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7187384279295809416, guid: 0264fe2e7938dd944bcf2b2f82cb3d02, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7187384279295809416, guid: 0264fe2e7938dd944bcf2b2f82cb3d02, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SmoothMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Smooth Movement
-  stepDescription: You can move around smoothly with the left stick. Be careful as
-    this can make you feel nauseous if you are not used to it. Try walking around
+  stepDescription: You can move around smoothly with the left thumbstick. Be careful
+    as this can make you feel nauseous if you are not used to it. Try walking around
     and going through the red targets as they appear
   videoClip: {fileID: 32900000, guid: e08da7e5a5d4bcc46bf0d9f8b55f3be2, type: 3}
   interactionPrefab: {fileID: 6400019320946754940, guid: 154b3a61571915349a7b3b34de1432d1, type: 3}

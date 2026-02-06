@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BothMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Movement
-  stepDescription: You can move around smoothly with the left stick, or teleport
-    by holding the right stick forward and releasing it once the arrow is where you
-    want it. We recommend you use Teleportation
+  stepDescription: You can move around smoothly with the left thumbstick, or teleport
+    by holding the right thumbstick forward and releasing it once the arrow is where
+    you want it. We recommend you use Teleportation
   videoClip: {fileID: 32900000, guid: f410ec199940453479e05e451fd18005, type: 3}
   interactionPrefab: {fileID: 6400019320946754940, guid: 154b3a61571915349a7b3b34de1432d1, type: 3}
   immediateCompletion: 0

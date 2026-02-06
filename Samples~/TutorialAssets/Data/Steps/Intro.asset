@@ -15,7 +15,8 @@ MonoBehaviour:
   stepTitle: Introduction
   stepDescription: This tutorial aims to familiarise you with some common VR controls
     that you might need in the following VR experiences. To start, you can use the
-    triggers on either hand to interact with UI Elements. Click "Next" to continue
+    triggers on either hand to interact with User Interface buttons. Click "Next"
+    to continue
   videoClip: {fileID: 32900000, guid: 058e31a9c2a99214c9b089e45e3d587a, type: 3}
   interactionPrefab: {fileID: 6932860894398028169, guid: 47c045728f1fa8f4daa5168bf2aa0d53, type: 3}
   immediateCompletion: 1

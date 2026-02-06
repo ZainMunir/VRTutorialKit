@@ -46,6 +46,7 @@ Button.btn-feedback--fail {
     font-size: 25px;
     -unity-font-style: bold;
     -unity-text-align: upper-center;
+    white-space: normal;
 }
 
 .description {
@@ -60,7 +61,7 @@ Button.btn-feedback--fail {
 
 .background {
     flex-grow: 1;
-    background-color: rgba(0, 0, 0, 0.39);
+    background-color: rgb(0, 0, 0);
 }
 
 Toggle #unity-checkmark {

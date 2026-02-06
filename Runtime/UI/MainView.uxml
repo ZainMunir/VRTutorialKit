@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Packages/com.ecda.vrtutorialkit/Runtime/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3#style"/>
+    <Style src="project://database/Packages/com.ecda.vrtutorialkit/Runtime/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3"/>
     <ui:VisualElement class="background">
         <ui:VisualElement name="Header" style="flex-grow: 1; max-height: 15%;">
             <ui:Label text="VR Controls Tutorial" name="title" class="title"/>

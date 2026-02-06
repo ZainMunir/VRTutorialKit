@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SmoothMovementBoth
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Smooth Movement
-  stepDescription: You can move around smoothly with the stick on either controller.
+  stepDescription: You can move around smoothly with the thumbstick on either controller.
     Be careful as this can make you feel nauseous if you are not used to it. Try
     walking around and going through the red targets as they appear
   videoClip: {fileID: 32900000, guid: 0af0ec0fbe8cae54bb50937de6a99ec1, type: 3}

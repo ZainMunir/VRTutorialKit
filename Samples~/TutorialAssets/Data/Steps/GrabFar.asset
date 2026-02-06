@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Grab from a Distance
   stepDescription: You can also grab objects that are far away from a distance by
-    aiming the line in from of the controllers at them
+    aiming the line in front of the controllers at them
   videoClip: {fileID: 32900000, guid: 07d359d43bdbcce43acb10d4bf438015, type: 3}
   interactionPrefab: {fileID: 2781056083990958088, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
   immediateCompletion: 0

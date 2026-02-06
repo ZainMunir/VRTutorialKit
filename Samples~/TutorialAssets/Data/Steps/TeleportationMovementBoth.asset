@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: TeleportationMovementBoth
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
   stepTitle: Teleportation
-  stepDescription: Holding the stick forward on either controller allows you to teleport
-    to where the visual is when you let go. Move around the table and teleport to
-    the red areas when they appear
+  stepDescription: Holding the thumbstick forward on either controller allows you
+    to instantly move, commonly referred to as teleporting, to where the visual is
+    when you let go. Move around the table and teleport to the red areas when they
+    appear
   videoClip: {fileID: 32900000, guid: 9e7ccb00003f5544d8897d59c1b45e3d, type: 3}
   interactionPrefab: {fileID: 1122210626397759210, guid: 89d86f31aebd34a42b2ee661eaa68e28, type: 3}
   immediateCompletion: 0

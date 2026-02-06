@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace ECDA.VRTutorialKit
@@ -6,10 +7,11 @@ namespace ECDA.VRTutorialKit
     {
         private GuidingController guidingController;
         private Transform targetTransform;
+        private Coroutine delayedTargetCoroutine;
 
         void Awake()
         {
-            targetTransform = this.transform;
+            targetTransform = transform;
             guidingController = FindAnyObjectByType<GuidingController>();
 
             if (guidingController == null)
@@ -26,9 +28,24 @@ namespace ECDA.VRTutorialKit
 
         public void RemoveSelfAsTarget()
         {
-
+            if (delayedTargetCoroutine != null)
+            {
+                StopCoroutine(delayedTargetCoroutine);
+                delayedTargetCoroutine = null;
+            }
             guidingController.RemoveTarget(targetTransform);
         }
+        public void SetSelfAsTargetDelayed(int secondsDelay = 10)
+        {
+            if (delayedTargetCoroutine != null)
+                StopCoroutine(delayedTargetCoroutine);
+            delayedTargetCoroutine = StartCoroutine(SetTargetAfterDelay(secondsDelay));
+        }
 
+        private IEnumerator SetTargetAfterDelay(int secondsDelay)
+        {
+            yield return new WaitForSeconds(secondsDelay);
+            SetSelfAsTarget();
+        }
     }
 }

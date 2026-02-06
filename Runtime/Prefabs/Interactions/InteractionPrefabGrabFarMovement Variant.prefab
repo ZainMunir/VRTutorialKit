@@ -213,8 +213,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 299346174740757530}
   m_SourcePrefab: {fileID: 100100000, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
+--- !u!1 &4985420273130172568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
+  m_PrefabInstance: {fileID: 1780175725238230777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &299346174740757530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985420273130172568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5dc317b69d47c34283f168ba9720c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTK.Examples.RotateObject
 --- !u!4 &5648664019893234210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6255607206769407195, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
@@ -349,13 +369,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6547083549731573559}
   m_SourcePrefab: {fileID: 100100000, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
 --- !u!4 &236189262176062562 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6255607206769407195, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
   m_PrefabInstance: {fileID: 6167536192848476345}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &580063085079058136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
+  m_PrefabInstance: {fileID: 6167536192848476345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6547083549731573559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580063085079058136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5dc317b69d47c34283f168ba9720c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTK.Examples.RotateObject
 --- !u!1001 &8104572633525411432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -423,13 +463,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1106602475188777917}
   m_SourcePrefab: {fileID: 100100000, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
 --- !u!4 &2785854887823370931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6255607206769407195, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
   m_PrefabInstance: {fileID: 8104572633525411432}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3306355633079398409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
+  m_PrefabInstance: {fileID: 8104572633525411432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1106602475188777917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3306355633079398409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5dc317b69d47c34283f168ba9720c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTK.Examples.RotateObject
 --- !u!1001 &9068477637548507967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438,9 +498,157 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7639665954973720356}
+    - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RemoveSelfAsTarget
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.GuidingTarget, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2781056083990958088, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
       propertyPath: m_Name
       value: InteractionPrefabGrabFarMovement Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6547083549731573559}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 299346174740757530}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1106602475188777917}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 7639665954973720356}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateY
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RotateY
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RotateY
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetSelfAsTargetDelayed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VRTK.Examples.RotateObject, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: VRTK.Examples.RotateObject, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: VRTK.Examples.RotateObject, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.GuidingTarget, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932288793814244460, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5297401857950877046, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -494,10 +702,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5297401857950877046, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
       insertIndex: 5
       addedObject: {fileID: 2479053593480566686}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1749169154027543751, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7639665954973720356}
   m_SourcePrefab: {fileID: 100100000, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
 --- !u!4 &3773333351848412745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5297401857950877046, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
   m_PrefabInstance: {fileID: 9068477637548507967}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7322844536009842680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1749169154027543751, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+  m_PrefabInstance: {fileID: 9068477637548507967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7639665954973720356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322844536009842680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01dbaf67ee3d6b34fb5e8d6efc3c8179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GuidingTarget

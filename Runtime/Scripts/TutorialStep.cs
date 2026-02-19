@@ -27,13 +27,8 @@ namespace ECDA.VRTutorialKit
 
         [Header("Control Settings")]
         public bool enableSnapTurn = false;
-        public enum LocomotionMode
-        {
-            None,
-            Smooth,
-            Teleport
-        }
-        public LocomotionMode leftHandLocomotion = LocomotionMode.None;
-        public LocomotionMode rightHandLocomotion = LocomotionMode.None;
+
+        public RigController.LocomotionMode leftHandLocomotion = RigController.LocomotionMode.None;
+        public RigController.LocomotionMode rightHandLocomotion = RigController.LocomotionMode.None;
     }
 }

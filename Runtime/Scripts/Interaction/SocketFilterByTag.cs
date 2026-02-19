@@ -74,7 +74,7 @@ namespace ECDA.VRTutorialKit
 
             if (interactable.transform.TryGetComponent<SocketInteractableTag>(out var interactableTag))
             {
-                return interactableTag.socketTag == requiredTag;
+                return interactableTag.enabled ? interactableTag.socketTag == requiredTag : false;
             }
 
             return false;

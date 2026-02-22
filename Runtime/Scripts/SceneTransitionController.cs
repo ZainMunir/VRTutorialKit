@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,23 +44,25 @@ namespace ECDA.VRTutorialKit
 
                 if (fadeScreen != null) yield return fadeScreen.FadeOut();
 
-                while (operation.progress < 0.9f)
+
+                var handlers = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Exclude, FindObjectsSortMode.None)
+                                    .OfType<IBeforeSceneChange>();
+
+                foreach (var handler in handlers)
                 {
-                    yield return null;
+                    if (handler is MonoBehaviour mb && !mb.isActiveAndEnabled) continue;
+                    yield return handler.OnBeforeSceneChange();
                 }
 
+                while (operation.progress < 0.9f) yield return null;
                 operation.allowSceneActivation = true;
-
-                yield return null;
+                while (!operation.isDone) yield return null;
+                yield return new WaitForEndOfFrame();
 
                 fadeScreen = FindAnyObjectByType<FadeScreen>(FindObjectsInactive.Include);
-
                 AlignPlayer();
 
-                if (fadeScreen != null)
-                {
-                    yield return fadeScreen.FadeIn();
-                }
+                if (fadeScreen != null) yield return fadeScreen.FadeIn();
             }
             finally
             {

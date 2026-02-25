@@ -47,5 +47,13 @@ namespace ECDA.VRTutorialKit
             yield return new WaitForSeconds(secondsDelay);
             SetSelfAsTarget();
         }
+
+
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireSphere(transform.position, 0.2f);
+            Gizmos.DrawLine(transform.position, transform.position + Vector3.up * 0.5f);
+        }
     }
 }

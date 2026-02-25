@@ -294,12 +294,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3775452375270451397}
+      objectReference: {fileID: 7794460435479132629}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
@@ -315,14 +315,14 @@ PrefabInstance:
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 3775452375270451397}
+      objectReference: {fileID: 7794460435479132629}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 3775452375270451397}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HighlightAfterDelay
+      value: StartAction
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -334,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CancelHighlightAfterDelay
+      value: CancelAction
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -342,7 +342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+      value: ECDA.VRTutorialKit.ActionAfterDelay, ecda.vrtutorialkit
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -350,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+      value: ECDA.VRTutorialKit.ActionAfterDelay, ecda.vrtutorialkit
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -387,6 +387,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7503459990976185480, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3775452375270451397}
+    - targetCorrespondingSourceObject: {fileID: 7503459990976185480, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7794460435479132629}
   m_SourcePrefab: {fileID: 100100000, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
 --- !u!4 &1984551845091392329 stripped
 Transform:
@@ -414,6 +417,35 @@ MonoBehaviour:
   outlineWidth: 2
   startHighlighted: 0
   highlightDelaySeconds: 1
+--- !u!114 &7794460435479132629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385299642161286024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796ed772503f04047899b38d65940ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ActionAfterDelay
+  delay: 40
+  startOnEnable: 0
+  actions:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3775452375270451397}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+        m_MethodName: Highlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9157456170829929162 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
@@ -549,12 +581,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6715176715122862278}
+      objectReference: {fileID: 1838977219739014401}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
@@ -570,14 +602,14 @@ PrefabInstance:
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 6715176715122862278}
+      objectReference: {fileID: 1838977219739014401}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 6715176715122862278}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HighlightAfterDelay
+      value: StartAction
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -589,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CancelHighlightAfterDelay
+      value: CancelAction
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -597,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+      value: ECDA.VRTutorialKit.ActionAfterDelay, ecda.vrtutorialkit
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -605,7 +637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+      value: ECDA.VRTutorialKit.ActionAfterDelay, ecda.vrtutorialkit
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -646,6 +678,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7503459990976185480, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6715176715122862278}
+    - targetCorrespondingSourceObject: {fileID: 7503459990976185480, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1838977219739014401}
   m_SourcePrefab: {fileID: 100100000, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
 --- !u!114 &2283882939804996769 stripped
 MonoBehaviour:
@@ -679,6 +714,35 @@ MonoBehaviour:
   outlineWidth: 2
   startHighlighted: 0
   highlightDelaySeconds: 1
+--- !u!114 &1838977219739014401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4051285287015532003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796ed772503f04047899b38d65940ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ActionAfterDelay
+  delay: 40
+  startOnEnable: 0
+  actions:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6715176715122862278}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+        m_MethodName: Highlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &8876209847199380770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3113687504143430729, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
@@ -746,12 +810,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2393340130165287606}
+      objectReference: {fileID: 3574057779812037176}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
@@ -767,14 +831,14 @@ PrefabInstance:
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2393340130165287606}
+      objectReference: {fileID: 3574057779812037176}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 2393340130165287606}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HighlightAfterDelay
+      value: StartAction
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -786,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CancelHighlightAfterDelay
+      value: CancelAction
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -794,7 +858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+      value: ECDA.VRTutorialKit.ActionAfterDelay, ecda.vrtutorialkit
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -802,7 +866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+      value: ECDA.VRTutorialKit.ActionAfterDelay, ecda.vrtutorialkit
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -863,6 +927,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7503459990976185480, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2393340130165287606}
+    - targetCorrespondingSourceObject: {fileID: 7503459990976185480, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3574057779812037176}
   m_SourcePrefab: {fileID: 100100000, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
 --- !u!114 &1546557614372326307 stripped
 MonoBehaviour:
@@ -896,6 +963,35 @@ MonoBehaviour:
   outlineWidth: 2
   startHighlighted: 0
   highlightDelaySeconds: 1
+--- !u!114 &3574057779812037176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3674528394288274145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796ed772503f04047899b38d65940ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ActionAfterDelay
+  delay: 40
+  startOnEnable: 0
+  actions:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2393340130165287606}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
+        m_MethodName: Highlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &8208130595601312288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3113687504143430729, guid: 744de4767d25bb442aaddc86d409489b, type: 3}

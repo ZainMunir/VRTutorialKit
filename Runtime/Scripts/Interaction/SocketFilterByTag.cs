@@ -11,7 +11,7 @@ namespace ECDA.VRTutorialKit
     public class SocketFilterByTag : MonoBehaviour, IXRSelectFilter, IXRHoverFilter
     {
         [Tooltip("The tag required for an object to be accepted.")]
-        [SerializeField] private SocketTag requiredTag;
+        [SerializeField] private TargetTag requiredTag;
 
         [Tooltip("Event invoked when the valid object enters the socket.")]
         public UnityEvent onValidEntry;

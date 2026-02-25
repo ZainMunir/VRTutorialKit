@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 5bfdb47f2dfb55f46acf5af07b6be075
+guid: f0818ff62f15fa14d86285dda3be1ac4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - tutorialConfig: {fileID: 11400000, guid: 68fbcb58af314284b9afbc981ca789e1, type: 2}
+  - bouncingArrowPrefab: {fileID: 2503458939241129540, guid: 93c1bd892a7c65c42912ead5659b4fac, type: 3}
+  - targetTag: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

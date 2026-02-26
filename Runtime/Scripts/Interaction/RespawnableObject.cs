@@ -9,6 +9,7 @@ namespace ECDA.VRTutorialKit
         private Vector3 m_SpawnPosition;
         private Quaternion m_SpawnRotation;
         private Rigidbody m_Rigidbody;
+        public TargetTag targetTag;
 
         private void Awake()
         {

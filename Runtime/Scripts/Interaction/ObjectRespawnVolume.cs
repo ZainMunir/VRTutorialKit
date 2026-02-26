@@ -11,6 +11,8 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private float m_RespawnDelay = 3.0f;
         private Dictionary<RespawnableObject, Coroutine> m_PendingRespawns = new Dictionary<RespawnableObject, Coroutine>();
 
+        [SerializeField] private TargetTag targetTag;
+
         private void Awake()
         {
             var col = GetComponent<Collider>();
@@ -37,6 +39,9 @@ namespace ECDA.VRTutorialKit
         {
             RespawnableObject respawnable = GetRespawnable(other);
             if (respawnable == null) return;
+
+            // Only consider objects whose tag matches this volume's tag (including both null)
+            if (respawnable.targetTag != targetTag) return;
 
             if (!m_PendingRespawns.ContainsKey(respawnable))
             {

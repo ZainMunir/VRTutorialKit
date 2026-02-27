@@ -12,11 +12,12 @@ GameObject:
   - component: {fileID: 4877033671538522162}
   - component: {fileID: 3414554689259709658}
   - component: {fileID: 7057581745372276970}
-  - component: {fileID: 4999539798781508927}
   - component: {fileID: 6781431991913945692}
   - component: {fileID: 4194017837622433434}
   - component: {fileID: 1808182231051209098}
   - component: {fileID: 3011791170949201539}
+  - component: {fileID: 9176723731567213897}
+  - component: {fileID: 3874091860544370318}
   m_Layer: 0
   m_Name: GazeTarget
   m_TagString: Untagged
@@ -117,37 +118,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4999539798781508927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2943989731782827304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7d70ce9bd3b1634ea4d8669c5ec0b2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialSubStep
-  manageGameObjectActiveState: 1
-  OnSubStepActive:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4194017837622433434}
-        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.GuidingTarget, ecda.vrtutorialkit
-        m_MethodName: SetSelfAsTarget
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnSubStepCompleted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &6781431991913945692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,9 +130,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cd69ab4c5a804ea5b30bd43c62084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnGaze
-  subStep: {fileID: 4999539798781508927}
   gazeDuration: 2
   maxGazeAngle: 15
+  onGazeComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.TutorialSubStep, ecda.vrtutorialkit
+        m_MethodName: Complete
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  reuseOnComplete: 0
 --- !u!114 &4194017837622433434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +175,7 @@ MonoBehaviour:
   progressProvider: {fileID: 6781431991913945692}
   effects:
   - {fileID: 3011791170949201539}
+  - {fileID: 3874091860544370318}
 --- !u!114 &3011791170949201539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,3 +191,114 @@ MonoBehaviour:
   targetRenderer: {fileID: 3414554689259709658}
   startMaterial: {fileID: 2100000, guid: baec3d057c2d23a46bf1ebdf1d0a374a, type: 2}
   endMaterial: {fileID: 2100000, guid: 197ff8ca9b6e5d0429613ba4b4e8f275, type: 2}
+--- !u!82 &9176723731567213897
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943989731782827304}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 247a84fa22ac5ed489aaa956f4217072, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &3874091860544370318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943989731782827304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a410e13d5f45d4ba62d247474c4236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.AudioProgressClipEffect
+  audioSource: {fileID: 9176723731567213897}
+  startThreshold: 0.01

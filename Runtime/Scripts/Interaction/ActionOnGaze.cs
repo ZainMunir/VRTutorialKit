@@ -1,11 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ECDA.VRTutorialKit
 {
-    public class CompleteOnGaze : ProgressProvider
+    public class ActionOnGaze : ProgressProvider
     {
         [Header("Gaze Completion Settings")]
-        [SerializeField] private TutorialSubStep subStep;
         [SerializeField] private float gazeDuration = 2f;
         [SerializeField] private float maxGazeAngle = 15f;
 
@@ -14,6 +14,11 @@ namespace ECDA.VRTutorialKit
 
         public override float Progress => Mathf.Clamp01(gazeTimer / gazeDuration);
 
+        public UnityEvent onGazeComplete;
+
+        private bool completed = false;
+        [SerializeField] private bool reuseOnComplete = false;
+
         private void Awake()
         {
             playerCamera = Camera.main;
@@ -21,22 +26,22 @@ namespace ECDA.VRTutorialKit
             {
                 Debug.LogError($"Main Camera not found in the scene for {name}.");
             }
-            if (subStep == null)
-            {
-                Debug.LogError($"{nameof(subStep)} reference is not set on {name}.");
-            }
         }
 
         private void Update()
         {
-            if (subStep.IsCompleted) return;
+            if (completed) return;
 
             if (IsPlayerLookingAt())
             {
 
                 gazeTimer += Time.deltaTime;
                 if (gazeTimer >= gazeDuration)
-                    subStep.Complete();
+                {
+                    completed = true;
+                    onGazeComplete?.Invoke();
+                    if (reuseOnComplete) Reset();
+                }
             }
             else
             {
@@ -55,6 +60,12 @@ namespace ECDA.VRTutorialKit
             float angle = Vector3.Angle(cameraForward, directionToObject);
 
             return angle < maxGazeAngle;
+        }
+
+        public void Reset()
+        {
+            completed = false;
+            gazeTimer = 0f;
         }
     }
 }

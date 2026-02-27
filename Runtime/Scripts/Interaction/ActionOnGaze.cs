@@ -1,23 +1,17 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace ECDA.VRTutorialKit
 {
-    public class ActionOnGaze : ProgressProvider
+    public class ActionOnGaze : IConditionSource, ProgressProvider
     {
         [Header("Gaze Completion Settings")]
         [SerializeField] private float gazeDuration = 2f;
         [SerializeField] private float maxGazeAngle = 15f;
-
         private float gazeTimer = 0f;
         private Camera playerCamera;
-
-        public override float Progress => Mathf.Clamp01(gazeTimer / gazeDuration);
-
-        public UnityEvent onGazeComplete;
-
-        private bool completed = false;
-        [SerializeField] private bool reuseOnComplete = false;
+        private bool isLookingAt;
+        private bool hasCompleted;
+        public float Progress => gazeDuration <= 0f ? 1f : Mathf.Clamp01(gazeTimer / gazeDuration);
 
         private void Awake()
         {
@@ -30,22 +24,25 @@ namespace ECDA.VRTutorialKit
 
         private void Update()
         {
-            if (completed) return;
+            if (triggerOnce && hasTriggered) return;
+            isLookingAt = IsPlayerLookingAt();
 
-            if (IsPlayerLookingAt())
+            if (isLookingAt)
             {
-
                 gazeTimer += Time.deltaTime;
-                if (gazeTimer >= gazeDuration)
+                if (!hasCompleted && gazeTimer >= gazeDuration)
                 {
-                    completed = true;
-                    onGazeComplete?.Invoke();
-                    if (reuseOnComplete) Reset();
+                    hasCompleted = true;
+                    InvokeConditionAction();
                 }
+
+                SetConditionState(gazeTimer >= gazeDuration);
             }
             else
             {
                 gazeTimer = 0f;
+                hasCompleted = false;
+                SetConditionState(false);
             }
         }
 
@@ -60,12 +57,6 @@ namespace ECDA.VRTutorialKit
             float angle = Vector3.Angle(cameraForward, directionToObject);
 
             return angle < maxGazeAngle;
-        }
-
-        public void Reset()
-        {
-            completed = false;
-            gazeTimer = 0f;
         }
     }
 }

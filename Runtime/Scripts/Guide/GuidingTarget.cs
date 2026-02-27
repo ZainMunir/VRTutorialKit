@@ -49,7 +49,7 @@ namespace ECDA.VRTutorialKit
         }
 
 
-        void OnDrawGizmos()
+        void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireSphere(transform.position, 0.2f);

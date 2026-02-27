@@ -53,9 +53,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6781431991913945692, guid: 36382aa2799f05f4dbbba36b0aa33bef, type: 3}
+      propertyPath: triggerOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781431991913945692, guid: 36382aa2799f05f4dbbba36b0aa33bef, type: 3}
+      propertyPath: onAction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781431991913945692, guid: 36382aa2799f05f4dbbba36b0aa33bef, type: 3}
+      propertyPath: onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781431991913945692, guid: 36382aa2799f05f4dbbba36b0aa33bef, type: 3}
+      propertyPath: onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5008034945972101158}
+    - target: {fileID: 6781431991913945692, guid: 36382aa2799f05f4dbbba36b0aa33bef, type: 3}
+      propertyPath: onAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781431991913945692, guid: 36382aa2799f05f4dbbba36b0aa33bef, type: 3}
+      propertyPath: onAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Complete
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781431991913945692, guid: 36382aa2799f05f4dbbba36b0aa33bef, type: 3}
       propertyPath: onGazeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5008034945972101158}
+    - target: {fileID: 6781431991913945692, guid: 36382aa2799f05f4dbbba36b0aa33bef, type: 3}
+      propertyPath: onAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.TutorialSubStep, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781431991913945692, guid: 36382aa2799f05f4dbbba36b0aa33bef, type: 3}
+      propertyPath: onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

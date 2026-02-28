@@ -3,9 +3,28 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-    public class ActionOnAllConditions : IConditionSource
+    public class ActionOnAllConditions : IConditionSource, ProgressProvider
     {
         [SerializeField] private List<IConditionSource> conditionSources = new List<IConditionSource>();
+
+        public float Progress => CalculateProgress();
+
+        private float CalculateProgress()
+        {
+            if (conditionSources.Count == 0)
+                return 0f;
+
+            int metCount = 0;
+            for (int index = 0; index < conditionSources.Count; index++)
+            {
+                if (conditionSources[index] != null && conditionSources[index].IsConditionMet)
+                {
+                    metCount++;
+                }
+            }
+
+            return (float)metCount / conditionSources.Count;
+        }
 
         private void Awake()
         {

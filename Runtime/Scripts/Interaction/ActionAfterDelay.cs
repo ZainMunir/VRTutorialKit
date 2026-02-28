@@ -23,6 +23,7 @@ namespace ECDA.VRTutorialKit
         {
             yield return new WaitForSeconds(delay);
             actions?.Invoke();
+            actionCoroutine = null;
         }
 
         void OnDestroy()
@@ -52,6 +53,7 @@ namespace ECDA.VRTutorialKit
         {
             if (actionCoroutine == null)
             {
+                Debug.Log($"[ActionAfterDelay] Starting delayed action with {delay} seconds delay.");
                 actionCoroutine = StartCoroutine(DelayedAction());
             }
         }

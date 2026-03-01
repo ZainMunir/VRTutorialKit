@@ -6,6 +6,7 @@ namespace ECDA.VRTutorialKit
     {
         [SerializeField] private GameObject bouncingArrowPrefab;
         [SerializeField] private TargetTag targetTag;
+        [SerializeField] private int size = 1;
         private BouncingArrow activeArrow;
 
         [SerializeField] private Target overrideTarget;
@@ -20,6 +21,7 @@ namespace ECDA.VRTutorialKit
             GameObject arrowInstance = Instantiate(bouncingArrowPrefab, target.transform);
             arrowInstance.transform.localPosition = Vector3.zero;
             activeArrow = arrowInstance.GetComponent<BouncingArrow>();
+            activeArrow.SetSize(size);
             activeArrow.StartBouncing();
 
         }

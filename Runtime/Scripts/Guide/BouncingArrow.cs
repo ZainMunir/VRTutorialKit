@@ -92,5 +92,11 @@ namespace ECDA.VRTutorialKit
             }
             bounceCoroutine = null;
         }
+
+        public void SetSize(float newSize)
+        {
+            size = newSize;
+            transform.localScale = Vector3.one * size;
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace ECDA.VRTutorialKit
     {
         [SerializeField] private GameObject bouncingArrowPrefab;
         [SerializeField] private TargetTag targetTag;
-        [SerializeField] private int size = 1;
+        [SerializeField] private float size = 1;
         private BouncingArrow activeArrow;
 
         [SerializeField] private Target overrideTarget;

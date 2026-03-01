@@ -7,7 +7,7 @@ namespace ECDA.VRTutorialKit
     public class ActionAfterDelay : MonoBehaviour
     {
         public float delay = 5f;
-        public bool startOnEnable = true;
+        public bool startOnEnable = false;
         public UnityEvent actions;
         private Coroutine actionCoroutine;
 

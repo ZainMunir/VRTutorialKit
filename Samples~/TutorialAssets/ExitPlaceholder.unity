@@ -584,6 +584,22 @@ PrefabInstance:
       value: If you're seeing this, you should let the person helping you know you're
         done, and they'll tell you what to do next
       objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_title.m_TableEntryReference.m_KeyId
+      value: 43384284033024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_description.m_TableEntryReference.m_KeyId
+      value: 43443419525120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_title.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_description.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
     - target: {fileID: 1506362771973898349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
       propertyPath: m_Size.y
       value: 3
@@ -1098,7 +1114,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ButtonController
   buttonName: Button
-  buttonText: Return to Tutorial
+  buttonText:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 47646489620480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -1114,6 +1138,9 @@ MonoBehaviour:
           m_StringArgument: MainScene
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!65 &2013289015
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -2,23 +2,51 @@
     <Style src="project://database/Packages/com.ecda.vrtutorialkit/Runtime/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3#style"/>
     <ui:VisualElement class="background" style="flex-grow: 1;">
         <ui:VisualElement style="flex-grow: 1; max-height: 15%;">
-            <ui:Label text="Click around below" class="title"/>
+            <ui:Label text="Click around below" class="title">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(36731723624448)"/>
+                </Bindings>
+            </ui:Label>
         </ui:VisualElement>
         <ui:VisualElement name="" style="flex-grow: 1; flex-shrink: 1;">
-            <ui:Label text="Buttons in the environment can be clicked and do various &quot;one time&quot; actions" class="description"/>
+            <ui:Label text="Buttons in the environment can be clicked and do various &quot;one time&quot; actions" class="description">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(36782541811712)"/>
+                </Bindings>
+            </ui:Label>
             <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; justify-content: center;">
-                <ui:Button text="Success" name="SuccessButton" class="button"/>
-                <ui:Button text="Error" name="ErrorButton" class="button"/>
+                <ui:Button text="Success" name="SuccessButton" class="button">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(36857988952064)"/>
+                    </Bindings>
+                </ui:Button>
+                <ui:Button text="Error" name="ErrorButton" class="button">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(36874665504768)"/>
+                    </Bindings>
+                </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="" style="flex-grow: 1; flex-shrink: 1;">
-            <ui:Label text="Grayed out buttons are disabled, and cannot be interacted with" class="description"/>
+            <ui:Label text="Grayed out buttons are disabled, and cannot be interacted with" class="description">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(36892575182848)"/>
+                </Bindings>
+            </ui:Label>
             <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: center;">
-                <ui:Button text="Inactive" enabled="false" name="InactiveButton" class="button"/>
+                <ui:Button text="Inactive" enabled="false" name="InactiveButton" class="button">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(36911130783744)"/>
+                    </Bindings>
+                </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 1;">
-            <ui:Label text="Toggles are used to turn on or off continuous actions" class="description"/>
+            <ui:Label text="Toggles are used to turn on or off continuous actions" class="description">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(36928197406720)"/>
+                </Bindings>
+            </ui:Label>
             <ui:VisualElement style="flex-grow: 1; align-items: center;">
                 <ui:Toggle value="false" name="ExampleToggle" class="IconToggle"/>
             </ui:VisualElement>

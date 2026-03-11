@@ -12,11 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: Intro
   m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialStep
-  stepTitle: Introduction
-  stepDescription: This tutorial aims to familiarise you with some common VR controls
-    that you might need in the following VR experiences. To start, you can use the
-    triggers on either hand to interact with User Interface buttons. Click "Next"
-    to continue
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28683739246592
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28765091966976
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: 058e31a9c2a99214c9b089e45e3d587a, type: 3}
   interactionPrefab: {fileID: 6932860894398028169, guid: 47c045728f1fa8f4daa5168bf2aa0d53, type: 3}
   immediateCompletion: 1
@@ -27,3 +40,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 0
+  references:
+    version: 2
+    RefIds: []

@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: Grab
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Grab Objects
-  stepDescription: You can use the grips on either hand to grab objects. Try picking
-    the objects in front of you up and placing them on the red platforms
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28364095533056
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28365907472384
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: 3162f98d9f06ab34f9d3fd7c29385d38, type: 3}
   interactionPrefab: {fileID: 8015947867209236510, guid: 8237d87c9aac1b246b2088d4e1b1fa84, type: 3}
   immediateCompletion: 0
@@ -25,3 +40,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 0
+  references:
+    version: 2
+    RefIds: []

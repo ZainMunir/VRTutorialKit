@@ -12,10 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: BothMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Movement
-  stepDescription: You can move around smoothly with the left thumbstick, or teleport
-    by holding the right thumbstick forward and releasing it once the arrow is where
-    you want it. We recommend you use Teleportation
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 25955529043968
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 26251961479168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: f410ec199940453479e05e451fd18005, type: 3}
   interactionPrefab: {fileID: 6400019320946754940, guid: 154b3a61571915349a7b3b34de1432d1, type: 3}
   immediateCompletion: 0
@@ -28,3 +42,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 1
   rightHandLocomotion: 2
+  references:
+    version: 2
+    RefIds: []

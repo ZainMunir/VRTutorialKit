@@ -12,10 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: GrabFarMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Moving with Objects
-  stepDescription: After you grab an object, it's still possible to move or teleport
-    with it. Try going and retrieving the object on the other side of the wall while
-    holding it the entire time
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28367736188928
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28371590754304
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: b8864acd000902a49ad03b5d2798abca, type: 3}
   interactionPrefab: {fileID: 6575817973684982583, guid: 0745ab0e6f44dda46854e5c3de10e068, type: 3}
   immediateCompletion: 0
@@ -28,3 +42,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 2
+  references:
+    version: 2
+    RefIds: []

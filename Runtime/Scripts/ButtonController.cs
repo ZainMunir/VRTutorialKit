@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Events;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 namespace ECDA.VRTutorialKit
 {
@@ -8,7 +10,7 @@ namespace ECDA.VRTutorialKit
     public class ButtonController : MonoBehaviour
     {
         public string buttonName = "Button";
-        public string buttonText;
+        public LocalizedString buttonText;
         public UnityEvent onClick;
 
         private Button uiButton;
@@ -20,8 +22,23 @@ namespace ECDA.VRTutorialKit
             uiButton = buttonContainer.Q<Button>();
             if (uiButton != null)
             {
-                uiButton.text = buttonText;
+                uiButton.text = buttonText.GetLocalizedString();
                 uiButton.clicked += () => onClick?.Invoke();
+            }
+
+            LocalizationSettings.SelectedLocaleChanged += OnSelectedLocaleChanged;
+        }
+
+        private void OnSelectedLocaleChanged(Locale newLocale)
+        {
+            UpdateUI();
+        }
+
+        void UpdateUI()
+        {
+            if (uiButton != null)
+            {
+                uiButton.text = buttonText.GetLocalizedString();
             }
         }
 
@@ -31,6 +48,7 @@ namespace ECDA.VRTutorialKit
             {
                 uiButton.clicked -= () => onClick?.Invoke();
             }
+            LocalizationSettings.SelectedLocaleChanged -= OnSelectedLocaleChanged;
         }
 
     }

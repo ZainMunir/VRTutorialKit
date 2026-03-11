@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: Sockets
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Sockets
-  stepDescription: Some objects might snap into specific positions called sockets.
-    They can be put in and sometimes taken back out
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 29046873698304
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 29087898185728
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: 7ee02adcf5a37c74597296b71e57c615, type: 3}
   interactionPrefab: {fileID: 7526973094371630708, guid: 85535440fbddb5c409cc9593bc5b49aa, type: 3}
   immediateCompletion: 0
@@ -25,3 +40,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 0
+  references:
+    version: 2
+    RefIds: []

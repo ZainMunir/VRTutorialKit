@@ -202,7 +202,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ButtonController
   buttonName: Button
-  buttonText: Skip
+  buttonText:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 47380235202560
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -218,6 +226,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &4156000529205624753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,9 +309,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1092709405454683383}
     m_Modifications:
+    - target: {fileID: 1741626037115671470, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: m_WorldSpaceHeight
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989512636628722476, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: d_title.m_TableEntryReference.m_KeyId
+      value: 35825586188288
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989512636628722476, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: d_description.m_TableEntryReference.m_KeyId
+      value: 36151735267328
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989512636628722476, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: d_title.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989512636628722476, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: d_description.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
     - target: {fileID: 5692879520999303190, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
       propertyPath: m_Name
       value: ConfigSelector
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174563346713419755, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174563346713419755, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: m_Size.z
+      value: 0.00000043711387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174563346713419755, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174563346713419755, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: m_Center.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6836218428812881167, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -517,6 +564,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a53e9ca81e9d8645969b5f114de6657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.DynamicUIText
+  d_title:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 35771752296448
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  d_description:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 35773371297792
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   title: Skip Tutorial
   description: If you don't need the tutorial, you can skip it directly by clicking
     the button below. This is not recommended unless you are familiar with VR interactions
+  references:
+    version: 2
+    RefIds: []

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.Localization.Settings; // Add this
+using UnityEngine.Localization;
 
 namespace ECDA.VRTutorialKit
 {
@@ -8,7 +10,10 @@ namespace ECDA.VRTutorialKit
     {
         TutorialManager tutorialManager;
         RadioButtonGroup radioButtonGroup;
+        RadioButtonGroup languageGroup; // New reference
+
         private EventCallback<ChangeEvent<int>> valueChangedCallback;
+        private EventCallback<ChangeEvent<int>> languageChangedCallback; // New callback
 
         public List<TutorialConfig> configOptions = new List<TutorialConfig>();
 
@@ -17,19 +22,26 @@ namespace ECDA.VRTutorialKit
             tutorialManager = TutorialManager.Instance;
             VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
+            // --- Tutorial Config Setup ---
             radioButtonGroup = root.Q<RadioButtonGroup>("ConfigOptions");
+            SetupConfigOptions();
 
-            int currentIndex = -1;
+            // --- Language Options Setup ---
+            languageGroup = root.Q<RadioButtonGroup>("LanguageOptions");
+            SetupLanguageOptions();
+        }
+
+        private void SetupConfigOptions()
+        {
             string currentConfigName = tutorialManager.tutorialConfig.name;
-
             var configNames = new List<string>();
-            foreach (var config in configOptions)
+
+            for (int i = 0; i < configOptions.Count; i++)
             {
-                currentIndex++;
-                configNames.Add(config.name);
-                if (config.name == currentConfigName)
+                configNames.Add(configOptions[i].name);
+                if (configOptions[i].name == currentConfigName)
                 {
-                    radioButtonGroup.value = currentIndex;
+                    radioButtonGroup.value = i;
                 }
             }
 
@@ -47,11 +59,52 @@ namespace ECDA.VRTutorialKit
             radioButtonGroup.RegisterValueChangedCallback(valueChangedCallback);
         }
 
+        private void SetupLanguageOptions()
+        {
+            if (languageGroup == null) return;
+
+            // 1. Get available languages from Localization Settings
+            var locales = LocalizationSettings.AvailableLocales.Locales;
+            var languageNames = new List<string>();
+            int currentLocaleIndex = 0;
+
+            for (int i = 0; i < locales.Count; i++)
+            {
+                languageNames.Add(locales[i].Identifier.CultureInfo.NativeName);
+
+                if (locales[i] == LocalizationSettings.SelectedLocale)
+                {
+                    currentLocaleIndex = i;
+                }
+            }
+
+            languageGroup.choices = languageNames;
+            languageGroup.value = currentLocaleIndex;
+
+            // 2. Define the callback to change language
+            languageChangedCallback = evt =>
+            {
+                int selectedIndex = evt.newValue;
+                if (selectedIndex >= 0 && selectedIndex < locales.Count)
+                {
+                    // Start the async operation to swap locales
+                    LocalizationSettings.SelectedLocale = locales[selectedIndex];
+                }
+            };
+
+            languageGroup.RegisterValueChangedCallback(languageChangedCallback);
+        }
+
         void OnDestroy()
         {
             if (radioButtonGroup != null && valueChangedCallback != null)
             {
                 radioButtonGroup.UnregisterValueChangedCallback(valueChangedCallback);
+            }
+
+            if (languageGroup != null && languageChangedCallback != null)
+            {
+                languageGroup.UnregisterValueChangedCallback(languageChangedCallback);
             }
         }
     }

@@ -12,10 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: HiddenObjects
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Hidden Objects
-  stepDescription: Important objects may be hidden behind interactions in the environment.
-    If something changes color, you can probably grab it to do something. Try exploring
-    behind you to find the hidden blocks to continue
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28619214073856
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28667926720512
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: aefe03ab6e6498743b95a72a631135bb, type: 3}
   interactionPrefab: {fileID: 4847387973745477182, guid: 64514d55344ff354d9731a51366902fa, type: 3}
   immediateCompletion: 0
@@ -26,3 +40,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 0
+  references:
+    version: 2
+    RefIds: []

@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: DoorsBoth
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Doors
-  stepDescription: Some doors may be interactable in different ways, using the "Grab"
-    trigger. Try it out with the doors on the right
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 27924679274496
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 27985102417920
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: ff875c3b5e169004dbe30ade292968a5, type: 3}
   interactionPrefab: {fileID: 8261944132838956729, guid: 8cc070baab5b2934ba0979abd8750dc8, type: 3}
   immediateCompletion: 0
@@ -29,3 +44,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 2
   rightHandLocomotion: 2
+  references:
+    version: 2
+    RefIds: []

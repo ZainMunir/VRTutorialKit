@@ -1,0 +1,324 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: TutorialText Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: TutorialText
+  m_TableCollectionNameGuidString: 3488ca378e6e01d488f136c270b8cfd2
+  m_Entries:
+  - m_Id: 1924562071552
+    m_Key: MAINUI_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2297217593344
+    m_Key: MAINUI_PREVIOUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342872592384
+    m_Key: MAINUI_NEXT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2373344210944
+    m_Key: MAINUI_FINISH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25955529043968
+    m_Key: STEP_BOTHMOVEMENT_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26251961479168
+    m_Key: STEP_BOTHMOVEMENT_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27811156242432
+    m_Key: STEP_DOORS_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27841548169216
+    m_Key: STEP_DOORS_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27924679274496
+    m_Key: STEP_DOORSBOTH_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27985102417920
+    m_Key: STEP_DOORSBOTH_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28171165937664
+    m_Key: STEP_FINISHED_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28212194619392
+    m_Key: STEP_FINISHED_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28267643318272
+    m_Key: STEP_GAZE_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28284957405184
+    m_Key: STEP_GAZE_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28364095533056
+    m_Key: STEP_GRAB_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28365907472384
+    m_Key: STEP_GRAB_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366456926208
+    m_Key: STEP_GRABFAR_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28367039934464
+    m_Key: STEP_GRABFAR_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28367736188928
+    m_Key: STEP_GRABFARMOVEMENT_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28371590754304
+    m_Key: STEP_GRABFARMOVEMENT_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28584049029120
+    m_Key: STEP_GRABFARMOVEMENTBOTH_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28605737775104
+    m_Key: STEP_GRABFARMOVEMENTBOTH_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28619214073856
+    m_Key: STEP_HIDDENOBJECTS_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28667926720512
+    m_Key: STEP_HIDDENOBJECTS_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28683739246592
+    m_Key: STEP_INTRO_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28765091966976
+    m_Key: STEP_INTRO_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28779189022720
+    m_Key: STEP_OUTLINE_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28806963703808
+    m_Key: STEP_OUTLINE_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28833882746880
+    m_Key: STEP_RECENTER_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28890224832512
+    m_Key: STEP_RECENTER_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28906595201024
+    m_Key: STEP_SMOOTHMOVEMENT_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28955286876160
+    m_Key: STEP_SMOOTHMOVEMENT_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28982105255936
+    m_Key: STEP_SMOOTHMOVEMENTBOTH_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29027848335360
+    m_Key: STEP_SMOOTHMOVEMENTBOTH_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29046873698304
+    m_Key: STEP_SOCKETS_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29087898185728
+    m_Key: STEP_SOCKETS_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29111495340032
+    m_Key: STEP_TELEPORTATIONMOVEMENT_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29166637854720
+    m_Key: STEP_TELEPORTATIONMOVEMENT_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29192663511040
+    m_Key: STEP_TELEPORTATIONMOVEMENTBOTH_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29236246523904
+    m_Key: STEP_TELEPORTATIONMOVEMENTBOTH_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29251824168960
+    m_Key: STEP_UIPRESS_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29274297249792
+    m_Key: STEP_UIPRESS_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34149919797248
+    m_Key: DYNAMIC_NORMALDOORS_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34201371324416
+    m_Key: DYNAMIC_NORMALDOORS_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34581102637056
+    m_Key: DYNAMIC_OUTLINEDDOORS_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34590900531200
+    m_Key: DYNAMIC_OUTLINEDDOORS_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34813857148928
+    m_Key: DYNAMIC_DOORSDONE_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34815140605952
+    m_Key: DYNAMIC_DOORSDONE_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35094430920704
+    m_Key: TOOLTIP_DROP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35430633746432
+    m_Key: TOOLTIP_GRABME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35771752296448
+    m_Key: DYNAMIC_SKIP_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35773371297792
+    m_Key: DYNAMIC_SKIP_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35825586188288
+    m_Key: DYNAMIC_CONFIG_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36151735267328
+    m_Key: DYNAMIC_CONFIG_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36219968204800
+    m_Key: UI_CONFIGCHOOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36731723624448
+    m_Key: UI_PRESS_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36782541811712
+    m_Key: UI_PRESS_BUTTONEXPLANATION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36857988952064
+    m_Key: UI_PRESS_SUCCESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36874665504768
+    m_Key: UI_PRESS_ERROR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36892575182848
+    m_Key: UI_PRESS_DISABLED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36911130783744
+    m_Key: UI_PRESS_INACTIVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36928197406720
+    m_Key: UI_PRESS_TOGGLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37844069822464
+    m_Key: TOOLTIP_BLINK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38130469482496
+    m_Key: TOOLTIP_UIPRESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38214301036544
+    m_Key: TOOLTIP_GRAB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38420614656000
+    m_Key: TOOLTIP_OPTIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38465833447424
+    m_Key: TOOLTIP_RECENTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38663703932928
+    m_Key: TOOLTIP_SMOOTHMOVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38737561432064
+    m_Key: TOOLTIP_TURN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43384284033024
+    m_Key: DYNAMIC_TUTORIALDONE_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43443419525120
+    m_Key: DYNAMIC_TUTORIALDONE_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44061622185984
+    m_Key: UI_CONFIG_LANGUAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47380235202560
+    m_Key: "UI_SKIP_BUTTON\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47646489620480
+    m_Key: UI_BACKTOTUTORIAL_BUTTON
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5925276117622849798
+  references:
+    version: 2
+    RefIds:
+    - rid: 5925276117622849798
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1773225049346

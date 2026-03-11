@@ -229,6 +229,22 @@ PrefabInstance:
       propertyPath: description
       value: You can head back to the desk now to continue
       objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_title.m_TableEntryReference.m_KeyId
+      value: 34813857148928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_description.m_TableEntryReference.m_KeyId
+      value: 34815140605952
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_title.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_description.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
     - target: {fileID: 2272338843266871945, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.20000002
@@ -590,6 +606,22 @@ PrefabInstance:
       value: If a door is already highlighted with an outline, you can grab it and
         it will transition to the next scene. Try grabbing it!
       objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_title.m_TableEntryReference.m_KeyId
+      value: 34581102637056
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_description.m_TableEntryReference.m_KeyId
+      value: 34590900531200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_title.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_description.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
     - target: {fileID: 2272338843266871945, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.91216016
@@ -876,6 +908,22 @@ PrefabInstance:
       propertyPath: description
       value: If you hover over a door and it "highlights", you can open it using
         the Grab trigger and walk through
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_title.m_TableEntryReference.m_KeyId
+      value: 34149919797248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_description.m_TableEntryReference.m_KeyId
+      value: 34201371324416
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_title.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405137281343070349, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
+      propertyPath: d_description.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
       objectReference: {fileID: 0}
     - target: {fileID: 2272338843266871945, guid: e1d537376396be142b448f2bc7ac92b5, type: 3}
       propertyPath: m_LocalPosition.x

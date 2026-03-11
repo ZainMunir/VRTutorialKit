@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UIElements;
 using UnityEngine.Video;
 
@@ -53,6 +55,7 @@ namespace ECDA.VRTutorialKit
             tutorialManager.OnStepCompleted += UpdateStepUI;
             tutorialManager.OnTutorialStepChanged += UpdateStepUI;
             tutorialManager.OnTutorialFinished += EnabledFinishButton;
+            LocalizationSettings.SelectedLocaleChanged += OnSelectedLocaleChanged;
 
             UpdateStepUI();
         }
@@ -65,6 +68,8 @@ namespace ECDA.VRTutorialKit
                 tutorialManager.OnTutorialStepChanged -= UpdateStepUI;
                 tutorialManager.OnTutorialFinished -= EnabledFinishButton;
             }
+
+            LocalizationSettings.SelectedLocaleChanged -= OnSelectedLocaleChanged;
         }
 
         void NextStep()
@@ -79,13 +84,15 @@ namespace ECDA.VRTutorialKit
 
         void UpdateStepUI(bool ignored) => UpdateStepUI();
 
+        void OnSelectedLocaleChanged(Locale _) => UpdateStepUI();
+
         void UpdateStepUI()
         {
             TutorialStep step = tutorialManager.GetCurrentStep();
             if (step == null) return;
 
-            stepTitleLabel.text = step.stepTitle;
-            stepDescriptionLabel.text = step.stepDescription;
+            stepTitleLabel.text = step.stepTitle.GetLocalizedString();
+            stepDescriptionLabel.text = step.stepDescription.GetLocalizedString();
 
             if (step.videoClip != null)
             {

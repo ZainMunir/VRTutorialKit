@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.Video;
 
 namespace ECDA.VRTutorialKit
@@ -11,9 +12,8 @@ namespace ECDA.VRTutorialKit
         public enum TooltipHand { Left, Right }
 
         [Header("UI Settings")]
-        public string stepTitle = "New Lesson";
-        [TextArea(3, 10)]
-        public string stepDescription = "Instructions for this step.";
+        public LocalizedString stepTitle;
+        public LocalizedString stepDescription;
         public VideoClip videoClip;
 
         [Header("Interaction Settings")]

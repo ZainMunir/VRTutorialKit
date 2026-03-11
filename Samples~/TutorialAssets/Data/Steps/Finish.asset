@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: Finish
   m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialStep
-  stepTitle: Finished!
-  stepDescription: That's all you need to know from this tutorial. Hit "Finish" and
-    you'll have access to whatever comes next
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28171165937664
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28212194619392
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: 7b298984c8dea54439abcf4cf370ed89, type: 3}
   interactionPrefab: {fileID: 0}
   immediateCompletion: 1
@@ -25,3 +40,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 0
+  references:
+    version: 2
+    RefIds: []

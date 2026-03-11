@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Unparent
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2310990496487279829, guid: 16a81b6273773584c92821b6ffd112eb, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 38663703932928
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310990496487279829, guid: 16a81b6273773584c92821b6ffd112eb, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:3488ca378e6e01d488f136c270b8cfd2
+      objectReference: {fileID: 0}
     - target: {fileID: 3427622684821028259, guid: 16a81b6273773584c92821b6ffd112eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0092

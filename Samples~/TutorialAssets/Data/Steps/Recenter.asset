@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: Recenter
   m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialStep
-  stepTitle: Re-centering your view
-  stepDescription: At any point, you can hold down the indented button on the right
-    controller to reposition the scene to where you are looking
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28833882746880
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28890224832512
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: 9dd395bf33eb7d148bcf0d5392589801, type: 3}
   interactionPrefab: {fileID: 4880692150062475949, guid: 0a122c7200292eb47a6e0c4f1c26f362, type: 3}
   immediateCompletion: 0
@@ -24,3 +39,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 0
+  references:
+    version: 2
+    RefIds: []

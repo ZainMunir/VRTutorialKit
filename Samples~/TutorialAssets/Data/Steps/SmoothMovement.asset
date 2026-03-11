@@ -12,10 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: SmoothMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Smooth Movement
-  stepDescription: You can move around smoothly with the left thumbstick. Be careful
-    as this can make you feel nauseous if you are not used to it. Try walking around
-    and going through the red targets as they appear
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28906595201024
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 28955286876160
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: e08da7e5a5d4bcc46bf0d9f8b55f3be2, type: 3}
   interactionPrefab: {fileID: 6400019320946754940, guid: 154b3a61571915349a7b3b34de1432d1, type: 3}
   immediateCompletion: 0
@@ -26,3 +40,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 1
   rightHandLocomotion: 0
+  references:
+    version: 2
+    RefIds: []

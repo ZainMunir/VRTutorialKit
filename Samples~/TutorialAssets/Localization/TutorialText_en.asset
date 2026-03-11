@@ -1,0 +1,369 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TutorialText_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 3488ca378e6e01d488f136c270b8cfd2, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 5925276117622850237
+  m_TableData:
+  - m_Id: 1924562071552
+    m_Localized: VR Controls Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2297217593344
+    m_Localized: Previous
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342872592384
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2373344210944
+    m_Localized: Finish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25955529043968
+    m_Localized: Movement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26251961479168
+    m_Localized: You can move around smoothly with the left thumbstick, or teleport
+      by holding the right thumbstick forward and releasing it once the arrow is
+      where you want it. We recommend you use Teleportation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27811156242432
+    m_Localized: Doors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27841548169216
+    m_Localized: Some doors may be interactable in different ways, using the "Grab"
+      trigger. Try it out with the doors on the right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27924679274496
+    m_Localized: Doors
+    m_Metadata:
+      m_Items:
+      - rid: 5925276117622850237
+  - m_Id: 27985102417920
+    m_Localized: Some doors may be interactable in different ways, using the "Grab"
+      trigger. Try it out with the doors on the right
+    m_Metadata:
+      m_Items:
+      - rid: 5925276117622850237
+  - m_Id: 28171165937664
+    m_Localized: Finished!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28212194619392
+    m_Localized: That's all you need to know from this tutorial. Hit "Finish" and
+      you'll have access to whatever comes next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28267643318272
+    m_Localized: Looking Around
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28284957405184
+    m_Localized: VR allows you to look around the room in every direction. Follow
+      the arrows and look at every target to get used to this
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28364095533056
+    m_Localized: Grab Objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28365907472384
+    m_Localized: You can use the grips on either hand to grab objects. Try picking
+      the objects in front of you up and placing them on the red platforms
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366456926208
+    m_Localized: Grab from a Distance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28367039934464
+    m_Localized: You can also grab objects that are far away from a distance by aiming
+      the line in front of the controllers at them
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28367736188928
+    m_Localized: Moving with Objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28371590754304
+    m_Localized: After you grab an object, it's still possible to move or teleport
+      with it. Try going and retrieving the object on the other side of the wall
+      while holding it the entire time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28584049029120
+    m_Localized: Moving with Objects
+    m_Metadata:
+      m_Items:
+      - rid: 5925276117622850237
+  - m_Id: 28605737775104
+    m_Localized: After you grab an object, it's still possible to move or teleport
+      with it. Try going and retrieving the object on the other side of the wall
+      while holding it the entire time
+    m_Metadata:
+      m_Items:
+      - rid: 5925276117622850237
+  - m_Id: 28619214073856
+    m_Localized: Hidden Objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28667926720512
+    m_Localized: Important objects may be hidden behind interactions in the environment.
+      If something changes color, you can probably grab it to do something. Try exploring
+      behind you to find the hidden blocks to continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28683739246592
+    m_Localized: Introduction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28765091966976
+    m_Localized: This tutorial aims to familiarise you with some common VR controls
+      that you might need in the following VR experiences. To start, you can use
+      the triggers on either hand to interact with User Interface buttons. Click
+      "Next" to continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28779189022720
+    m_Localized: Outlined Objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28806963703808
+    m_Localized: Objects of particular importance may be highlighted with an outline
+      and have a silhoutte that can be seen through objects. These are important
+      for progression, so be sure to look out for them
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28833882746880
+    m_Localized: Re-centering your view
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28890224832512
+    m_Localized: At any point, you can hold down the indented button on the right
+      controller to reposition the scene to where you are looking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28906595201024
+    m_Localized: Smooth Movement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28955286876160
+    m_Localized: You can move around smoothly with the left thumbstick. Be careful
+      as this can make you feel nauseous if you are not used to it. Try walking around
+      and going through the red targets as they appear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28982105255936
+    m_Localized: Smooth Movement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29027848335360
+    m_Localized: You can move around smoothly with the thumbstick on either controller.
+      Be careful as this can make you feel nauseous if you are not used to it. Try
+      walking around and going through the red targets as they appear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29046873698304
+    m_Localized: Sockets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29087898185728
+    m_Localized: Some objects might snap into specific positions called sockets.
+      They can be put in and sometimes taken back out
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29111495340032
+    m_Localized: Teleportation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29166637854720
+    m_Localized: Holding the right thumbstick forward allows you to instantly move,
+      commonly referred to as teleporting, to where the visual is when you let go.
+      Move around the table and teleport to the red areas when they appear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29192663511040
+    m_Localized: Teleportation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29236246523904
+    m_Localized: Holding the thumbstick forward on either controller allows you to
+      instantly move, commonly referred to as teleporting, to where the visual is
+      when you let go. Move around the table and teleport to the red areas when they
+      appear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29251824168960
+    m_Localized: Interact with User Interfaces (UI)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29274297249792
+    m_Localized: Screen elements might be used for various purposes. Try some out
+      on the other screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34149919797248
+    m_Localized: Normal doors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34201371324416
+    m_Localized: If you hover over a door and it "highlights", you can open it using
+      the Grab trigger and walk through
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34581102637056
+    m_Localized: Outlined Doors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34590900531200
+    m_Localized: If a door is already highlighted with an outline, you can grab it
+      and it will transition to the next scene. Try grabbing it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34813857148928
+    m_Localized: Done!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34815140605952
+    m_Localized: You can head back to the desk now to continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35094430920704
+    m_Localized: "Drop the \nobject here"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35430633746432
+    m_Localized: Grab me!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35771752296448
+    m_Localized: Skip Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35773371297792
+    m_Localized: If you don't need the tutorial, you can skip it directly by clicking
+      the button below. This is not recommended unless you are familiar with VR interactions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35825586188288
+    m_Localized: Config Selector
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36151735267328
+    m_Localized: Do not change the selected option unless instructed to
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36219968204800
+    m_Localized: Choose one from below
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36731723624448
+    m_Localized: Click around below
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36782541811712
+    m_Localized: Buttons in the environment can be clicked and do various "one time"
+      actions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36857988952064
+    m_Localized: Success
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36874665504768
+    m_Localized: Error
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36892575182848
+    m_Localized: Grayed out buttons are disabled, and cannot be interacted with
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36911130783744
+    m_Localized: Inactive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36928197406720
+    m_Localized: Toggles are used to turn on or off continuous actions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37844069822464
+    m_Localized: Blink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38130469482496
+    m_Localized: UI Press
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38214301036544
+    m_Localized: Grab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38420614656000
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38465833447424
+    m_Localized: Re-center
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38663703932928
+    m_Localized: Move
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38737561432064
+    m_Localized: Turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43384284033024
+    m_Localized: The Tutorial is Done!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43443419525120
+    m_Localized: If you're seeing this, you should let the person helping you know
+      you're done, and they'll tell you what to do next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44061622185984
+    m_Localized: Choose a language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47380235202560
+    m_Localized: Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47646489620480
+    m_Localized: Back to Tutorial
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5925276117622850237
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 27924679274496
+        - id: 27985102417920
+        - id: 28584049029120
+        - id: 28605737775104

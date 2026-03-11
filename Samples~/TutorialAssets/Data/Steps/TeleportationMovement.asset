@@ -12,10 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
   m_Name: TeleportationMovement
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialStep
-  stepTitle: Teleportation
-  stepDescription: Holding the right thumbstick forward allows you to instantly move,
-    commonly referred to as teleporting, to where the visual is when you let go.
-    Move around the table and teleport to the red areas when they appear
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 29111495340032
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 29166637854720
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   videoClip: {fileID: 32900000, guid: 6f5ddb00864c8024d9b6b45bb1b65e27, type: 3}
   interactionPrefab: {fileID: 1122210626397759210, guid: 89d86f31aebd34a42b2ee661eaa68e28, type: 3}
   immediateCompletion: 0
@@ -26,3 +40,6 @@ MonoBehaviour:
   enableSnapTurn: 0
   leftHandLocomotion: 0
   rightHandLocomotion: 2
+  references:
+    version: 2
+    RefIds: []

@@ -1,8 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Packages/com.ecda.vrtutorialkit/Runtime/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3"/>
+    <Style src="project://database/Packages/com.ecda.vrtutorialkit/Runtime/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3#style"/>
     <ui:VisualElement class="background">
         <ui:VisualElement name="Header" style="flex-grow: 1; max-height: 15%;">
-            <ui:Label text="VR Controls Tutorial" name="title" class="title"/>
+            <ui:Label text="VR Controls Tutorial" name="title" class="title">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(1924562071552)"/>
+                </Bindings>
+            </ui:Label>
         </ui:VisualElement>
         <ui:VisualElement name="Dynamic" style="flex-grow: 1;">
             <ui:Label text="Step Title" name="StepTitle" class="subtitle"/>
@@ -10,9 +14,21 @@
             <ui:Label text="Step Description" name="StepDescription" class="description"/>
         </ui:VisualElement>
         <ui:VisualElement name="Controls" style="flex-grow: 1; max-height: 15%; flex-direction: row; justify-content: center; align-self: auto; align-items: stretch;">
-            <ui:Button text="Previous" name="PreviousButton" class="button"/>
-            <ui:Button text="Next" name="NextButton" class="button"/>
-            <ui:Button text="Finish" name="FinishButton" class="button"/>
+            <ui:Button text="Previous" name="PreviousButton" class="button">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(2297217593344)"/>
+                </Bindings>
+            </ui:Button>
+            <ui:Button text="Next" name="NextButton" class="button">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(2342872592384)"/>
+                </Bindings>
+            </ui:Button>
+            <ui:Button text="Finish" name="FinishButton" class="button">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(2373344210944)"/>
+                </Bindings>
+            </ui:Button>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

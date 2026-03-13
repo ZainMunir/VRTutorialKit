@@ -310,6 +310,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1092709405454683383}
     m_Modifications:
     - target: {fileID: 1741626037115671470, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: m_WorldSpaceWidth
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741626037115671470, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
       propertyPath: m_WorldSpaceHeight
       value: 500
       objectReference: {fileID: 0}
@@ -332,6 +336,10 @@ PrefabInstance:
     - target: {fileID: 5692879520999303190, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
       propertyPath: m_Name
       value: ConfigSelector
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174563346713419755, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: m_Size.x
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6174563346713419755, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
       propertyPath: m_Size.y
@@ -388,6 +396,14 @@ PrefabInstance:
     - target: {fileID: 6836218428812881167, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757423567563612269, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757423567563612269, guid: 494368e6e7cc9084eb0fe1ee6bbe2df1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -582,9 +598,6 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  title: Skip Tutorial
-  description: If you don't need the tutorial, you can skip it directly by clicking
-    the button below. This is not recommended unless you are familiar with VR interactions
   references:
     version: 2
     RefIds: []

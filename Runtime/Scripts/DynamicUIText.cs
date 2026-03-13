@@ -10,11 +10,6 @@ namespace ECDA.VRTutorialKit
     {
         public LocalizedString d_title;
         public LocalizedString d_description;
-
-        public string title;
-        [TextArea(3, 10)]
-        public string description;
-
         VisualElement root;
         void Start()
         {

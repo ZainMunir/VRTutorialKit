@@ -20,29 +20,346 @@ MonoBehaviour:
     - rid: 5925276117622850238
   m_TableData:
   - m_Id: 1924562071552
-    m_Localized: TEST
+    m_Localized: VR Controls Tutorial
     m_Metadata:
       m_Items: []
   - m_Id: 27924679274496
-    m_Localized: 
+    m_Localized: Deuren
     m_Metadata:
       m_Items:
       - rid: 5925276117622850238
   - m_Id: 27985102417920
-    m_Localized: 
+    m_Localized: Deuren kunnen geopend worden met de grijp knop. Probeer het eens
+      uit met de deuren aan de rechterkant.
     m_Metadata:
       m_Items:
       - rid: 5925276117622850238
   - m_Id: 28584049029120
-    m_Localized: 
+    m_Localized: Bewegen met objecten
     m_Metadata:
       m_Items:
       - rid: 5925276117622850238
   - m_Id: 28605737775104
-    m_Localized: 
+    m_Localized: Nadat je een voorwerp hebt gepakt, kun je er nog steeds mee bewegen
+      of teleporteren. Probeer het voorwerp aan de andere kant van de muur op te
+      halen terwijl je het de hele tijd vasthoudt.
     m_Metadata:
       m_Items:
       - rid: 5925276117622850238
+  - m_Id: 2297217593344
+    m_Localized: Vorige
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2342872592384
+    m_Localized: Volgende
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2373344210944
+    m_Localized: Klaar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25955529043968
+    m_Localized: Beweging
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26251961479168
+    m_Localized: Je kunt vloeiend bewegen met de linker thumbstick, of teleporteren
+      door de rechter thumbstick naar voren te houden en los te laten zodra de pijl
+      op de gewenste plek staat. We raden je aan om te teleporteren.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27811156242432
+    m_Localized: Deuren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27841548169216
+    m_Localized: Deuren kunnen geopend worden met de grijp knop. Probeer het eens
+      uit met de deuren aan de rechterkant.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28171165937664
+    m_Localized: Klaar!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28212194619392
+    m_Localized: Dat is alles wat je uit deze tutorial moet weten. Klik op "Klaar"
+      om verder te gaan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28267643318272
+    m_Localized: Rondkijken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28284957405184
+    m_Localized: In VR kun je in alle richtingen rondkijken in de kamer. Volg de
+      pijlen en kijk naar elk doelwit om hieraan te wennen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28364095533056
+    m_Localized: Voorwerpen pakken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28365907472384
+    m_Localized: "Je kunt de grijp knop aan \xE9\xE9n van je handen gebruiken om
+      voorwerpen vast te pakken. Probeer de voorwerpen voor je op te pakken en op
+      de rode platforms te plaatsen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366456926208
+    m_Localized: Pakken op een afstand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28367039934464
+    m_Localized: Je kunt ook objecten die ver weg zijn vanop een afstand pakken door
+      de lijn die uit de controllers komt erop te richten.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28367736188928
+    m_Localized: Bewegen met objecten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28371590754304
+    m_Localized: Nadat je een voorwerp hebt gepakt, kun je er nog steeds mee bewegen
+      of teleporteren. Probeer het voorwerp aan de andere kant van de muur op te
+      halen terwijl je het de hele tijd vasthoudt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28619214073856
+    m_Localized: Verborgen objecten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28667926720512
+    m_Localized: Belangrijke objecten kunnen verborgen zijn in de omgeving. Als iets
+      van kleur verandert, kun je het waarschijnlijk vastpakken om er iets mee te
+      doen. Probeer achter je te kijken om de verborgen blokken te vinden en verder
+      te gaan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28683739246592
+    m_Localized: Introductie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28765091966976
+    m_Localized: "Deze tutorial is bedoeld om je enkele veelgebruikte VR-bedieningselementen
+      te leren die je nodig hebt in de VR-ervaring. Om te beginnen, gebruik de triggers
+      op \xE9\xE9n van je controllers om de knoppen van de gebruikersinterface te
+      bedienen. Klik op \"Volgende\" om verder te gaan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28779189022720
+    m_Localized: Omlijnde objecten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28806963703808
+    m_Localized: Belangrijke objecten kunnen worden gemarkeerd met een omlijning
+      en een silhouet dat door objecten heen zichtbaar is. Deze markeringen zijn
+      belangrijk voor de voortgang. Let er dus goed op.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28833882746880
+    m_Localized: Zicht centreren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28890224832512
+    m_Localized: "Je kunt op elk gewenst moment de ingedeukte knop op de rechter
+      controller ingedrukt houden om de sc\xE8ne rondom je te centreren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28906595201024
+    m_Localized: Vloeiende beweging
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28955286876160
+    m_Localized: Je kunt vloeiend bewegen met de linker thumbstick. Wees voorzichtig,
+      want dit kan misselijkheid veroorzaken als je er niet aan gewend bent. Probeer
+      rond te lopen en de rode doelen te volgen zodra ze verschijnen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28982105255936
+    m_Localized: Vloeiende beweging
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29027848335360
+    m_Localized: Je kunt vloeiend bewegen met de linker of rechter thumbstick. Wees
+      voorzichtig, want dit kan misselijkheid veroorzaken als je er niet aan gewend
+      bent. Probeer rond te lopen en de rode doelen te volgen zodra ze verschijnen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29046873698304
+    m_Localized: Sockets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29087898185728
+    m_Localized: Sommige objecten kunnen vastklikken in specifieke posities die sockets
+      worden genoemd. Ze kunnen erin worden geplaatst en soms ook weer worden verwijderd.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29111495340032
+    m_Localized: Teleporteren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29166637854720
+    m_Localized: Door de rechter thumbstick naar voren te houden, kun je direct naar
+      de locatie bewegen waar de visual naartoe wijst zodra je de stick loslaat.
+      Dit wordt ook wel teleporteren genoemd. Beweeg rond de tafel en teleporteer
+      naar de rode gebieden wanneer deze verschijnen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29192663511040
+    m_Localized: Teleporteren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29236246523904
+    m_Localized: Door de rechter of linker thumbstick naar voren te houden, kun je
+      direct naar de locatie bewegen waar de visual naartoe wijst zodra je de stick
+      loslaat. Dit wordt ook wel teleporteren genoemd. Beweeg rond de tafel en teleporteer
+      naar de rode gebieden wanneer deze verschijnen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29251824168960
+    m_Localized: Interactie met gebruikersinterfaces (UI)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29274297249792
+    m_Localized: Schermelementen kunnen voor verschillende doeleinden worden gebruikt.
+      Probeer er een paar uit op het andere scherm.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34149919797248
+    m_Localized: Deuren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34201371324416
+    m_Localized: Als je met je controller over een deur beweegt en deze licht op,
+      dan kun je hem openen met de grijp knop en erdoorheen lopen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34581102637056
+    m_Localized: Omlijnde deuren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34590900531200
+    m_Localized: "Als een deur al is gemarkeerd met een omlijning, kun je deze vastpakken
+      om naar de volgende sc\xE8ne te gaan. Probeer het maar eens!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34813857148928
+    m_Localized: Klaar!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34815140605952
+    m_Localized: Je kan nu teruggaan naar de tafel om verder te gaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35094430920704
+    m_Localized: Object hier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35430633746432
+    m_Localized: Grijp me!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35771752296448
+    m_Localized: Tutorial skippen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35773371297792
+    m_Localized: Als je de tutorial niet nodig hebt, kun je deze overslaan door op
+      de onderstaande knop te klikken. Dit wordt echter afgeraden, tenzij je al bekend
+      bent met VR-interacties.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35825586188288
+    m_Localized: Configuratie selectie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36151735267328
+    m_Localized: Wijzig de geselecteerde optie niet, tenzij het je expliciet gevraagd
+      wordt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36219968204800
+    m_Localized: Kies uit de onderstaande opties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36731723624448
+    m_Localized: Klik hieronder rond
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36782541811712
+    m_Localized: Knoppen in de omgeving kan je aanklikken en voeren diverse acties
+      uit.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36857988952064
+    m_Localized: Succes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36874665504768
+    m_Localized: Error
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36892575182848
+    m_Localized: Grijze knoppen zijn uitgeschakeld en kunnen niet worden gebruikt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36911130783744
+    m_Localized: Inactief
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36928197406720
+    m_Localized: Toggels worden gebruikt om continue acties in of uit te schakelen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37844069822464
+    m_Localized: Blink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38130469482496
+    m_Localized: UI klik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38214301036544
+    m_Localized: Pak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38420614656000
+    m_Localized: Opties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38465833447424
+    m_Localized: Centeren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38663703932928
+    m_Localized: Beweeg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38737561432064
+    m_Localized: Draai
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43384284033024
+    m_Localized: De tutorial is klaar!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43443419525120
+    m_Localized: Als je dit ziet, laat dan de persoon die je helpt weten dat je klaar
+      bent. Die zal je dan vertellen wat je vervolgens moet doen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44061622185984
+    m_Localized: Kies een taal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47646489620480
+    m_Localized: Terug naar tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47380235202560
+    m_Localized: Skip
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

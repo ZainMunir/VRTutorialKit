@@ -13,7 +13,7 @@ public class HideOnButtonPress : MonoBehaviour
 
     private Dictionary<GameObject, Vector3> originalPositions;
 
-    void Start()
+    void OnEnable()
     {
         foreach (var button in buttonsToWatch)
         {
@@ -29,6 +29,15 @@ public class HideOnButtonPress : MonoBehaviour
         }
         UpdateObjectVisibility();
     }
+
+    void OnDisable()
+    {
+        foreach (var button in buttonsToWatch)
+        {
+            button.action.performed -= OnButtonPressed;
+        }
+    }
+
 
     void UpdateObjectVisibility()
     {

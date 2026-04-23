@@ -19,6 +19,55 @@ like
 git log v0.0.0..HEAD --oneline --no-decorate
 ```
 
+## v0.4.0
+Localisation with English, Dutch. Version used (mostly) in Outsourced during course
+
+```
+f87abbb add: hider uses onEnable and onDisable instead of Start
+dcae6f2 add: dutch translations and make it the default
+af1b339 add: prevent teleport under tables
+6aafb70 fix: grabmovement arrows flipping multiple times
+df69084 add: all text uses localisation table now
+4e494ae fix: add dependency
+7280e58 add: localization package to test
+c018e90 fix: int to float size, startOnEnable false
+e0265a9 add: ability to set bouncing arrow size
+80ee265 add: progressprovider to actiononallconditions
+fe03fa0 fix: actionafterdelay multiple uses
+698063c add: stacked conditional events and orientation action
+cc67b27 add: general gaze action
+3c5ef71 add: tags to respawn functionality
+644995e add: bouncing arrow mechanism and targets, action after delay
+097de98 add: ability to run something before scene change
+95ff5d6 fix: disabling socketinteractabletag prevents mount
+7b2974a add: separate out tutorial controls from rigcontroller
+6ad8e9c add: flip arrows in grab movement + set placement as target after delay
+6b77ac0 change: cuboid -> cube
+0186a15 add: limit teleportable area
+f25a613 add: change some wording and plane backing to UI
+778b4a9 add: changes to rig
+469c020 add: revert to old shader with new method
+4c32e1b add: potential alternative to inconsistent outlining
+2533342 update: make triggerenterevents reusable elsewhere
+6fdef66 add: use new door prefab for doors task too
+b23dfa7 add: hidden objects exploring task
+f973f6b add: unhighlight with helper
+e82f2a7 add: new way of handling socket filtering
+909cdaf add: dynamic update to interactionHighlighter
+020f353 add: allow setting linkedobjects in highlighter
+7c6c9db add: variations of steps with teleport on both hands
+74f8df5 add: fix attempts for scene transitions breaking
+95d874e fix: hovervisual and highlightobject conflict
+fe8fe57 add: improve hover visual to use all materials
+a1eee30 add: improve hinge animator
+8f2d62d fix: layering of arrow when not in overlay
+faa69e6 add: videos for each step
+c7b0466 add: hide controller button
+157ba6d add: guide arrows in grabfarmove and different second door
+c896709 fix: teleport anchor and gaze target bugs
+98471c1 changelog: entry v0.3.0
+```
+
 ## v0.3.0
 Guiding arrows, new steps (gaze, recenter, variations of movement and grab) and reworked tooltips
 

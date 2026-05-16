@@ -311,6 +311,14 @@ MonoBehaviour:
     m_Key: UI_BACKTOTUTORIAL_BUTTON
     m_Metadata:
       m_Items: []
+  - m_Id: 23999530250186752
+    m_Key: STEP_HELDACTION_DESC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23999806994558976
+    m_Key: STEP_HELDACTION_TITLE
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfdb47f2dfb55f46acf5af07b6be075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialManager
-  tutorialConfig: {fileID: 11400000, guid: 68fbcb58af314284b9afbc981ca789e1, type: 2}
+  tutorialConfig: {fileID: 11400000, guid: e1c4d1cfa84b8f9449136c27ca7ddea7, type: 2}
 --- !u!4 &2020561983
 Transform:
   m_ObjectHideFlags: 0

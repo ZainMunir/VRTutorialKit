@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: TestConfig
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialConfig
   tutorialSteps:
-  - {fileID: 11400000, guid: 53fab3a1776a3cc49a8c16a24f4aaa40, type: 2}
-  - {fileID: 11400000, guid: 1d1649c4f40af9f4f83fad3584c768e2, type: 2}
+  - {fileID: 11400000, guid: 5ac7f0aa1eec616489c3e5bf9db4829c, type: 2}
   startingScene: Assets/Samples/VRTutorialKitSamples/TutorialAssets/ExitPlaceholder.unity

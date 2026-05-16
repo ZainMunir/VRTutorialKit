@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1760e2931b97704ca2dc44bc768c4cf, type: 3}
+  m_Name: VREmergencyConfig
+  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialConfig
+  tutorialSteps:
+  - {fileID: 11400000, guid: 1db6a6d53afa20347ac12987acfe6d0d, type: 2}
+  - {fileID: 11400000, guid: b073f2ccbb691134982a46cef9aae091, type: 2}
+  - {fileID: 11400000, guid: 5ac7f0aa1eec616489c3e5bf9db4829c, type: 2}
+  - {fileID: 11400000, guid: 3693dce5d3f26fa41b9482a7c54f5045, type: 2}
+  - {fileID: 11400000, guid: 31cd7c619824f2d4291b174b73fadd0b, type: 2}
+  - {fileID: 11400000, guid: c6ff3a37e0883b24ab016a5c806a070a, type: 2}
+  - {fileID: 11400000, guid: 0ccadc1636d140b49874ab5efbcb9dde, type: 2}
+  - {fileID: 11400000, guid: 1d1649c4f40af9f4f83fad3584c768e2, type: 2}
+  - {fileID: 11400000, guid: 721dce7c48a096640907540c741b915a, type: 2}
+  - {fileID: 11400000, guid: 826b1ef50ce57824fa35909811e057f7, type: 2}
+  startingScene: Assets/Samples/VRTutorialKitSamples/TutorialAssets/ExitPlaceholder.unity

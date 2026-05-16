@@ -355,6 +355,15 @@ MonoBehaviour:
     m_Localized: Back to Tutorial
     m_Metadata:
       m_Items: []
+  - m_Id: 23999530250186752
+    m_Localized: When holding an object, you can press the trigger to do some specific
+      action that only happens while it's held
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23999806994558976
+    m_Localized: Held Actions
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

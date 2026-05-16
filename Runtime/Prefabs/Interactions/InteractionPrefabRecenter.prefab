@@ -25,12 +25,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736922943435692061}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3217785154132164563}
+  m_Father: {fileID: 6375413476881569842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6183125924946332624
 MonoBehaviour:
@@ -47,53 +47,19 @@ MonoBehaviour:
   movementThreshold: 0.01
   OnRecenterDetected:
     m_PersistentCalls:
-      m_Calls: []
---- !u!1 &3487115338148639062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1136147866598376340}
-  - component: {fileID: 6316671515012045956}
-  m_Layer: 0
-  m_Name: CompleteOnRecenter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1136147866598376340
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3487115338148639062}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6375413476881569842}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6316671515012045956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3487115338148639062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b155b44f051463479ef3c29c5178c5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.CompleteOnRecenter
-  subStep: {fileID: 4388017291770591665}
-  recenterDetector: {fileID: 6183125924946332624}
+      m_Calls:
+      - m_Target: {fileID: 4388017291770591665}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.TutorialSubStep, ecda.vrtutorialkit
+        m_MethodName: Complete
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1882750456441769109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,9 +123,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3929110419934294854, guid: fe677d46cdecaef4e8096771a7cb5020, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5211704565680987194}
     - targetCorrespondingSourceObject: {fileID: 3929110419934294854, guid: fe677d46cdecaef4e8096771a7cb5020, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6375413476881569842}
@@ -227,7 +190,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1136147866598376340}
+      addedObject: {fileID: 5211704565680987194}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
 --- !u!114 &4388017291770591665 stripped

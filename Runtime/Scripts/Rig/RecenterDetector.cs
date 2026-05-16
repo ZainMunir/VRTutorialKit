@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Unity.XR.CoreUtils;
 
-public class XRRecenterDetector : MonoBehaviour
+public class RecenterDetector : MonoBehaviour
 {
     [Header("Settings")]
     [Tooltip("How far must the camera jump in one frame to trigger a recenter? (In meters)")]

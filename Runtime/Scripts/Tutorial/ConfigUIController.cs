@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.Localization.Settings; // Add this
+using UnityEngine.Localization.Settings;
 using UnityEngine.Localization;
 
 namespace ECDA.VRTutorialKit
@@ -10,10 +10,10 @@ namespace ECDA.VRTutorialKit
     {
         TutorialManager tutorialManager;
         RadioButtonGroup radioButtonGroup;
-        RadioButtonGroup languageGroup; // New reference
+        RadioButtonGroup languageGroup;
 
         private EventCallback<ChangeEvent<int>> valueChangedCallback;
-        private EventCallback<ChangeEvent<int>> languageChangedCallback; // New callback
+        private EventCallback<ChangeEvent<int>> languageChangedCallback;
 
         public List<TutorialConfig> configOptions = new List<TutorialConfig>();
 

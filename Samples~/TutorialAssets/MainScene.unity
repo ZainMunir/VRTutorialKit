@@ -561,7 +561,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 687112708}
-  - component: {fileID: 687112707}
+  - component: {fileID: 687112710}
+  - component: {fileID: 687112709}
   m_Layer: 0
   m_Name: TutorialUIHider
   m_TagString: Untagged
@@ -569,24 +570,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &687112707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687112706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60353ee3dd1c4ed46b4c9730771b349e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::HideOnButtonPress
-  objectsToHide:
-  - {fileID: 1867425664}
-  buttonsToWatch:
-  - {fileID: 966231709}
-  - {fileID: 999326327}
-  isHidden: 0
 --- !u!4 &687112708
 Transform:
   m_ObjectHideFlags: 0
@@ -602,6 +585,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &687112709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687112706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b135730448ad22b408021333975d628f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ObjectHider
+  objectsToHide:
+  - {fileID: 1867425664}
+  isHidden: 0
+--- !u!114 &687112710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687112706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b016e1279f0ce4d930d09d35ebe826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ActionOnButtonPress
+  buttonsToWatch:
+  - {fileID: -3599823989380923159, guid: 0be0028c24f2a4c14a96b6aa39055933, type: 3}
+  - {fileID: -3599823989380923159, guid: b6d5c44ebe3244b7692e81ae8265eb22, type: 3}
+  onButtonPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 687112709}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.ObjectHider, ecda.vrtutorialkit
+        m_MethodName: ToggleVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &756192406
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,20 +759,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1859242352}
   m_SourcePrefab: {fileID: 100100000, guid: 1f1efaf859edaa14abd7e5f04d67d9f9, type: 3}
---- !u!114 &966231709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Left/Hide
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: dd61aaee-9518-4f49-8b30-0c0c3fd73840
 --- !u!1 &966750316
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,20 +956,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966750316}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &999326327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Right/Hide
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: c7ccb53c-e8c8-4388-ae26-0d4653858904
 --- !u!1001 &1058666481
 PrefabInstance:
   m_ObjectHideFlags: 0

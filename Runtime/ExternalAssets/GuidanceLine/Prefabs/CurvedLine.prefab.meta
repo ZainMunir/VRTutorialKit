@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d9e2c581552012a42a5f6244fba1a977
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303873
+  packageName: Guidance Line
+  packageVersion: 1.0.0
+  assetPath: Assets/GuidanceLine/Prefabs/CurvedLine.prefab
+  uploadId: 716538

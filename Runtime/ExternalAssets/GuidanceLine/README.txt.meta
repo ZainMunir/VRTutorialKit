@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cfd3d040d705611409ba251689e61f3e
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303873
+  packageName: Guidance Line
+  packageVersion: 1.0.0
+  assetPath: Assets/GuidanceLine/README.txt
+  uploadId: 716538

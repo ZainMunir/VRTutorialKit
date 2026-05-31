@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2e17403cdf5ee76438498311f447de2d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303873
+  packageName: Guidance Line
+  packageVersion: 1.0.0
+  assetPath: Assets/GuidanceLine/Editor/GuidanceLineCustomEditor.cs
+  uploadId: 716538

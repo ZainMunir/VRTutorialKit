@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4a14e66026839694e8e59910a7cc5d93
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303873
+  packageName: Guidance Line
+  packageVersion: 1.0.0
+  assetPath: Assets/GuidanceLine/Prefabs/Player.prefab
+  uploadId: 716538

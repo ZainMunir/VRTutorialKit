@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9c2222f8c90b0b54691b174c0c6a8760
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303873
+  packageName: Guidance Line
+  packageVersion: 1.0.0
+  assetPath: Assets/GuidanceLine/Scripts/CheckPointMovement.cs
+  uploadId: 716538

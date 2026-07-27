@@ -16,28 +16,33 @@ namespace ECDA.VRTutorialKit
             root = GetComponent<UIDocument>().rootVisualElement;
             LocalizationSettings.SelectedLocaleChanged += OnSelectedLocaleChanged;
 
-            UpdateUI();
+            UpdateUI(d_title, d_description);
         }
 
         void OnSelectedLocaleChanged(Locale newLocale)
         {
-            UpdateUI();
+            UpdateUI(d_title, d_description);
         }
 
-        void UpdateUI()
+        public void UpdateUI(LocalizedString title, LocalizedString description)
         {
             Label titleLabel = root.Q<Label>("Title");
             Label descriptionLabel = root.Q<Label>("Description");
 
             if (titleLabel != null)
             {
-                titleLabel.text = d_title.GetLocalizedString();
+                titleLabel.text = title.GetLocalizedString();
             }
 
             if (descriptionLabel != null)
             {
-                descriptionLabel.text = d_description.GetLocalizedString();
+                descriptionLabel.text = description.GetLocalizedString();
             }
+        }
+
+        public void ResetUI()
+        {
+            UpdateUI(d_title, d_description);
         }
     }
 }

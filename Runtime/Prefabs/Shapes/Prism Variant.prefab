@@ -94,6 +94,10 @@ PrefabInstance:
       propertyPath: socketTag
       value: 
       objectReference: {fileID: 11400000, guid: 0b593a7b77aa7824c9406f9f6bdd15dc, type: 2}
+    - target: {fileID: 852799688037268325, guid: 8dd8418b5370dd74f9f9f1cbd703a52c, type: 3}
+      propertyPath: 'socketTag.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b593a7b77aa7824c9406f9f6bdd15dc, type: 2}
     - target: {fileID: 6957000769822834732, guid: 8dd8418b5370dd74f9f9f1cbd703a52c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5

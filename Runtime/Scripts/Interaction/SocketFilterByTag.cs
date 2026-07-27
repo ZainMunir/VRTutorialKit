@@ -14,7 +14,8 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private TargetTag requiredTag;
 
         [Tooltip("Event invoked when the valid object enters the socket.")]
-        public UnityEvent onValidEntry;
+        public UnityEvent<IXRInteractable> onValidEntry;
+        public UnityEvent<IXRInteractable> onValidExit;
 
         private XRSocketInteractor m_SocketInteractor;
 
@@ -44,18 +45,28 @@ namespace ECDA.VRTutorialKit
         {
             if (m_SocketInteractor != null)
                 m_SocketInteractor.selectEntered.AddListener(OnSelectEntered);
+            if (m_SocketInteractor != null)
+                m_SocketInteractor.selectExited.AddListener(OnSelectExited);
         }
 
         void OnDisable()
         {
             if (m_SocketInteractor != null)
                 m_SocketInteractor.selectEntered.RemoveListener(OnSelectEntered);
+            if (m_SocketInteractor != null)
+                m_SocketInteractor.selectExited.RemoveListener(OnSelectExited);
         }
 
         void OnSelectEntered(SelectEnterEventArgs args)
         {
             // Since we are filtering, if something enters, it obeys the filter.
-            onValidEntry?.Invoke();
+            onValidEntry?.Invoke(args.interactableObject);
+        }
+
+        void OnSelectExited(SelectExitEventArgs args)
+        {
+            // Since we are filtering, if something exits, it obeys the filter.
+            onValidExit?.Invoke(args.interactableObject);
         }
 
         public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)
@@ -74,7 +85,7 @@ namespace ECDA.VRTutorialKit
 
             if (interactable.transform.TryGetComponent<SocketInteractableTag>(out var interactableTag))
             {
-                return interactableTag.enabled ? interactableTag.socketTag == requiredTag : false;
+                return interactableTag.enabled && interactableTag.HasTag(requiredTag);
             }
 
             return false;

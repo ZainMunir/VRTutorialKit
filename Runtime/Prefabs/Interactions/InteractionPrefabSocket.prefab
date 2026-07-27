@@ -382,6 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.BouncingArrowHandler
   bouncingArrowPrefab: {fileID: 2503458939241129540, guid: 93c1bd892a7c65c42912ead5659b4fac, type: 3}
   targetTag: {fileID: 0}
+  size: 1
   overrideTarget: {fileID: 4104356839144036542}
 --- !u!114 &7809278031136778952
 MonoBehaviour:
@@ -727,6 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.BouncingArrowHandler
   bouncingArrowPrefab: {fileID: 2503458939241129540, guid: 93c1bd892a7c65c42912ead5659b4fac, type: 3}
   targetTag: {fileID: 0}
+  size: 1
   overrideTarget: {fileID: 3901256357261378537}
 --- !u!114 &3786236240936392103
 MonoBehaviour:
@@ -929,6 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.BouncingArrowHandler
   bouncingArrowPrefab: {fileID: 2503458939241129540, guid: 93c1bd892a7c65c42912ead5659b4fac, type: 3}
   targetTag: {fileID: 0}
+  size: 1
   overrideTarget: {fileID: 7046800414878548512}
 --- !u!114 &4133147928633822748
 MonoBehaviour:

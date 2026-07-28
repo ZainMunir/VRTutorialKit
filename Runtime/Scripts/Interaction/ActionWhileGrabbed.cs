@@ -15,7 +15,7 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private InputActionReference rightTriggerAction;
 
         [Header("Events")]
-        [SerializeField] private UnityEvent onTriggerPressed;
+        public UnityEvent onTriggerPressed;
 
         private XRGrabInteractable grabInteractable;
         private InputAction currentAction;

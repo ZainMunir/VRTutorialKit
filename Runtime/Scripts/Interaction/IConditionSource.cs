@@ -10,7 +10,7 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private bool isConditionMet = false;
         public bool IsConditionMet => isConditionMet;
         public event Action<bool> ConditionStateChanged;
-        [SerializeField] protected UnityEvent onAction;
+        public UnityEvent onAction;
         [SerializeField] protected bool triggerOnce = false;
         protected bool hasTriggered = false;
         private bool previousConditionState = false;

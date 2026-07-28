@@ -10,8 +10,8 @@ namespace ECDA.VRTutorialKit
     public class GrabOnlySelect : MonoBehaviour
     {
         [SerializeField] private XRGrabInteractable grabInteractable;
-        [SerializeField] private UnityEvent onGrabEntered;
-        [SerializeField] private UnityEvent onGrabExited;
+        public UnityEvent onGrabEntered;
+        public UnityEvent onGrabExited;
         private void Reset()
         {
             grabInteractable = GetComponent<XRGrabInteractable>();

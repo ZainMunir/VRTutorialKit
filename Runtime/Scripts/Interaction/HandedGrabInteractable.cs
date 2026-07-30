@@ -4,7 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace ECDA.VRTutorialKit
 {
-    public class HandedAttachPoint : XRGrabInteractable
+    public class HandedGrabInteractable : XRGrabInteractable
     {
         public Transform leftAttach;
         public Transform rightAttach;

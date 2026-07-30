@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &528378394244840956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4453347341242899584}
+  m_Layer: 0
+  m_Name: LeftAttach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4453347341242899584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528378394244840956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3000186246023203508}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031448858251931788
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,8 +112,41 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4453347341242899584}
+  - {fileID: 5813700980388089266}
   m_Father: {fileID: 6957000769822834732}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3550546741439653096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5813700980388089266}
+  m_Layer: 0
+  m_Name: RightAttach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5813700980388089266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3550546741439653096}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3000186246023203508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4016998538935985753
 GameObject:
@@ -125,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6957000769822834732}
   - component: {fileID: 6957000769822834729}
-  - component: {fileID: 6957000769822834730}
+  - component: {fileID: 8076963418057174753}
   - component: {fileID: 7758657608288277187}
   - component: {fileID: -8230707300246142760}
   - component: {fileID: 852799688037268325}
@@ -181,7 +245,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6957000769822834730
+--- !u!114 &8076963418057174753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,9 +254,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6957000769822834733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9586669a3cddaaa4195d1daeb771ab8d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HandedAttachPoint
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
@@ -281,7 +345,7 @@ MonoBehaviour:
   m_ParentInteractableObject: {fileID: 0}
   m_AttachTransform: {fileID: 3000186246023203508}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 1
+  m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -294,16 +358,16 @@ MonoBehaviour:
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 1
-  m_SmoothPositionAmount: 5
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
   m_TightenPosition: 0.1
   m_TrackRotation: 1
-  m_SmoothRotation: 1
-  m_SmoothRotationAmount: 5
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
   m_TrackScale: 1
-  m_SmoothScale: 1
-  m_SmoothScaleAmount: 5
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
   m_ThrowOnDetach: 1
   m_ThrowSmoothingDuration: 0.25
@@ -334,6 +398,8 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+  leftAttach: {fileID: 4453347341242899584}
+  rightAttach: {fileID: 5813700980388089266}
 --- !u!114 &7758657608288277187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c43262f1d8c9da4aa014cf7402f12d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HoverVisual
+  gameObjectsToHighlightRoot: {fileID: 0}
 --- !u!114 &-8230707300246142760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.RespawnableObject
   m_SpawnPointOverride: {fileID: 0}
+  targetTag: {fileID: 0}
 --- !u!114 &852799688037268325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,4 +439,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e782491f8dee50b43beb844de5255e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.SocketInteractableTag
-  socketTag: {fileID: 0}
+  socketTag:
+  - {fileID: 0}

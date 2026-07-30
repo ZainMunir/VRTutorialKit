@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ThumbMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 1
+  - m_Path: Armature/Bone
+    m_Weight: 1
+  - m_Path: Armature/Bone/index
+    m_Weight: 0
+  - m_Path: Armature/Bone/index/index.001
+    m_Weight: 1
+  - m_Path: Armature/Bone/index/index.001/index.002
+    m_Weight: 1
+  - m_Path: Armature/Bone/index/index.001/index.002/index.003
+    m_Weight: 1
+  - m_Path: Armature/Bone/index/index.001/index.002/index.003/index.003_end
+    m_Weight: 1
+  - m_Path: Armature/Bone/middle
+    m_Weight: 0
+  - m_Path: Armature/Bone/middle/middle.001
+    m_Weight: 1
+  - m_Path: Armature/Bone/middle/middle.001/middle.002
+    m_Weight: 1
+  - m_Path: Armature/Bone/middle/middle.001/middle.002/middle.003
+    m_Weight: 1
+  - m_Path: Armature/Bone/middle/middle.001/middle.002/middle.003/middle.003_end
+    m_Weight: 1
+  - m_Path: Armature/Bone/pinky
+    m_Weight: 0
+  - m_Path: Armature/Bone/pinky/pinky.001
+    m_Weight: 1
+  - m_Path: Armature/Bone/pinky/pinky.001/pinky.002
+    m_Weight: 1
+  - m_Path: Armature/Bone/pinky/pinky.001/pinky.002/pinky.003
+    m_Weight: 1
+  - m_Path: Armature/Bone/pinky/pinky.001/pinky.002/pinky.003/pinky.003_end
+    m_Weight: 1
+  - m_Path: Armature/Bone/ring
+    m_Weight: 0
+  - m_Path: Armature/Bone/ring/ring.001
+    m_Weight: 1
+  - m_Path: Armature/Bone/ring/ring.001/ring.002
+    m_Weight: 1
+  - m_Path: Armature/Bone/ring/ring.001/ring.002/ring.003
+    m_Weight: 1
+  - m_Path: Armature/Bone/ring/ring.001/ring.002/ring.003/ring.003_end
+    m_Weight: 1
+  - m_Path: Armature/Bone/thumb
+    m_Weight: 1
+  - m_Path: Armature/Bone/thumb/thumb.001
+    m_Weight: 1
+  - m_Path: Armature/Bone/thumb/thumb.001/thumb.002
+    m_Weight: 1
+  - m_Path: Armature/Bone/thumb/thumb.001/thumb.002/thumb.002_end
+    m_Weight: 1
+  - m_Path: Plane005
+    m_Weight: 0

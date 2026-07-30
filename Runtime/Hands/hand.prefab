@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6079175476825670091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.338
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.761
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.367632
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.80133444
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.029850157
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5970574
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.02224059
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.219
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -73.422
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 4.089
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      propertyPath: m_Name
+      value: hand
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7221010088939719897}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8965608216185706943}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7588223917982053791}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3234650889658085228}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6353985630886227763}
+  m_SourcePrefab: {fileID: 100100000, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+--- !u!1 &6385251268616060058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c311178d637f125428f58e86b8c28dad, type: 3}
+  m_PrefabInstance: {fileID: 6079175476825670091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7221010088939719897
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385251268616060058}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd6341ad7af15254aba9564301e43ca8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8965608216185706943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385251268616060058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471a37ebe0ba3f54184e292ccf2ecf3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainTrigger: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  secondaryTrigger: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  hoverInteractor: {fileID: 0}
+  driver: {fileID: 7588223917982053791}
+  hoverPose: {fileID: 11400000, guid: 85ef335b119df494ba1851f53f613db7, type: 2}
+--- !u!114 &7588223917982053791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385251268616060058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d9a6fb7ab0ff4478690415a8313496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ECDA.VRTutorialKit.HandPoseDriver
+  isLeftHand: 1
+  defaultCurlSpeed: 12
+--- !u!114 &3234650889658085228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385251268616060058}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae9e9c6d2ed32d40bcbdcc5c286ab1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ECDA.VRTutorialKit.HandPoseTester
+  driver: {fileID: 7588223917982053791}
+  handAnimatorToSuppress: {fileID: 8965608216185706943}
+  index: 0
+  middle: 0
+  ring: 0
+  pinky: 0
+  thumb: 0
+  livePose: {fileID: 0}
+--- !u!114 &6353985630886227763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385251268616060058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27039ee782415f49bbbd91d055d2378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HandGripBinder
+  interactor: {fileID: 0}
+  driver: {fileID: 7588223917982053791}

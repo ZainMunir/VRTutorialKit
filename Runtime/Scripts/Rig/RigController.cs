@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using System.Collections.Generic;
 
 namespace ECDA.VRTutorialKit
 {
@@ -12,7 +13,6 @@ namespace ECDA.VRTutorialKit
 
         [SerializeField] private XRRayInteractor leftTeleportRayInteractor;
         [SerializeField] private XRRayInteractor rightTeleportRayInteractor;
-
 
         [SerializeField] private SnapTurnProvider snapTurnProvider;
         [SerializeField] private DynamicMoveProvider dynamicMoveProvider;
@@ -27,6 +27,11 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private LocomotionMode leftHandLocomotion;
         [SerializeField] private LocomotionMode rightHandLocomotion;
         [SerializeField] private bool enableSnapTurn;
+
+        [SerializeField] private bool useHands = false;
+
+        [SerializeField] private List<GameObject> controllers = new List<GameObject>();
+        [SerializeField] private List<GameObject> hands = new List<GameObject>();
         public void SetLeftHandLocomotion(LocomotionMode mode)
         {
             leftHandLocomotion = mode;
@@ -41,14 +46,37 @@ namespace ECDA.VRTutorialKit
             enableSnapTurn = enabled;
         }
 
+
+        public void SetUseHands(bool enabled)
+        {
+            useHands = enabled;
+            foreach (var controller in controllers)
+            {
+                controller.SetActive(!enabled);
+            }
+            foreach (var hand in hands)
+            {
+                hand.SetActive(enabled);
+            }
+        }
+
+        [ContextMenu("Toggle Use Hands")]
+        public void ToggleUseHands()
+        {
+            SetUseHands(!useHands);
+        }
+
+
         void Start()
         {
             UpdateLocomotionControls();
+            SetUseHands(useHands);
         }
 
         void OnValidate()
         {
             UpdateLocomotionControls();
+            SetUseHands(useHands);
         }
 
         private void AllowMovement(bool enabled)

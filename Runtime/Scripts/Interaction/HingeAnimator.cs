@@ -37,6 +37,7 @@ namespace ECDA.VRTutorialKit
             }
         }
 
+        [ContextMenu("Toggle")]
         public void Toggle() => SetState(!isOpen);
 
         public void SetState(bool open)

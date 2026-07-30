@@ -14,9 +14,15 @@ namespace ECDA.VRTutorialKit
 
         private List<RendererData> _renderers = new List<RendererData>();
 
+        [SerializeField] private GameObject gameObjectsToHighlightRoot;
+
         void Start()
         {
-            var renderers = GetComponentsInChildren<Renderer>();
+            if (gameObjectsToHighlightRoot == null)
+            {
+                gameObjectsToHighlightRoot = this.gameObject;
+            }
+            var renderers = gameObjectsToHighlightRoot.GetComponentsInChildren<Renderer>();
             foreach (var renderer in renderers)
             {
                 var colorData = new List<(int, Color)>();

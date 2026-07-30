@@ -1,3 +1,18 @@
 {
-	"name": "ecda.vrtutorialkit.Editor"
+    "name": "ecda.vrtutorialkit.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:014a25b6a95b41f4388126210065e72b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

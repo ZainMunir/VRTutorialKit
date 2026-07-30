@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3000186246023203508}
+  - component: {fileID: 1583026284172167584}
   m_Layer: 0
   m_Name: Attach
   m_TagString: Untagged
@@ -117,6 +118,22 @@ Transform:
   - {fileID: 5813700980388089266}
   m_Father: {fileID: 6957000769822834732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1583026284172167584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277249689611702729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8f82e662856e74e82bc392f646ee96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.AttachPointMirror
+  leftAttach: {fileID: 4453347341242899584}
+  rightAttach: {fileID: 5813700980388089266}
+  mirrorAxis: 0
+  mirrorSpace: {fileID: 0}
 --- !u!1 &3550546741439653096
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +210,7 @@ GameObject:
   - component: {fileID: 7758657608288277187}
   - component: {fileID: -8230707300246142760}
   - component: {fileID: 852799688037268325}
+  - component: {fileID: 6765827231076289577}
   m_Layer: 0
   m_Name: Shape
   m_TagString: Untagged
@@ -400,6 +418,7 @@ MonoBehaviour:
   m_MaxAngularVelocityDelta: 20
   leftAttach: {fileID: 4453347341242899584}
   rightAttach: {fileID: 5813700980388089266}
+  liveAttachTuning: 1
 --- !u!114 &7758657608288277187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,3 +460,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.SocketInteractableTag
   socketTag:
   - {fileID: 0}
+--- !u!114 &6765827231076289577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6957000769822834733}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0efbac289a88f64da87242ccd37281c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GripPoseProvider
+  defaultPose: {fileID: 0}
+  leftPoseOverride: {fileID: 0}
+  rightPoseOverride: {fileID: 0}

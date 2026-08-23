@@ -41,13 +41,13 @@ namespace ECDA.VRTutorialKit
             {
                 attachTransform = rightAttach;
             }
-            else
-            {
-                Debug.LogWarning(
-                    $"{name}: no handed attach point resolved for interactor " +
-                    $"'{interactorTransform.name}' (tag '{interactorTransform.tag}'). " +
-                    "Falling back to the currently assigned attach transform.", this);
-            }
+            // else
+            // {
+            //     Debug.LogWarning(
+            //         $"{name}: no handed attach point resolved for interactor " +
+            //         $"'{interactorTransform.name}' (tag '{interactorTransform.tag}'). " +
+            //         "Falling back to the currently assigned attach transform.", this);
+            // }
 
 #if UNITY_EDITOR
             _activeAttach = attachTransform;

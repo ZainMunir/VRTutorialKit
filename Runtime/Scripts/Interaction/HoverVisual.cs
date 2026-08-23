@@ -31,8 +31,8 @@ namespace ECDA.VRTutorialKit
                     var mat = renderer.materials[i];
                     if (mat.HasProperty("_Color") && !mat.name.Contains("Outline"))  // Skip outline materials
                         colorData.Add((i, mat.color));
-                    else
-                        Debug.LogWarning($"Material on {renderer.gameObject.name} does not have a _Color property or is an outline material.");
+                    // else
+                    // Debug.LogWarning($"Material on {renderer.gameObject.name} does not have a _Color property or is an outline material.");
                 }
                 _renderers.Add(new RendererData
                 {

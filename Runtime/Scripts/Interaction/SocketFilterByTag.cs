@@ -16,10 +16,21 @@ namespace ECDA.VRTutorialKit
         [Tooltip("Event invoked when the valid object enters the socket.")]
         public UnityEvent<IXRInteractable> onValidEntry;
         public UnityEvent<IXRInteractable> onValidExit;
-
+        public UnityEvent<GameObject> onObjectSocketed;
+        public UnityEvent<GameObject> onObjectRemoved;
         private XRSocketInteractor m_SocketInteractor;
-
         public bool canProcess => isActiveAndEnabled;
+        public IXRSelectInteractable SocketedInteractable { get; private set; }
+        public GameObject SocketedObject
+        {
+            get
+            {
+                Transform socketedTransform = SocketedInteractable?.transform;
+                return socketedTransform != null ? socketedTransform.gameObject : null;
+            }
+        }
+
+        public bool HasItem => SocketedObject != null;
 
         void Awake()
         {
@@ -43,30 +54,45 @@ namespace ECDA.VRTutorialKit
 
         void OnEnable()
         {
-            if (m_SocketInteractor != null)
-                m_SocketInteractor.selectEntered.AddListener(OnSelectEntered);
-            if (m_SocketInteractor != null)
-                m_SocketInteractor.selectExited.AddListener(OnSelectExited);
+            if (m_SocketInteractor == null)
+                return;
+
+            m_SocketInteractor.selectEntered.AddListener(OnSelectEntered);
+            m_SocketInteractor.selectExited.AddListener(OnSelectExited);
+
+            var held = m_SocketInteractor.interactablesSelected;
+            SocketedInteractable = held.Count > 0 ? held[0] : null;
         }
 
         void OnDisable()
         {
-            if (m_SocketInteractor != null)
-                m_SocketInteractor.selectEntered.RemoveListener(OnSelectEntered);
-            if (m_SocketInteractor != null)
-                m_SocketInteractor.selectExited.RemoveListener(OnSelectExited);
+            if (m_SocketInteractor == null)
+                return;
+
+            m_SocketInteractor.selectEntered.RemoveListener(OnSelectEntered);
+            m_SocketInteractor.selectExited.RemoveListener(OnSelectExited);
         }
 
         void OnSelectEntered(SelectEnterEventArgs args)
         {
             // Since we are filtering, if something enters, it obeys the filter.
+            SocketedInteractable = args.interactableObject;
+
             onValidEntry?.Invoke(args.interactableObject);
+            onObjectSocketed?.Invoke(SocketedObject);
         }
 
         void OnSelectExited(SelectExitEventArgs args)
         {
             // Since we are filtering, if something exits, it obeys the filter.
+            Transform leavingTransform = args.interactableObject?.transform;
+            GameObject leaving = leavingTransform != null ? leavingTransform.gameObject : null;
+
+            if (SocketedInteractable == args.interactableObject)
+                SocketedInteractable = null;
+
             onValidExit?.Invoke(args.interactableObject);
+            onObjectRemoved?.Invoke(leaving);
         }
 
         public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)

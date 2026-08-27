@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 #if UNITY_EDITOR
 using System.Collections.Generic;
@@ -11,7 +12,9 @@ using UnityEngine.XR.Interaction.Toolkit.Transformers;
 namespace ECDA.VRTutorialKit
 {
     /// <summary>
-    /// Grab interactable that swaps its attach transform based on which hand grabbed it.
+    /// Grab interactable that resolves its attach transform per interactor: a left or right hand
+    /// gets the matching handed attach point, everything else (sockets above all) keeps the attach
+    /// transform assigned in the Inspector.
     /// In the Editor it additionally supports live tuning of the attach pose while held.
     /// </summary>
     public class HandedGrabInteractable : XRGrabInteractable
@@ -29,36 +32,70 @@ namespace ECDA.VRTutorialKit
         Transform _activeAttach;
 #endif
 
-        protected override void OnSelectEntering(SelectEnterEventArgs args)
+        /// <summary>
+        /// The attach transform used by any interactor that is not a hand. This is the transform
+        /// assigned on the component, i.e. the parent attach point the handed ones live under.
+        /// </summary>
+        Transform DefaultAttach => attachTransform != null ? attachTransform : transform;
+
+        /// <inheritdoc />
+        public override Transform GetAttachTransform(IXRInteractor interactor)
         {
-            var interactorTransform = args.interactorObject.transform;
+            var resolved = base.GetAttachTransform(interactor);
 
-            if (interactorTransform.CompareTag("LeftHand") && leftAttach != null)
+            // Only the primary attach transform is swapped for a handed one. Dynamic, secondary and
+            // predicted-visual attach transforms are handed back untouched so their own behaviour
+            // is preserved.
+            if (resolved != DefaultAttach)
+                return resolved;
+
+            var handedAttach = ResolveHandedAttach(interactor);
+            return handedAttach != null ? handedAttach : resolved;
+        }
+
+        /// <summary>
+        /// Returns the handed attach point for a left/right interactor, or null for anything else -
+        /// sockets, gaze, and any interactor without a handed attach assigned.
+        /// </summary>
+        Transform ResolveHandedAttach(IXRInteractor interactor)
+        {
+            if (interactor == null)
+                return null;
+
+            switch (interactor.handedness)
             {
-                attachTransform = leftAttach;
+                case InteractorHandedness.Left:
+                    return leftAttach;
+                case InteractorHandedness.Right:
+                    return rightAttach;
             }
-            else if (interactorTransform.CompareTag("RightHand") && rightAttach != null)
-            {
-                attachTransform = rightAttach;
-            }
-            // else
-            // {
-            //     Debug.LogWarning(
-            //         $"{name}: no handed attach point resolved for interactor " +
-            //         $"'{interactorTransform.name}' (tag '{interactorTransform.tag}'). " +
-            //         "Falling back to the currently assigned attach transform.", this);
-            // }
 
-#if UNITY_EDITOR
-            _activeAttach = attachTransform;
-            if (_activeAttach != null)
-                _activeAttach.hasChanged = false;
-#endif
+            // Fallback for interactors that leave handedness unset but are tagged on the rig.
+            var interactorTransform = interactor.transform;
+            if (interactorTransform == null)
+                return null;
 
-            base.OnSelectEntering(args);
+            if (interactorTransform.CompareTag("LeftHand"))
+                return leftAttach;
+
+            if (interactorTransform.CompareTag("RightHand"))
+                return rightAttach;
+
+            return null;
         }
 
 #if UNITY_EDITOR
+        protected override void OnSelectEntering(SelectEnterEventArgs args)
+        {
+            base.OnSelectEntering(args);
+
+            // Resolved after the base call so any dynamic attach transform created for this
+            // interactor is the one that gets tuned.
+            _activeAttach = GetAttachTransform(args.interactorObject);
+            if (_activeAttach != null)
+                _activeAttach.hasChanged = false;
+        }
+
         void Update()
         {
             if (!liveAttachTuning || !isSelected || _activeAttach == null)

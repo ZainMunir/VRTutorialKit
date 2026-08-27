@@ -4,7 +4,7 @@ namespace ECDA.VRTutorialKit
 {
     public class ProgressDrivenEffect : MonoBehaviour
     {
-        [SerializeField] private MonoBehaviour progressProvider;
+        [SerializeField, RequireInterface(typeof(ProgressProvider))] private MonoBehaviour progressProvider;
         [SerializeField] private ProgressEffect[] effects;
 
         private ProgressProvider cachedProvider;

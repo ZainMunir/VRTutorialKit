@@ -19,6 +19,33 @@ like
 git log v0.0.0..HEAD --oneline --no-decorate
 ```
 
+## v0.5.0
+Updates XR Interaction Toolkit 3.3.0 → 3.6.0. Also adds hands to the rig, handed grabs, nested sockets and guidance lines
+
+```
+de71ff9 add: hands react to ui hover
+31aa597 fix: missing namespace
+4a7bbd8 add: singleton base class
+1b7b275 add: SlidingAnimator preview
+3de2a7f fix: handedgrab overriding default attach point
+d8d165b fix: progress driven effect grab progressprovider component
+a5a819a add: nestedsockets mechanisms
+5d11bb8 add: reduce logs, hinge preview
+f37b959 add: utilities for handedness
+3226fd4 breaking: handed grab interactable replaced in shape
+4a73ab4 add: hands to rig
+5492243 fix: missing meta file
+3435134 add: handed attachpoint
+e1b07fd add: allow specificity in hovervisual
+46194b3 add: make events public
+d6a6c3d add: DynamicUI public functionality
+b9f011b add: breaking change of socketfilterbytag
+c958f8b fix: guidance line build error
+36a7367 add: guidance line package and move move folders
+2377d1e add: actionwhilegrabbed and basic associated step
+ecb9a5f refactor: moving files around and removing redundant bits
+```
+
 ## v0.4.0
 Localisation with English, Dutch. Version used (mostly) in Outsourced during course
 

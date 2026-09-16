@@ -1,6 +1,7 @@
+using ECDA.VRTutorialKit;
 using UnityEngine;
 
-public class GuidingController : MonoBehaviour
+public class GuidingController : SingletonBehaviour<GuidingController>
 {
     [Header("Targets")]
     [SerializeField] private Transform currentTarget;

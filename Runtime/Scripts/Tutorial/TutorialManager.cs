@@ -5,26 +5,8 @@ using System;
 namespace ECDA.VRTutorialKit
 {
 
-    public class TutorialManager : MonoBehaviour
+    public class TutorialManager : SingletonBehaviour<TutorialManager>
     {
-        private static TutorialManager _instance;
-        public static TutorialManager Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = FindAnyObjectByType<TutorialManager>();
-                    if (_instance == null)
-                    {
-                        GameObject singletonObject = new GameObject("TutorialManager");
-                        _instance = singletonObject.AddComponent<TutorialManager>();
-                    }
-                }
-                return _instance;
-            }
-        }
-
         public TutorialConfig tutorialConfig;
 
         private int currentStepIndex = 0;
@@ -38,32 +20,12 @@ namespace ECDA.VRTutorialKit
         public Action<bool> OnTutorialStepChanged;
 
 
-        void Awake()
-        {
-            if (_instance == null)
-            {
-                _instance = this;
-            }
-            else if (_instance != this)
-            {
-                Destroy(gameObject);
-            }
-        }
-
         void Start()
         {
             if (tutorialConfig != null)
             {
                 stepsCompleted = new bool[TotalSteps()];
                 CheckImmediateCompletion();
-            }
-        }
-
-        void OnDestroy()
-        {
-            if (_instance == this)
-            {
-                _instance = null;
             }
         }
 
@@ -146,7 +108,7 @@ namespace ECDA.VRTutorialKit
         public void FinishTutorial()
         {
             Debug.Log("Tutorial Finished!");
-            var transitionController = FindAnyObjectByType<SceneTransitionController>();
+            var transitionController = SceneTransitionController.Instance;
             if (transitionController != null)
             {
                 transitionController.GoToScene(tutorialConfig.startingScene);

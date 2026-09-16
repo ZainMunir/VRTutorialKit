@@ -5,22 +5,15 @@ using UnityEngine.SceneManagement;
 
 namespace ECDA.VRTutorialKit
 {
-    public class SceneTransitionController : MonoBehaviour
+    public class SceneTransitionController : SingletonBehaviour<SceneTransitionController>
     {
-        public static SceneTransitionController Instance { get; private set; }
         public FadeScreen fadeScreen;
         [SerializeField] private bool _isTransitioning = false;
 
-        void Awake()
-        {
-            if (Instance != null && Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+        protected override bool PersistAcrossScenes => true;
 
+        protected override void OnSingletonAwake()
+        {
             if (fadeScreen == null)
             {
                 fadeScreen = FindAnyObjectByType<FadeScreen>();

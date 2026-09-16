@@ -20,6 +20,13 @@ namespace ECDA.VRTutorialKit
         void Start()
         {
             tutorialManager = TutorialManager.Instance;
+
+            if (tutorialManager == null)
+            {
+                Debug.LogError("TutorialManager instance not found.");
+                return;
+            }
+
             VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
             // --- Tutorial Config Setup ---

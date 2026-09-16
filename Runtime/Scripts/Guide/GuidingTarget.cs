@@ -5,24 +5,26 @@ namespace ECDA.VRTutorialKit
 {
     public class GuidingTarget : MonoBehaviour
     {
-        private GuidingController guidingController;
         private Transform targetTransform;
         private Coroutine delayedTargetCoroutine;
 
         void Awake()
         {
             targetTransform = transform;
-            guidingController = FindAnyObjectByType<GuidingController>();
+        }
 
+        private GuidingController GetGuidingController()
+        {
+            var guidingController = GuidingController.Instance;
             if (guidingController == null)
-            {
                 Debug.LogError($"No {nameof(GuidingController)} found in the scene for {name}.");
-                return;
-            }
+            return guidingController;
         }
 
         public void SetSelfAsTarget()
         {
+            var guidingController = GetGuidingController();
+            if (guidingController == null) return;
             guidingController.SetNewTarget(targetTransform);
         }
 
@@ -33,6 +35,8 @@ namespace ECDA.VRTutorialKit
                 StopCoroutine(delayedTargetCoroutine);
                 delayedTargetCoroutine = null;
             }
+            var guidingController = GetGuidingController();
+            if (guidingController == null) return;
             guidingController.RemoveTarget(targetTransform);
         }
         public void SetSelfAsTargetDelayed(int secondsDelay = 10)

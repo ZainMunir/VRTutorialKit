@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf169feceaf0166489df1cd6b2849e4c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::GuidingArrow
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GuidingArrow
 --- !u!4 &2999017740878302298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2519792923381737832, guid: 66d569aadc5e41846ab15e17f325b70a, type: 3}
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf169feceaf0166489df1cd6b2849e4c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::GuidingArrow
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GuidingArrow
 --- !u!4 &7750653306840967665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2519792923381737832, guid: 66d569aadc5e41846ab15e17f325b70a, type: 3}

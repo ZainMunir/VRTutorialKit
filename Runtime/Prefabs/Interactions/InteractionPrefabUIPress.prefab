@@ -424,5 +424,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6963930d26475a94eaf3a6e0725bcd78, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::UIPressStepController
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.UIPressStepController
   tutorialSubStep: {fileID: 1128408648283202507}

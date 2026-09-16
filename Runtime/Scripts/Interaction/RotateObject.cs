@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace VRTK.Examples
+namespace ECDA.VRTutorialKit
 {
     public class RotateObject : MonoBehaviour
     {

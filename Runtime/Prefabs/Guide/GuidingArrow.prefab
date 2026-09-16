@@ -44,7 +44,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf169feceaf0166489df1cd6b2849e4c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::GuidingArrow
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GuidingArrow
   arrowRenderer: {fileID: 8979774927468788992}
   rotationSpeed: 10
   fadeSpeed: 5

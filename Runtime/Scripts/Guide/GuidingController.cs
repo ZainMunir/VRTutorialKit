@@ -1,77 +1,79 @@
-using ECDA.VRTutorialKit;
 using UnityEngine;
 
-public class GuidingController : SingletonBehaviour<GuidingController>
+namespace ECDA.VRTutorialKit
 {
-    [Header("Targets")]
-    [SerializeField] private Transform currentTarget;
-
-    [Header("Arrows")]
-    [SerializeField] private GuidingArrow leftArrow;
-    [SerializeField] private GuidingArrow rightArrow;
-
-    [Header("Gaze Settings")]
-    [Tooltip("Target is 'visible' within this cone angle in degrees")]
-    [SerializeField] private float sensitivityAngle = 25f;
-
-    void Start()
+    public class GuidingController : SingletonBehaviour<GuidingController>
     {
-        if (leftArrow == null || rightArrow == null)
+        [Header("Targets")]
+        [SerializeField] private Transform currentTarget;
+
+        [Header("Arrows")]
+        [SerializeField] private GuidingArrow leftArrow;
+        [SerializeField] private GuidingArrow rightArrow;
+
+        [Header("Gaze Settings")]
+        [Tooltip("Target is 'visible' within this cone angle in degrees")]
+        [SerializeField] private float sensitivityAngle = 25f;
+
+        void Start()
         {
-            Debug.LogError($"{nameof(leftArrow)} or {nameof(rightArrow)} components not assigned in {nameof(GuidingController)}");
-            enabled = false;
-            return;
-        }
-    }
-
-    void Update()
-    {
-        if (currentTarget == null)
-        {
-            DeactivateBoth();
-            return;
-        }
-
-        Vector3 targetDir = currentTarget.position - transform.position;
-
-        float angle = Vector3.Angle(transform.forward, targetDir);
-        float signedAngle = Vector3.SignedAngle(transform.forward, targetDir, Vector3.up);
-
-        if (angle > sensitivityAngle)
-        {
-            if (signedAngle > 0) // Target is to the Right
+            if (leftArrow == null || rightArrow == null)
             {
-                rightArrow.Activate(targetDir);
-                leftArrow.Deactivate();
-            }
-            else // Target is to the Left
-            {
-                leftArrow.Activate(targetDir);
-                rightArrow.Deactivate();
+                Debug.LogError($"{nameof(leftArrow)} or {nameof(rightArrow)} components not assigned in {nameof(GuidingController)}");
+                enabled = false;
+                return;
             }
         }
-        else
+
+        void Update()
         {
-            DeactivateBoth();
+            if (currentTarget == null)
+            {
+                DeactivateBoth();
+                return;
+            }
+
+            Vector3 targetDir = currentTarget.position - transform.position;
+
+            float angle = Vector3.Angle(transform.forward, targetDir);
+            float signedAngle = Vector3.SignedAngle(transform.forward, targetDir, Vector3.up);
+
+            if (angle > sensitivityAngle)
+            {
+                if (signedAngle > 0) // Target is to the Right
+                {
+                    rightArrow.Activate(targetDir);
+                    leftArrow.Deactivate();
+                }
+                else // Target is to the Left
+                {
+                    leftArrow.Activate(targetDir);
+                    rightArrow.Deactivate();
+                }
+            }
+            else
+            {
+                DeactivateBoth();
+            }
         }
-    }
 
-    void DeactivateBoth()
-    {
-        leftArrow.Deactivate();
-        rightArrow.Deactivate();
-    }
-
-    public void SetNewTarget(Transform newTarget)
-    {
-        currentTarget = newTarget;
-    }
-
-    public void RemoveTarget(Transform targetToRemove)
-    {
-        if (currentTarget == targetToRemove)
+        void DeactivateBoth()
         {
-            currentTarget = null;
+            leftArrow.Deactivate();
+            rightArrow.Deactivate();
+        }
+
+        public void SetNewTarget(Transform newTarget)
+        {
+            currentTarget = newTarget;
+        }
+
+        public void RemoveTarget(Transform targetToRemove)
+        {
+            if (currentTarget == targetToRemove)
+            {
+                currentTarget = null;
+            }
         }
     }
 }

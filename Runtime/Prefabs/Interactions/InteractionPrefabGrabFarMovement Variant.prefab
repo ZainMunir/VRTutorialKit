@@ -48,7 +48,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6547083549731573559}
-        m_TargetAssemblyTypeName: VRTK.Examples.RotateObject, ecda.vrtutorialkit
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.RotateObject, ecda.vrtutorialkit
         m_MethodName: RotateY
         m_Mode: 3
         m_Arguments:
@@ -60,7 +60,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 299346174740757530}
-        m_TargetAssemblyTypeName: VRTK.Examples.RotateObject, ecda.vrtutorialkit
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.RotateObject, ecda.vrtutorialkit
         m_MethodName: RotateY
         m_Mode: 3
         m_Arguments:
@@ -72,7 +72,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1106602475188777917}
-        m_TargetAssemblyTypeName: VRTK.Examples.RotateObject, ecda.vrtutorialkit
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.RotateObject, ecda.vrtutorialkit
         m_MethodName: RotateY
         m_Mode: 3
         m_Arguments:
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5dc317b69d47c34283f168ba9720c57, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTK.Examples.RotateObject
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.RotateObject
 --- !u!4 &5648664019893234210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6255607206769407195, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5dc317b69d47c34283f168ba9720c57, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTK.Examples.RotateObject
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.RotateObject
 --- !u!1001 &8104572633525411432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5dc317b69d47c34283f168ba9720c57, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTK.Examples.RotateObject
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.RotateObject
 --- !u!1001 &9068477637548507967
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 using System.Collections.Generic;
 
 namespace ECDA.VRTutorialKit
@@ -32,6 +34,18 @@ namespace ECDA.VRTutorialKit
 
         [SerializeField] private List<GameObject> controllers = new List<GameObject>();
         [SerializeField] private List<GameObject> hands = new List<GameObject>();
+
+        [Header("Teleport Blink")]
+        [SerializeField] private TeleportationProvider teleportationProvider;
+        [SerializeField] private FadeScreen fadeScreen;
+        [SerializeField] private bool enableTeleportBlink = true;
+        [SerializeField, Min(0f)] private float blinkFadeOut = 0.15f;
+        [SerializeField, Min(0f)] private float teleportDelayPadding = 0.05f;
+        [SerializeField, Min(0f)] private float blinkHold = 0.1f;
+        [SerializeField, Min(0f)] private float blinkFadeIn = 0.25f;
+
+        private bool blinkActive;
+
         public void SetLeftHandLocomotion(LocomotionMode mode)
         {
             leftHandLocomotion = mode;
@@ -46,6 +60,12 @@ namespace ECDA.VRTutorialKit
             enableSnapTurn = enabled;
         }
 
+
+        public void SetEnableTeleportBlink(bool enabled)
+        {
+            enableTeleportBlink = enabled;
+            ApplyTeleportBlink();
+        }
 
         public void SetUseHands(bool enabled)
         {
@@ -67,16 +87,52 @@ namespace ECDA.VRTutorialKit
         }
 
 
+        void OnEnable()
+        {
+            teleportationProvider.locomotionStateChanged += OnTeleportStateChanged;
+        }
+
+        void OnDisable()
+        {
+            teleportationProvider.locomotionStateChanged -= OnTeleportStateChanged;
+        }
+
         void Start()
         {
             UpdateLocomotionControls();
             SetUseHands(useHands);
+            ApplyTeleportBlink();
         }
 
         void OnValidate()
         {
             UpdateLocomotionControls();
             SetUseHands(useHands);
+            if (Application.isPlaying)
+                ApplyTeleportBlink();
+        }
+
+        private void ApplyTeleportBlink()
+        {
+            teleportationProvider.delayTime = enableTeleportBlink ? blinkFadeOut + teleportDelayPadding : 0f;
+        }
+
+        private void OnTeleportStateChanged(LocomotionProvider provider, LocomotionState state)
+        {
+            switch (state)
+            {
+                case LocomotionState.Preparing:
+                    var transition = SceneTransitionController.Instance;
+                    if (!enableTeleportBlink || (transition != null && transition.IsTransitioning)) return;
+                    blinkActive = true;
+                    fadeScreen.FadeOut(blinkFadeOut);
+                    break;
+                case LocomotionState.Ended:
+                    if (!blinkActive) return;
+                    blinkActive = false;
+                    fadeScreen.FadeIn(blinkFadeIn, blinkHold);
+                    break;
+            }
         }
 
         private void AllowMovement(bool enabled)

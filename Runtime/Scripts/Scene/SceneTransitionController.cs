@@ -9,6 +9,7 @@ namespace ECDA.VRTutorialKit
     {
         public FadeScreen fadeScreen;
         [SerializeField] private bool _isTransitioning = false;
+        public bool IsTransitioning => _isTransitioning;
 
         protected override bool PersistAcrossScenes => true;
 

@@ -181,6 +181,17 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 2030474958516206901, guid: 6f70fd83109951a409af49f2d725a234, type: 3}
   m_PrefabInstance: {fileID: 3420016767881804138}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4187679488746063216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1543599355978546202, guid: 6f70fd83109951a409af49f2d725a234, type: 3}
+  m_PrefabInstance: {fileID: 3420016767881804138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005c68984e979c34381e534094d1aef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::FadeScreen
 --- !u!1001 &3859132133711020832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -705,6 +716,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a07ef133a37d140a87cdf1f1c75fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6018715231853358105 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1748222016861356527, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
+  m_PrefabInstance: {fileID: 5459536150774672886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6176948478950932623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2196849375614954873, guid: 313c88cc8bc481c4f95ec0d0eaca8be4, type: 3}
@@ -743,6 +765,13 @@ MonoBehaviour:
   hands:
   - {fileID: 5466062695654968933}
   - {fileID: 2501098717952841799}
+  teleportationProvider: {fileID: 6018715231853358105}
+  fadeScreen: {fileID: 4187679488746063216}
+  enableTeleportBlink: 1
+  blinkFadeOut: 0.1
+  teleportDelayPadding: 0.05
+  blinkHold: 0.05
+  blinkFadeIn: 0.15
 --- !u!114 &337167642723670069
 MonoBehaviour:
   m_ObjectHideFlags: 0

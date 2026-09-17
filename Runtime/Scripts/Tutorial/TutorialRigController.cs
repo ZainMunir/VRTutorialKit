@@ -23,6 +23,7 @@ namespace ECDA.VRTutorialKit
                 return;
             }
             tutorialManager.OnTutorialStepChanged += OnTutorialStepChanged;
+            OnTutorialStepChanged(tutorialManager.IsCurrentStepCompleted);
         }
 
         void OnTutorialStepChanged(bool stepCompleted)

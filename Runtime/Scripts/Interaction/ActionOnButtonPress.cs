@@ -8,16 +8,14 @@ namespace ECDA.VRTutorialKit
     public class ActionOnButtonPress : MonoBehaviour
     {
         [SerializeField] private List<InputActionReference> buttonsToWatch = new List<InputActionReference>();
-
         public UnityEvent onButtonPressed;
-
-
 
         void OnEnable()
         {
             foreach (var button in buttonsToWatch)
             {
                 button.action.performed += OnButtonPressed;
+                button.action.Enable();
             }
         }
 
@@ -43,9 +41,4 @@ namespace ECDA.VRTutorialKit
         }
 
     }
-
-
-
-
-
 }

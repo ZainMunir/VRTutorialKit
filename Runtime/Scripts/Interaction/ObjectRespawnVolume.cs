@@ -27,6 +27,7 @@ namespace ECDA.VRTutorialKit
         {
             var respawnable = GetRespawnable(other);
             if (respawnable == null) return;
+            if (respawnable.targetTag != targetTag) return;
 
             if (m_PendingRespawns.TryGetValue(respawnable, out Coroutine routine))
             {

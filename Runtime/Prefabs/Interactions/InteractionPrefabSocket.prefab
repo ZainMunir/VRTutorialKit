@@ -198,7 +198,7 @@ PrefabInstance:
     - target: {fileID: 8962452306224011040, guid: 63dabfdbdbfa8254987221ad2518781a, type: 3}
       propertyPath: subStep
       value: 
-      objectReference: {fileID: 2998365696161366729}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4976500803621899709, guid: 63dabfdbdbfa8254987221ad2518781a, type: 3}
     m_RemovedGameObjects: []
@@ -213,6 +213,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4402348236594173925, guid: 63dabfdbdbfa8254987221ad2518781a, type: 3}
   m_PrefabInstance: {fileID: 62955345253306599}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8988814795982882759 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8962452306224011040, guid: 63dabfdbdbfa8254987221ad2518781a, type: 3}
+  m_PrefabInstance: {fileID: 62955345253306599}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3121338581892444288baa5e21698c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ChangeMaterialOnComplete
 --- !u!1001 &1741581830896021888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 523006317818593978, guid: fe92b3133b31e4c41bdfd6fbf52b1245, type: 3}
       propertyPath: subStep
       value: 
-      objectReference: {fileID: 7685447358739926458}
+      objectReference: {fileID: 0}
     - target: {fileID: 1598235409877711966, guid: fe92b3133b31e4c41bdfd6fbf52b1245, type: 3}
       propertyPath: m_Name
       value: CubeSocket
@@ -286,6 +297,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2118312572305696484, guid: fe92b3133b31e4c41bdfd6fbf52b1245, type: 3}
   m_PrefabInstance: {fileID: 1741581830896021888}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2263410704608932666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 523006317818593978, guid: fe92b3133b31e4c41bdfd6fbf52b1245, type: 3}
+  m_PrefabInstance: {fileID: 1741581830896021888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3121338581892444288baa5e21698c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ChangeMaterialOnComplete
 --- !u!1001 &2391096474627771915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -352,17 +374,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7547892300063553144}
   m_SourcePrefab: {fileID: 100100000, guid: 07fe9d3a938f4bb49903a674766561e6, type: 3}
---- !u!114 &880916641272731929 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3249141074423846674, guid: 07fe9d3a938f4bb49903a674766561e6, type: 3}
-  m_PrefabInstance: {fileID: 2391096474627771915}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880916641272731934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &880916641272731934 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3249141074423846677, guid: 07fe9d3a938f4bb49903a674766561e6, type: 3}
@@ -396,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bd02f203825404ca7c4b1b4302fdca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GrabOnlySelect
-  grabInteractable: {fileID: 880916641272731929}
+  grabInteractable: {fileID: 0}
   onGrabEntered:
     m_PersistentCalls:
       m_Calls:
@@ -481,6 +492,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534031749754243850}
     m_Modifications:
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8988814795982882759}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.ChangeMaterialOnComplete, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -742,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bd02f203825404ca7c4b1b4302fdca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GrabOnlySelect
-  grabInteractable: {fileID: 3674001371483115469}
+  grabInteractable: {fileID: 0}
   onGrabEntered:
     m_PersistentCalls:
       m_Calls:
@@ -819,17 +862,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8822991722614002759, guid: 0f044d3213bc44f4c95e86f52258ad87, type: 3}
   m_PrefabInstance: {fileID: 5227901750934117260}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3674001371483115469 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8822991722614002753, guid: 0f044d3213bc44f4c95e86f52258ad87, type: 3}
-  m_PrefabInstance: {fileID: 5227901750934117260}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3674001371483115466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6731662012804935056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -896,17 +928,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 57491966785146513}
   m_SourcePrefab: {fileID: 100100000, guid: 0264fe2e7938dd944bcf2b2f82cb3d02, type: 3}
---- !u!114 &5285707008599917842 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1454997393813448834, guid: 0264fe2e7938dd944bcf2b2f82cb3d02, type: 3}
-  m_PrefabInstance: {fileID: 6731662012804935056}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5285707008599917845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &5285707008599917844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1454997393813448836, guid: 0264fe2e7938dd944bcf2b2f82cb3d02, type: 3}
@@ -945,7 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bd02f203825404ca7c4b1b4302fdca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GrabOnlySelect
-  grabInteractable: {fileID: 5285707008599917842}
+  grabInteractable: {fileID: 0}
   onGrabEntered:
     m_PersistentCalls:
       m_Calls:
@@ -1025,6 +1046,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534031749754243850}
     m_Modifications:
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2263410704608932666}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.ChangeMaterialOnComplete, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1104,6 +1157,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 534031749754243850}
     m_Modifications:
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 442384978293706520}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.ChangeMaterialOnComplete, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 56016779267972419, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7230626284315409600, guid: dd2d1fa27cd7bae40b51d097ac24b37d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1237,12 +1322,23 @@ PrefabInstance:
     - target: {fileID: 8719837061125224817, guid: 147c296f7f14af040b003c9fdc68d979, type: 3}
       propertyPath: subStep
       value: 
-      objectReference: {fileID: 8651649593396138926}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 147c296f7f14af040b003c9fdc68d979, type: 3}
+--- !u!114 &442384978293706520 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8719837061125224817, guid: 147c296f7f14af040b003c9fdc68d979, type: 3}
+  m_PrefabInstance: {fileID: 9160531993506477673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3121338581892444288baa5e21698c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ChangeMaterialOnComplete
 --- !u!4 &4559709378435231762 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4640933943463102075, guid: 147c296f7f14af040b003c9fdc68d979, type: 3}

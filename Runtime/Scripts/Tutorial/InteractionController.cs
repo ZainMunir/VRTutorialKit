@@ -23,6 +23,14 @@ namespace ECDA.VRTutorialKit
             UpdatePrefabsForCurrentStep();
         }
 
+        void OnDestroy()
+        {
+            if (tutorialManager != null)
+            {
+                tutorialManager.OnTutorialStepChanged -= OnTutorialStepChanged;
+            }
+        }
+
         void OnTutorialStepChanged(bool stepCompleted)
         {
             UpdatePrefabsForCurrentStep();

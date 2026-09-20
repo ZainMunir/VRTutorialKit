@@ -6,7 +6,7 @@ namespace ECDA.VRTutorialKit
     [RequireComponent(typeof(CalloutGazeController))]
     public class TooltipController : MonoBehaviour
     {
-        public TutorialStep.TooltipHand handSide;
+        public Handedness handSide;
 
         CalloutGazeController m_CalloutGazeController;
         TutorialManager tutorialManager;
@@ -47,11 +47,11 @@ namespace ECDA.VRTutorialKit
             if (step == null) return;
 
             List<GameObject> prefabs = null;
-            if (handSide == TutorialStep.TooltipHand.Left)
+            if (handSide == Handedness.Left)
             {
                 prefabs = step.leftTooltipPrefabs;
             }
-            else if (handSide == TutorialStep.TooltipHand.Right)
+            else if (handSide == Handedness.Right)
             {
                 prefabs = step.rightTooltipPrefabs;
             }

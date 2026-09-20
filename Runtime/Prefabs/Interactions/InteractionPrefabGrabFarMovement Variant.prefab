@@ -604,18 +604,18 @@ PrefabInstance:
     - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 7639665954973720356}
+      objectReference: {fileID: 9173939814536161973}
     - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: RemoveSelfAsTarget
+      value: ChangeMaterial
       objectReference: {fileID: 0}
     - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ECDA.VRTutorialKit.GuidingTarget, ecda.vrtutorialkit
+      value: ECDA.VRTutorialKit.ChangeMaterialOnComplete, ecda.vrtutorialkit
       objectReference: {fileID: 0}
     - target: {fileID: 1232506617283022121, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
@@ -801,6 +801,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6298300365233727762}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3932288793814244459, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5967965468250802418}
     - targetCorrespondingSourceObject: {fileID: 1749169154027543751, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7639665954973720356}
@@ -815,6 +818,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5297401857950877046, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
   m_PrefabInstance: {fileID: 9068477637548507967}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5425711168598253396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3932288793814244459, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+  m_PrefabInstance: {fileID: 9068477637548507967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5967965468250802418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5425711168598253396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bd02f203825404ca7c4b1b4302fdca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GrabOnlySelect
+  grabInteractable: {fileID: 6616042629737787800}
+  onGrabEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5575293620353464182}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.ExecuteOnce, ecda.vrtutorialkit
+        m_MethodName: Execute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onGrabExited:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6616042629737787800 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2740814115470291623, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+  m_PrefabInstance: {fileID: 9068477637548507967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5425711168598253396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9586669a3cddaaa4195d1daeb771ab8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HandedAttachPoint
 --- !u!1 &7322844536009842680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1749169154027543751, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
@@ -832,3 +882,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01dbaf67ee3d6b34fb5e8d6efc3c8179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.GuidingTarget
+--- !u!114 &9173939814536161973 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 182912532080142730, guid: 1c48e0fff359e9e45b3cd0463e6a6a5f, type: 3}
+  m_PrefabInstance: {fileID: 9068477637548507967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322844536009842680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3121338581892444288baa5e21698c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ChangeMaterialOnComplete

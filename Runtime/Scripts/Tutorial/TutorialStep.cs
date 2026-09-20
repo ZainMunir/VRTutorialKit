@@ -9,8 +9,6 @@ namespace ECDA.VRTutorialKit
 
     public class TutorialStep : ScriptableObject
     {
-        public enum TooltipHand { Left, Right }
-
         [Header("UI Settings")]
         public LocalizedString stepTitle;
         public LocalizedString stepDescription;

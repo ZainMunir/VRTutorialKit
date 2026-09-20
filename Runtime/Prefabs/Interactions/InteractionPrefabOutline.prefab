@@ -239,14 +239,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepActive.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
@@ -254,7 +262,15 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8103206920778471016}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3718680606169591524}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 846358561913679117}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
@@ -266,7 +282,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: Unhighlight
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
@@ -274,9 +302,21 @@ PrefabInstance:
       value: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.AudioTrigger, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.ChangeMaterialOnComplete, ecda.vrtutorialkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: ECDA.VRTutorialKit.HighlightObject, ecda.vrtutorialkit
       objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: e63ee575907e70144a96b10fff8f055c, type: 3}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
@@ -286,7 +326,15 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
       propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740208211974739402, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+      propertyPath: OnSubStepCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6450945480116789937, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
@@ -345,8 +393,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d70ce9bd3b1634ea4d8669c5ec0b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialSubStep
+--- !u!114 &3718680606169591524 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6645689290945425769, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+  m_PrefabInstance: {fileID: 8043802202335354765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3121338581892444288baa5e21698c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.ChangeMaterialOnComplete
 --- !u!4 &4942517202575076292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3113687504143430729, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
   m_PrefabInstance: {fileID: 8043802202335354765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8103206920778471016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2293753600629328357, guid: 744de4767d25bb442aaddc86d409489b, type: 3}
+  m_PrefabInstance: {fileID: 8043802202335354765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0692eb2ea23118242983a6d1672c7e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.AudioTrigger

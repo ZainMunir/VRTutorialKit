@@ -3,6 +3,7 @@ using UnityEngine.UIElements;
 using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using System;
 
 namespace ECDA.VRTutorialKit
 {
@@ -14,6 +15,7 @@ namespace ECDA.VRTutorialKit
         public UnityEvent onClick;
 
         private Button uiButton;
+        private Action clickHandler;
 
         public void Start()
         {
@@ -23,7 +25,8 @@ namespace ECDA.VRTutorialKit
             if (uiButton != null)
             {
                 uiButton.text = buttonText.GetLocalizedString();
-                uiButton.clicked += () => onClick?.Invoke();
+                clickHandler = () => onClick?.Invoke();
+                uiButton.clicked += clickHandler;
             }
 
             LocalizationSettings.SelectedLocaleChanged += OnSelectedLocaleChanged;
@@ -46,7 +49,7 @@ namespace ECDA.VRTutorialKit
         {
             if (uiButton != null)
             {
-                uiButton.clicked -= () => onClick?.Invoke();
+                if (clickHandler != null) uiButton.clicked -= clickHandler;
             }
             LocalizationSettings.SelectedLocaleChanged -= OnSelectedLocaleChanged;
         }

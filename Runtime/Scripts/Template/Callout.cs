@@ -98,9 +98,9 @@ namespace ECDA.VRTutorialKit
                 m_Curve.SetActive(false);
         }
 
-        public void SetHandSide(TutorialStep.TooltipHand handSide)
+        public void SetHandSide(Handedness handSide)
         {
-            if (handSide == TutorialStep.TooltipHand.Right)
+            if (handSide == Handedness.Right)
                 return;
 
             // Flip various parts of the callout for left hand

@@ -2,7 +2,7 @@
     "name": "GuidanceLine.Editor",
     "rootNamespace": "",
     "references": [
-        "ecda.vrtoolkit"
+        "GUID:0f3c91be95e3bbe4bb8324bd44ea44b2"
     ],
     "includePlatforms": [
         "Editor"

@@ -19,6 +19,24 @@ like
 git log v0.0.0..HEAD --oneline --no-decorate
 ```
 
+## v0.6.0
+**Breaking.** Splits the package into two assemblies: `ecda.vrtoolkit` (reusable VR building blocks) and `ecda.vrtutorialkit` (the tutorial, which references it). Renames `IConditionSource` → `ConditionSourceBase`, `ProgressProvider` → `IProgressProvider`, `Target` → `ArrowTarget`, and the editor assembly to `ecda.vrtoolkit.Editor`. Also adds the licence and third-party notices
+
+c7a7b89 update: package version
+107fb1c fix: outline, editor control for rig, button registration
+2be4fb8 add: shared editor preview animation functionality
+ea7dfa1 add: readme, licenses, third party notices
+1412208 refactor: full separation between core and tutorial
+067515a refactor: component names correctness
+b393ce4 add: assembly references
+596778d add: restructure scripts, separate tutorial from core
+7f3c6ab refactor: hygiene changes, pull out substep from change material, button action inspector fix
+cf26a0a fix: forgot to update version number
+53fe552 add: teleport fade, fix controls changes not applying to first step
+05164de change: disable labels on grabbable object after complete, change default config to outsourced
+a96f5a3 change: blink to teleport, reduce icons on teleport controller visual
+ffc3979 changelog: entry v0.5.0
+
 ## v0.5.0
 Updates XR Interaction Toolkit 3.3.0 → 3.6.0. Also adds hands to the rig, handed grabs, nested sockets and guidance lines
 

@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-
     public class BouncingArrow : MonoBehaviour
     {
         public float size = 1;

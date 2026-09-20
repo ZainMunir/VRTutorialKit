@@ -104,13 +104,28 @@ namespace ECDA.VRTutorialKit
             ApplyTeleportBlink();
         }
 
+#if UNITY_EDITOR
+        private bool applyPending;
+
         void OnValidate()
         {
+            if (applyPending) return;
+
+            applyPending = true;
+            UnityEditor.EditorApplication.delayCall += ApplyInspectorState;
+        }
+
+        private void ApplyInspectorState()
+        {
+            applyPending = false;
+            if (this == null) return;
+
             UpdateLocomotionControls();
             SetUseHands(useHands);
             if (Application.isPlaying)
                 ApplyTeleportBlink();
         }
+#endif
 
         private void ApplyTeleportBlink()
         {

@@ -46,11 +46,15 @@ full terms — note that **Guidance Line requires credit** in any published expe
 [Guidance Line](https://assetstore.unity.com/packages/tools/game-toolkits/guidance-line-303873)
 - v1.0 is copied into the package
 
-## Render Settings
+## Project setup
 
-Add the `Outline Fill` and `Outline Objects` renderer features to the existing render pipeline
-(`Assets/Settings/Project Configuration/Android Preset`). The two feature assets ship at
-`Runtime/Toolkit/Art/`.
+Two steps, both required before `SimpleOutline` / `HighlightObject` will show anything:
+
+1. Add an **`Outline` layer** under `Project Settings > Tags and Layers`. `SimpleOutline`
+   moves objects onto it to mark them for the outline pass, and logs an error if it is absent.
+2. Add the `Outline Fill` and `Outline Objects` renderer features to the existing render
+   pipeline (`Assets/Settings/Project Configuration/Android Preset`). The two feature assets
+   ship at `Runtime/Toolkit/Art/`.
 
 ## Samples
 

@@ -13,12 +13,26 @@ namespace ECDA.VRTutorialKit
         private static readonly int ColorID = Shader.PropertyToID("_OutlineColor");
         private static readonly int WidthID = Shader.PropertyToID("_OutlineWidth");
 
+        private const string OutlineLayerName = "Outline";
+
+        private bool layerAvailable;
+        private static bool reportedMissingLayer;
+
         private void Awake()
         {
-            outlineLayer = LayerMask.NameToLayer("Outline");
+            outlineLayer = LayerMask.NameToLayer(OutlineLayerName);
+            layerAvailable = outlineLayer >= 0;
             originalLayer = gameObject.layer;
             renderers = GetComponentsInChildren<Renderer>();
             propBlock = new MaterialPropertyBlock();
+
+            if (layerAvailable || reportedMissingLayer) return;
+
+            reportedMissingLayer = true;
+            Debug.LogError(
+                $"{nameof(SimpleOutline)}: this project has no \"{OutlineLayerName}\" layer, so outlines are disabled. " +
+                $"Add it under Project Settings > Tags and Layers, and add the Outline Fill and Outline Mask " +
+                $"renderer features to the active renderer.", this);
         }
 
         public void UpdateProperties(Color color, float width)
@@ -34,6 +48,8 @@ namespace ECDA.VRTutorialKit
 
         public void SetOutlineActive(bool active)
         {
+            if (!layerAvailable) return;
+
             SetLayerRecursive(gameObject, active ? outlineLayer : originalLayer);
         }
 

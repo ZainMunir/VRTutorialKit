@@ -3,6 +3,7 @@
   "version": "0.5.0",
   "displayName": "VR Tutorial Kit",
   "description": "A modular VR tutorial package for basic interactions.",
+  "license": "SEE LICENSE IN LICENSE.md",
   "unity": "6000.3",
   "dependencies": {
     "com.unity.xr.interaction.toolkit": "3.6.0",

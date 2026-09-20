@@ -47,10 +47,10 @@ MonoBehaviour:
   onActionExecuted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6547083549731573559}
-        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.RotateObject, ecda.vrtutorialkit
-        m_MethodName: RotateY
-        m_Mode: 3
+      - m_Target: {fileID: 1402978010790015958}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.RotateObject, ecda.vrtoolkit
+        m_MethodName: Rotate
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -59,10 +59,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 299346174740757530}
-        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.RotateObject, ecda.vrtutorialkit
-        m_MethodName: RotateY
-        m_Mode: 3
+      - m_Target: {fileID: 3432299016560251286}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.RotateObject, ecda.vrtoolkit
+        m_MethodName: Rotate
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -71,10 +71,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1106602475188777917}
-        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.RotateObject, ecda.vrtutorialkit
-        m_MethodName: RotateY
-        m_Mode: 3
+      - m_Target: {fileID: 7845147344127315391}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.RotateObject, ecda.vrtoolkit
+        m_MethodName: Rotate
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -311,14 +311,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 299346174740757530}
+      addedObject: {fileID: 3432299016560251286}
   m_SourcePrefab: {fileID: 100100000, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
 --- !u!1 &4985420273130172568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
   m_PrefabInstance: {fileID: 1780175725238230777}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &299346174740757530
+--- !u!114 &3432299016560251286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -327,9 +327,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4985420273130172568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5dc317b69d47c34283f168ba9720c57, type: 3}
+  m_Script: {fileID: 11500000, guid: 21720e96cfa543444bf41bcb41bac85f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.RotateObject
+  m_EditorClassIdentifier: ecda.vrtoolkit::ECDA.VRTutorialKit.RotateObject
+  isConditionMet: 0
+  onAction:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerOnce: 1
+  target: {fileID: 5648664019893234210}
+  axes: 2
+  space: 1
+  duration: 0.25
+  previewHoldDuration: 1
+  degrees: 180
 --- !u!4 &5648664019893234210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6255607206769407195, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
@@ -467,7 +478,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6547083549731573559}
+      addedObject: {fileID: 1402978010790015958}
   m_SourcePrefab: {fileID: 100100000, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
 --- !u!4 &236189262176062562 stripped
 Transform:
@@ -479,7 +490,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
   m_PrefabInstance: {fileID: 6167536192848476345}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6547083549731573559
+--- !u!114 &1402978010790015958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -488,9 +499,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 580063085079058136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5dc317b69d47c34283f168ba9720c57, type: 3}
+  m_Script: {fileID: 11500000, guid: 21720e96cfa543444bf41bcb41bac85f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.RotateObject
+  m_EditorClassIdentifier: ecda.vrtoolkit::ECDA.VRTutorialKit.RotateObject
+  isConditionMet: 0
+  onAction:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerOnce: 1
+  target: {fileID: 236189262176062562}
+  axes: 2
+  space: 1
+  duration: 0.25
+  previewHoldDuration: 1
+  degrees: 180
 --- !u!1001 &8104572633525411432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,7 +583,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1106602475188777917}
+      addedObject: {fileID: 7845147344127315391}
   m_SourcePrefab: {fileID: 100100000, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
 --- !u!4 &2785854887823370931 stripped
 Transform:
@@ -573,7 +595,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6745179690919358049, guid: 6b268c7ffbf917d4fb4976fa41d1e18b, type: 3}
   m_PrefabInstance: {fileID: 8104572633525411432}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1106602475188777917
+--- !u!114 &7845147344127315391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -582,9 +604,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 3306355633079398409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5dc317b69d47c34283f168ba9720c57, type: 3}
+  m_Script: {fileID: 11500000, guid: 21720e96cfa543444bf41bcb41bac85f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.RotateObject
+  m_EditorClassIdentifier: ecda.vrtoolkit::ECDA.VRTutorialKit.RotateObject
+  isConditionMet: 0
+  onAction:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerOnce: 1
+  target: {fileID: 2785854887823370931}
+  axes: 2
+  space: 1
+  duration: 0.25
+  previewHoldDuration: 1
+  degrees: 180
 --- !u!1001 &9068477637548507967
 PrefabInstance:
   m_ObjectHideFlags: 0

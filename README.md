@@ -8,7 +8,7 @@ The package ships two assemblies. The tutorial depends on the toolkit; never the
 
 | Assembly | Location | What it is |
 |---|---|---|
-| `ecda.vrtoolkit` | `Runtime/Toolkit/` | Reusable VR building blocks: sockets, grabs, respawn, hinges and sliders, highlights, guidance arrows, conditions and progress, rig and fade, scene transitions, hands, callouts, UI Toolkit helpers |
+| `ecda.vrtoolkit` | `Runtime/Toolkit/` | Reusable VR building blocks: sockets, grabs, respawn, hinges, sliders and transform tweens, highlights, guidance arrows, conditions and progress, rig and fade, haptics, scene transitions, hands, callouts, UI Toolkit helpers |
 | `ecda.vrtutorialkit` | `Runtime/Tutorial/` | The tutorial itself: manager, config and steps, substeps, the step controllers and the step prefabs |
 | `ecda.vrtoolkit.Editor` | `Editor/` | Inspector drawers and authoring tools for the toolkit |
 

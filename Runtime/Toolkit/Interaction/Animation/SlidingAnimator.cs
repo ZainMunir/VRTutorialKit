@@ -1,27 +1,19 @@
 using UnityEngine;
-using UnityEngine.Events;
-using System.Collections;
 
 namespace ECDA.VRTutorialKit
 {
-    public class SlidingAnimator : MonoBehaviour
+    public class SlidingAnimator : PreviewableAnimator
     {
-        [Header("Settings")]
+        [Header("Sliding")]
         public Vector3 openDirection = Vector3.forward;
         [Range(0, 1)] public float openFraction = 0.6f;
-        public float speed = 2f;
 
-        [Header("Preview")]
-        [Tooltip("Seconds the preview holds the open pose before reverting.")]
-        public float previewHoldDuration = 1f;
-
-        [Header("Events")]
-        public UnityEvent OnOpened;
-        public UnityEvent OnClosed;
-        private bool isOpen = false;
-        private bool isAnimating = false;
         private Vector3 closedPosition;
         private Vector3 openPosition;
+        private Vector3 startPosition;
+        private Vector3 targetPosition;
+
+        protected override string UndoLabel => "Sliding Animator";
 
         void Start()
         {
@@ -45,122 +37,26 @@ namespace ECDA.VRTutorialKit
             openPosition = closedPosition + openDirection.normalized * (length * openFraction);
         }
 
-        public void Toggle() => SetState(!isOpen);
-
-        [ContextMenu("Preview")]
-        public void Preview() => Play(true, revertAfterwards: true);
-
-        public void SetState(bool open)
+        protected override bool BeginAnimation(bool open)
         {
-            if (isAnimating || isOpen == open) return;
-            CalculateOpenPosition(); // Recalculate based on current inspector values
-            isOpen = open;
-            Play(open, revertAfterwards: false);
-        }
+            // Outside play mode Start() has never run, and the object is sitting at its authored
+            // pose, so that pose is the closed one.
+            if (!Application.isPlaying) closedPosition = transform.localPosition;
 
-        private void Play(bool open, bool revertAfterwards)
-        {
-            if (Application.isPlaying)
-            {
-                StartCoroutine(Animate(open, revertAfterwards));
-                return;
-            }
-
-#if UNITY_EDITOR
-            EditorPlay(open, revertAfterwards);
-#endif
-        }
-
-        private IEnumerator Animate(bool open, bool revertAfterwards)
-        {
-            isAnimating = true;
-            if (!revertAfterwards)
-            {
-                if (open) OnOpened.Invoke(); else OnClosed.Invoke();
-            }
-
-            Vector3 targetPosition = open ? openPosition : closedPosition;
-            Vector3 startPosition = transform.localPosition;
-            float duration = speed > 0f ? 1f / speed : 0f;
-            float elapsed = 0f;
-
-            while (elapsed < duration)
-            {
-                elapsed += Time.deltaTime;
-                float progress = Mathf.SmoothStep(0f, 1f, elapsed / duration);
-                transform.localPosition = Vector3.Lerp(startPosition, targetPosition, progress);
-                yield return null;
-            }
-
-            isAnimating = false;
-
-            if (revertAfterwards)
-            {
-                yield return new WaitForSeconds(previewHoldDuration);
-                transform.localPosition = startPosition;
-            }
-        }
-
-        private void OnDisable()
-        {
-#if UNITY_EDITOR
-            StopEditorPlay();
-#endif
-        }
-
-#if UNITY_EDITOR
-        private UnityEditor.EditorApplication.CallbackFunction editorStep;
-
-        private void EditorPlay(bool open, bool revertAfterwards)
-        {
-            StopEditorPlay();
-
-            Vector3 revertPosition = transform.localPosition;
-            closedPosition = revertPosition;
             CalculateOpenPosition();
-
-            isAnimating = true;
-            Vector3 targetPosition = open ? openPosition : closedPosition;
-            float duration = speed > 0f ? 1f / speed : 0f;
-            double startTime = UnityEditor.EditorApplication.timeSinceStartup;
-
-            editorStep = () =>
-            {
-                if (this == null)
-                {
-                    StopEditorPlay();
-                    return;
-                }
-
-                float elapsed = (float)(UnityEditor.EditorApplication.timeSinceStartup - startTime);
-                float progress = duration > 0f ? Mathf.Clamp01(elapsed / duration) : 1f;
-                float smoothed = Mathf.SmoothStep(0f, 1f, progress);
-                transform.localPosition = Vector3.Lerp(revertPosition, targetPosition, smoothed);
-                UnityEditor.SceneView.RepaintAll();
-
-                if (progress < 1f) return;
-
-                if (revertAfterwards)
-                {
-                    if (elapsed < duration + previewHoldDuration) return;
-                    transform.localPosition = revertPosition;
-                    UnityEditor.SceneView.RepaintAll();
-                }
-
-                StopEditorPlay();
-            };
-
-            UnityEditor.EditorApplication.update += editorStep;
+            startPosition = transform.localPosition;
+            targetPosition = open ? openPosition : closedPosition;
+            return true;
         }
 
-        private void StopEditorPlay()
+        protected override void ApplyProgress(float progress)
         {
-            isAnimating = false;
-            if (editorStep == null) return;
-
-            UnityEditor.EditorApplication.update -= editorStep;
-            editorStep = null;
+            float smoothed = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(progress));
+            transform.localPosition = Vector3.Lerp(startPosition, targetPosition, smoothed);
         }
-#endif
+
+        protected override object CaptureRevertState() => transform.localPosition;
+
+        protected override void ApplyRevertState(object state) => transform.localPosition = (Vector3)state;
     }
 }

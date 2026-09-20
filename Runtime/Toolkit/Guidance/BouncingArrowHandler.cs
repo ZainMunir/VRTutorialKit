@@ -9,7 +9,7 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private float size = 1;
         private BouncingArrow activeArrow;
 
-        [SerializeField] private Target overrideTarget;
+        [SerializeField] private ArrowTarget overrideTarget;
 
         void ShowArrowAtTarget(GameObject target)
         {
@@ -46,8 +46,8 @@ namespace ECDA.VRTutorialKit
                 return;
             }
 
-            Target[] targets = FindObjectsByType<Target>(FindObjectsSortMode.None);
-            foreach (Target target in targets)
+            ArrowTarget[] targets = FindObjectsByType<ArrowTarget>(FindObjectsSortMode.None);
+            foreach (ArrowTarget target in targets)
             {
                 if (target.ValidTarget(targetTag))
                 {

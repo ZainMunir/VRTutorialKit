@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-    public class ActionOnOrientation : IConditionSource, ProgressProvider
+    public class ActionOnOrientation : ConditionSourceBase, IProgressProvider
     {
         [Header("Orientation Settings")]
         [SerializeField] private Vector3 worldDirection = Vector3.up;

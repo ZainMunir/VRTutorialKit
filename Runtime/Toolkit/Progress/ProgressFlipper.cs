@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-    public class ProgressFlipper : MonoBehaviour, ProgressProvider
+    public class ProgressFlipper : MonoBehaviour, IProgressProvider
     {
         private float progress = 0f;
         public float Progress => progress;

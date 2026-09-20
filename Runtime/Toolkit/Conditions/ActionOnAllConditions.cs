@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-    public class ActionOnAllConditions : IConditionSource, ProgressProvider
+    public class ActionOnAllConditions : ConditionSourceBase, IProgressProvider
     {
-        [SerializeField] private List<IConditionSource> conditionSources = new List<IConditionSource>();
+        [SerializeField] private List<ConditionSourceBase> conditionSources = new List<ConditionSourceBase>();
 
         public float Progress => CalculateProgress();
 
@@ -78,7 +78,7 @@ namespace ECDA.VRTutorialKit
 
             for (int index = 0; index < conditionSources.Count; index++)
             {
-                IConditionSource source = conditionSources[index];
+                ConditionSourceBase source = conditionSources[index];
                 if (source != null)
                 {
                     source.ConditionStateChanged += OnSourceConditionStateChanged;
@@ -90,7 +90,7 @@ namespace ECDA.VRTutorialKit
         {
             for (int index = 0; index < conditionSources.Count; index++)
             {
-                IConditionSource source = conditionSources[index];
+                ConditionSourceBase source = conditionSources[index];
                 if (source != null)
                 {
                     source.ConditionStateChanged -= OnSourceConditionStateChanged;

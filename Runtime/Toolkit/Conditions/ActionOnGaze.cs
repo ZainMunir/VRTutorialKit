@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-    public class ActionOnGaze : IConditionSource, ProgressProvider
+    public class ActionOnGaze : ConditionSourceBase, IProgressProvider
     {
         [Header("Gaze Completion Settings")]
         [SerializeField] private float gazeDuration = 2f;

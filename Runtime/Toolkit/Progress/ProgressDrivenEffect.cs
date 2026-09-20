@@ -4,10 +4,10 @@ namespace ECDA.VRTutorialKit
 {
     public class ProgressDrivenEffect : MonoBehaviour
     {
-        [SerializeField, RequireInterface(typeof(ProgressProvider))] private MonoBehaviour progressProvider;
+        [SerializeField, RequireInterface(typeof(IProgressProvider))] private MonoBehaviour progressProvider;
         [SerializeField] private ProgressEffect[] effects;
 
-        private ProgressProvider cachedProvider;
+        private IProgressProvider cachedProvider;
 
         private void Awake()
         {
@@ -17,10 +17,10 @@ namespace ECDA.VRTutorialKit
                 return;
             }
 
-            cachedProvider = progressProvider as ProgressProvider;
+            cachedProvider = progressProvider as IProgressProvider;
             if (cachedProvider == null)
             {
-                Debug.LogError($"{nameof(ProgressDrivenEffect)} on {name} requires a component implementing {nameof(ProgressProvider)}.", this);
+                Debug.LogError($"{nameof(ProgressDrivenEffect)} on {name} requires a component implementing {nameof(IProgressProvider)}.", this);
             }
         }
 

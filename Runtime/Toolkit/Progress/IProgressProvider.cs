@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-    public interface ProgressProvider
+    public interface IProgressProvider
     {
         public abstract float Progress { get; }
     }

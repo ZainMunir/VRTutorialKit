@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace ECDA.VRTutorialKit
 {
-    public abstract class IConditionSource : MonoBehaviour
+    public abstract class ConditionSourceBase : MonoBehaviour
     {
         [Header("Condition State")]
         [SerializeField] private bool isConditionMet = false;

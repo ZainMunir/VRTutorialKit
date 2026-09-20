@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ECDA.VRTutorialKit
 {
-    public class Target : MonoBehaviour
+    public class ArrowTarget : MonoBehaviour
     {
         // Marker class for BouncingArrow
         public TargetTag targetTag;

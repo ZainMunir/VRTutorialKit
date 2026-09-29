@@ -17,8 +17,8 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private InteractionLayerMask grabbableLayers = 1;
         [SerializeField] private InteractionLayerMask notGrabbableLayers = 0;
         [SerializeField] private GameObject[] physicsLayerTargets;
-        [SerializeField] private string grabbablePhysicsLayer = "Default";
-        [SerializeField] private string notGrabbablePhysicsLayer = "Ignore Raycast";
+        [SerializeField, UnityLayer] private string grabbablePhysicsLayer = "Default";
+        [SerializeField, UnityLayer] private string notGrabbablePhysicsLayer = "Ignore Raycast";
         [SerializeField] private bool disableCollisionsWhileSocketed = true;
         public UnityEvent<bool> onGrabbableChanged;
         private Rigidbody m_Rigidbody;

@@ -1,14 +1,16 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ECDA.VRTutorialKit
 {
     public class OnTriggerEnterEventTag : OnTriggerEnterEventBase
     {
-        [SerializeField] private string targetTag;
+        [Tooltip("Unity tag (Tag Manager) the entering collider's GameObject must have. For TargetTag assets, use OnTriggerEnterEventTargetTag.")]
+        [SerializeField, UnityTag, FormerlySerializedAs("targetTag")] private string unityTag = "Untagged";
 
         protected override bool Evaluate(Collider other)
         {
-            return other.CompareTag(targetTag);
+            return other.CompareTag(unityTag);
         }
     }
 }

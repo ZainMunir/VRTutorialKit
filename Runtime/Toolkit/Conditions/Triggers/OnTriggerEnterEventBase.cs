@@ -13,6 +13,7 @@ namespace ECDA.VRTutorialKit
         private float m_TimeEnabled;
 
         public UnityEvent onTriggered;
+        public UnityEvent<GameObject> onTriggeredWith;
 
         protected virtual void Awake()
         {
@@ -33,12 +34,15 @@ namespace ECDA.VRTutorialKit
         {
             if (Time.time < m_TimeEnabled + startDelay) return;
 
-            if (Evaluate(other))
+            GameObject matched = Match(other);
+            if (matched != null)
             {
                 onTriggered?.Invoke();
+                onTriggeredWith?.Invoke(matched);
             }
         }
 
-        protected abstract bool Evaluate(Collider other);
+        // Returns the object that satisfied the condition, or null if the collider doesn't match.
+        protected abstract GameObject Match(Collider other);
     }
 }

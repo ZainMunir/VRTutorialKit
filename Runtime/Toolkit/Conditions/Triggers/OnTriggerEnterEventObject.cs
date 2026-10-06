@@ -6,9 +6,9 @@ namespace ECDA.VRTutorialKit
     {
         [SerializeField] private GameObject targetObject;
 
-        protected override bool Evaluate(Collider other)
+        protected override GameObject Match(Collider other)
         {
-            return other.gameObject == targetObject;
+            return other.gameObject == targetObject ? targetObject : null;
         }
     }
 }

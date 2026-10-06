@@ -311,6 +311,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 408654962735265085}
     m_Modifications:
+    - target: {fileID: 3123054678618179762, guid: 8d7b769101398534498c18b4bb0306c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123054678618179762, guid: 8d7b769101398534498c18b4bb0306c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0883
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123054678618179762, guid: 8d7b769101398534498c18b4bb0306c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0752
+      objectReference: {fileID: 0}
     - target: {fileID: 3375715200830104086, guid: 8d7b769101398534498c18b4bb0306c3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -680,62 +692,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8541865318816390731}
     m_Modifications:
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1303114780726656968}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 2514703558471437756}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Complete
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayClip
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ECDA.VRTutorialKit.TutorialSubStep, ecda.vrtutorialkit
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ECDA.VRTutorialKit.AudioTrigger, ecda.vrtutorialkit
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 8300000, guid: 7486faa47fc282d408629cce00409a81, type: 3}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 842385821178952699, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-      propertyPath: OnOpened.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.AudioClip, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3475568898065072327, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.97264
@@ -801,17 +757,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3475568898065072327, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
   m_PrefabInstance: {fileID: 3859698102841226746}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2514703558471437756 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1690648014995093574, guid: 6631845637e6f744d8b896e1bfe31345, type: 3}
-  m_PrefabInstance: {fileID: 3859698102841226746}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0692eb2ea23118242983a6d1672c7e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.AudioTrigger
 --- !u!1001 &5332575242254702423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1334,13 +1279,13 @@ PrefabInstance:
       addedObject: {fileID: 6072375951831737658}
     - targetCorrespondingSourceObject: {fileID: 6314046295882885173, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2475836253448543921}
-    - targetCorrespondingSourceObject: {fileID: 6314046295882885173, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2488851792318332647}
     - targetCorrespondingSourceObject: {fileID: 6314046295882885173, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2418224298752284397}
+    - targetCorrespondingSourceObject: {fileID: 6314046295882885173, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8350438254363100859}
   m_SourcePrefab: {fileID: 100100000, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}
 --- !u!1 &3202895084576722106 stripped
 GameObject:
@@ -1368,7 +1313,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0019500013, y: 0.012025, z: 0.027300006}
   m_Center: {x: 3.390012e-10, y: -0.005687499, z: 0.013650003}
---- !u!114 &2475836253448543921
+--- !u!114 &2488851792318332647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1377,9 +1322,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 3202895084576722106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c43262f1d8c9da4aa014cf7402f12d0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HoverVisual
+  gameObjectsToHighlightRoot: {fileID: 0}
+--- !u!114 &2418224298752284397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202895084576722106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7318f3d3c6d4e3842aec7820191a09f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HighlightObject
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 10
+  startHighlighted: 1
+  highlightDelaySeconds: 0
+--- !u!114 &8350438254363100859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202895084576722106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963c522a4a8747b3b49c33c7700d67ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtoolkit::ECDA.VRTutorialKit.AttachPointInteractable
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
@@ -1405,7 +1379,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2488851792318332647}
-        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.HoverVisual, ecda.vrtutorialkit
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.HoverVisual, ecda.vrtoolkit
         m_MethodName: SetHover
         m_Mode: 6
         m_Arguments:
@@ -1420,7 +1394,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2488851792318332647}
-        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.HoverVisual, ecda.vrtutorialkit
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.HoverVisual, ecda.vrtoolkit
         m_MethodName: SetHover
         m_Mode: 6
         m_Arguments:
@@ -1478,34 +1452,12 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
---- !u!114 &2488851792318332647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  attachTransform: {fileID: 8552110290477518916}
+--- !u!4 &8552110290477518916 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8267987396510731061, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}
+  m_PrefabInstance: {fileID: 8929802136832844943}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3202895084576722106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c43262f1d8c9da4aa014cf7402f12d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HoverVisual
---- !u!114 &2418224298752284397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3202895084576722106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7318f3d3c6d4e3842aec7820191a09f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HighlightObject
-  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 10
-  startHighlighted: 1
-  highlightDelaySeconds: 0
 --- !u!4 &8964343342105052004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c0f8544282192bc4cb2e3ffbb33aba77, type: 3}

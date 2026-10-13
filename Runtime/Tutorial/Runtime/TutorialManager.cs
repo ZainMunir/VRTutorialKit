@@ -108,6 +108,8 @@ namespace ECDA.VRTutorialKit
         public void FinishTutorial()
         {
             Debug.Log("Tutorial Finished!");
+            SessionLogger.Instance.Log("tutorial_finished");
+            SessionLogger.Instance.EndSession();
             var transitionController = SceneTransitionController.Instance;
             if (transitionController != null)
             {

@@ -59,3 +59,46 @@ Two steps, both required before `SimpleOutline` / `HighlightObject` will show an
 ## Samples
 
 Import **Tutorial Assets** from the Package Manager for a working tutorial scene.
+
+
+## Session telemetry
+
+`SessionLogger` writes one JSON Lines file per session to `Application.persistentDataPath/sessions`. Add
+`SessionUploader` to the same GameObject to also POST finished sessions to a telemetry server.
+Uploaded files move to `sessions/uploaded/`. Files that fail to upload stay where they are and
+are retried on the next launch or session end.
+
+### API key
+
+The uploader sends `X-Api-Key`, which must match the server's `INGEST_KEY`. Keep it out of
+version control with a key file in the consuming project:
+
+1. Copy `Assets/Resources/SessionUploaderKey.example.txt` to `Assets/Resources/SessionUploaderKey.txt`
+   (create both if your project has neither; any `Resources` folder works).
+2. Replace the contents with the key. The whole file is the key: no quotes, no comments.
+   Surrounding whitespace and newlines are trimmed.
+3. Add the key file to the project's `.gitignore`:
+   ```
+   /Assets/Resources/SessionUploaderKey.txt
+   /Assets/Resources/SessionUploaderKey.txt.meta
+   ```
+
+The key file is the only place the key is read from; there is no inspector field, so it can't end
+up in a scene or prefab. Without the file, the uploader logs a warning at startup and uploads
+nothing. Sessions stay on disk and are uploaded on the first launch after the file is added.
+
+The key still ships inside the build, so anyone with the APK can extract it. It keeps random
+traffic out, nothing more. A `401 unauthorized` in the console means the key doesn't match
+`INGEST_KEY` on the server.
+
+### Grab directly from headset
+
+- `adb pull /sdcard/Android/data/com.ECDA.VRTutorial/files/sessions LOCAL_PATH`
+
+### Other settings
+
+- **Endpoint:** use `https://`. An `http://` endpoint (e.g. a laptop server on the LAN) also needs
+  `Player Settings > Other Settings > Allow downloads over HTTP` set to `Always allowed`.
+- **Live Upload:** also uploads the running session every `Live Upload Interval` seconds
+  (minimum 10), so a dashboard can follow it. The session is uploaded again when it ends, and
+  that final upload is the one the server keeps.

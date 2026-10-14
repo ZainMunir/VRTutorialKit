@@ -23,7 +23,10 @@ namespace ECDA.VRTutorialKit
         public string CurrentSessionId { get; private set; }
         public bool IsLogging => writer != null;
 
-        // Raised with the session id after its file is closed. SessionUploader listens to this.
+        // Raised with the session id once its file is open and the session_start line is written.
+        public event Action<string> SessionStarted;
+
+        // Raised with the session id after its file is closed. SessionUploader listens to both.
         public event Action<string> SessionEnded;
 
         private StreamWriter writer;
@@ -58,6 +61,7 @@ namespace ECDA.VRTutorialKit
             var path = Path.Combine(SessionsDirectory, CurrentSessionId + ".jsonl");
             // No BOM: the first line must be plain JSON.
             writer = new StreamWriter(path, true, new UTF8Encoding(false)) { AutoFlush = true };
+            if (Application.isEditor) Debug.Log($"[SessionLogger] Writing to {Path.GetFullPath(path)}");
 
             Log("session_start", new SessionInfo
             {
@@ -66,7 +70,10 @@ namespace ECDA.VRTutorialKit
                 appVersion = Application.version,
                 device = SystemInfo.deviceModel,
                 scene = SceneManager.GetActiveScene().name,
+                isEditor = Application.isEditor,
             });
+
+            SessionStarted?.Invoke(CurrentSessionId);
         }
 
         public void EndSession()
@@ -127,6 +134,7 @@ namespace ECDA.VRTutorialKit
         private struct SessionInfo
         {
             public string participantId, project, appVersion, device, scene;
+            public bool isEditor;
         }
 
         [Serializable]

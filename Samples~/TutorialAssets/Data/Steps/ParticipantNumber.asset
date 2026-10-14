@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee02762db7c8bb408083fb268977637, type: 3}
+  m_Name: ParticipantNumber
+  m_EditorClassIdentifier: ecda.vrtutorialkit::VRTutorialKit.TutorialStep
+  stepTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 78698563891539968
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  stepDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:3488ca378e6e01d488f136c270b8cfd2
+    m_TableEntryReference:
+      m_KeyId: 78698606153347072
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  videoClip: {fileID: 32900000, guid: 581c8783c833fb74eb7387adf25e4ca1, type: 3}
+  interactionPrefab: {fileID: 2872045742663109763, guid: 718204e65f6bb834ab23bbda63004f0d, type: 3}
+  immediateCompletion: 0
+  leftTooltipPrefabs:
+  - {fileID: 2218924964502400796, guid: 74e8a1a4803dcc04da3de449718d8314, type: 3}
+  rightTooltipPrefabs:
+  - {fileID: 2218924964502400796, guid: 74e8a1a4803dcc04da3de449718d8314, type: 3}
+  enableSnapTurn: 0
+  leftHandLocomotion: 0
+  rightHandLocomotion: 0
+  references:
+    version: 2
+    RefIds: []

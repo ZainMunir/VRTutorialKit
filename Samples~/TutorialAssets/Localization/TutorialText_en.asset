@@ -307,7 +307,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37844069822464
-    m_Localized: Blink
+    m_Localized: Teleport
     m_Metadata:
       m_Items: []
   - m_Id: 38130469482496
@@ -362,6 +362,27 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23999806994558976
     m_Localized: Held Actions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78693946457763840
+    m_Localized: Fill in your number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78697269378330624
+    m_Localized: Backspace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78697340715053056
+    m_Localized: Submit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78698563891539968
+    m_Localized: Study Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78698606153347072
+    m_Localized: You should have been given a number that you can now fill in on
+      the screen to the right
     m_Metadata:
       m_Items: []
   references:

@@ -264,7 +264,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37844069822464
-    m_Key: TOOLTIP_BLINK
+    m_Key: TOOLTIP_TELEPORT
     m_Metadata:
       m_Items: []
   - m_Id: 38130469482496
@@ -317,6 +317,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23999806994558976
     m_Key: STEP_HELDACTION_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78693946457763840
+    m_Key: NUMPAD_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78697269378330624
+    m_Key: NUMPAD_BACKSPACE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78697340715053056
+    m_Key: NUMPAD_SUBMIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78698563891539968
+    m_Key: STEP_PARTICIPANTNUMBER_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78698606153347072
+    m_Key: STEP_PARTICIPANTNUMBER_DESC
     m_Metadata:
       m_Items: []
   m_Metadata:

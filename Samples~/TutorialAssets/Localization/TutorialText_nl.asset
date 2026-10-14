@@ -312,7 +312,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37844069822464
-    m_Localized: Blink
+    m_Localized: Teleporteren
     m_Metadata:
       m_Items: []
   - m_Id: 38130469482496
@@ -358,6 +358,27 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 47380235202560
     m_Localized: Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78693946457763840
+    m_Localized: Vul uw nummer in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78697269378330624
+    m_Localized: Backspace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78697340715053056
+    m_Localized: Indienen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78698563891539968
+    m_Localized: Studienummer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78698606153347072
+    m_Localized: Je zou een nummer moeten hebben gekregen dat je nu op het scherm
+      aan de rechterkant kunt invullen.
     m_Metadata:
       m_Items: []
   references:

@@ -102,3 +102,23 @@ traffic out, nothing more. A `401 unauthorized` in the console means the key doe
 - **Live Upload:** also uploads the running session every `Live Upload Interval` seconds
   (minimum 10), so a dashboard can follow it. The session is uploaded again when it ends, and
   that final upload is the one the server keeps.
+
+### Carrying state across scenes
+
+The tutorial and the experience after it each keep their own log. `ParticipantProfile` carries
+what the tutorial learned about the participant into the experience.
+
+- **Tutorial scene:** a `SessionLogger` with `Persist Across Scenes` off, so it only logs the
+  tutorial, and a `ParticipantProfile` on its own GameObject.
+- **Experience's first scene:** its own `SessionLogger`, with `Persist Across Scenes` on if the
+  experience spans several scenes, and another `ParticipantProfile`. Coming from the tutorial,
+  the tutorial's profile survives and this one removes itself; run on its own, the experience
+  still has a blank profile.
+
+Every session's `session_start` line carries the profile, and a `participant_profile` line is
+written whenever it changes. `linkId` is random and joins the tutorial and experience logs;
+`participantNumber` is what the participant typed, to match against a survey.
+
+Session ids are `yyyyMMdd_HHmmss_<8 random hex>`. A non-persistent uploader holds a
+`SceneTransitionController` scene change, for up to `Timeout Seconds`, while an upload is in
+flight.

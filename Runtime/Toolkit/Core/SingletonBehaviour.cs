@@ -24,10 +24,14 @@ namespace ECDA.VRTutorialKit
 
         protected virtual void OnSingletonAwake() { }
 
+        // Called on the duplicate just before its GameObject is destroyed.
+        protected virtual void OnDuplicateDestroyed() { }
+
         protected void Awake()
         {
             if (instance != null && instance != this)
             {
+                OnDuplicateDestroyed();
                 Destroy(gameObject);
                 return;
             }

@@ -12,7 +12,7 @@ namespace ECDA.VRTutorialKit
     // With liveUpload on, the open session is also sent on a timer and left in place; the server
     // replaces a session's rows on every re-send, so the end-of-session upload has the last word.
     [RequireComponent(typeof(SessionLogger))]
-    public class SessionUploader : MonoBehaviour
+    public class SessionUploader : MonoBehaviour, IBeforeSceneChange
     {
         private const float MinLiveUploadInterval = 10f;
         private const string ApiKeyResource = "SessionUploaderKey";
@@ -82,6 +82,17 @@ namespace ECDA.VRTutorialKit
         {
             StopLiveUpload();
             UploadPending();
+        }
+
+        // Holds a SceneTransitionController scene change, at most timeoutSeconds, so an upload in
+        // flight is not cut off with this scene. Anything unfinished is retried by the next uploader.
+        public IEnumerator OnBeforeSceneChange()
+        {
+            // Under DontDestroyOnLoad the upload carries on in the next scene.
+            if (gameObject.scene.buildIndex == -1) yield break;
+
+            var deadline = Time.realtimeSinceStartup + timeoutSeconds;
+            while (uploading && Time.realtimeSinceStartup < deadline) yield return null;
         }
 
         // Also callable from a UnityEvent, e.g. a "sync" button in the lobby.

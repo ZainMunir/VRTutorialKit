@@ -1,0 +1,45 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.ecda.vrtutorialkit/Runtime/Toolkit/UI/style.uss?fileID=7433441132597879392&amp;guid=5ad840cb0dde0ae42ac82b1f78aa205c&amp;type=3#style"/>
+    <ui:VisualElement class="background" style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 1; max-height: 15%;">
+            <ui:Label text="Click around below" class="title">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(78693946457763840)"/>
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:Label text="&#10;" name="Display" class="subtitle" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); background-color: rgb(192, 192, 192); color: rgb(0, 0, 0); min-height: 40px;"/>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: center;">
+            <ui:VisualElement name="" style="flex-grow: 0; flex-shrink: 0; flex-direction: column;">
+                <ui:Button text="1" name="Digit1" class="button numpad-button"/>
+                <ui:Button text="4" name="Digit4" class="button numpad-button" style="max-width: 50px; max-height: 50px; font-size: 30px;"/>
+                <ui:Button text="7" name="Digit7" class="button numpad-button" style="max-width: 50px; max-height: 50px; font-size: 30px;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="" style="flex-grow: 0; flex-shrink: 0; flex-direction: column;">
+                <ui:Button text="2" name="Digit2" class="button numpad-button" style="max-width: 50px; max-height: 50px; font-size: 30px;"/>
+                <ui:Button text="5" name="Digit5" class="button numpad-button" style="max-width: 50px; max-height: 50px; font-size: 30px;"/>
+                <ui:Button text="8" name="Digit8" class="button numpad-button" style="max-width: 50px; max-height: 50px; font-size: 30px;"/>
+                <ui:Button text="0" name="Digit0" class="button numpad-button" style="max-width: 50px; max-height: 50px; font-size: 30px;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="" style="flex-grow: 0; flex-shrink: 0; flex-direction: column;">
+                <ui:Button text="3" name="Digit3" class="button numpad-button" style="max-width: 50px; max-height: 50px; font-size: 30px;"/>
+                <ui:Button text="6" name="Digit6" class="button numpad-button" style="max-width: 50px; max-height: 50px; font-size: 30px;"/>
+                <ui:Button text="9" name="Digit9" class="button numpad-button" style="max-width: 50px; max-height: 50px; font-size: 30px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; align-items: center; flex-direction: row; justify-content: center;">
+            <ui:Button text="Success" name="Backspace" class="button">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(78697269378330624)"/>
+                </Bindings>
+            </ui:Button>
+            <ui:Button text="Success" name="Submit" class="button">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:3488ca378e6e01d488f136c270b8cfd2" entry="Id(78697340715053056)"/>
+                </Bindings>
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -15,8 +15,8 @@ namespace ECDA.VRTutorialKit
         [Tooltip("Start a session as soon as the app loads. Off: call StartSession yourself, e.g. from a start button.")]
         [SerializeField] private bool startOnAwake;
 
-        [Tooltip("Used when StartSession is called without a participant id.")]
-        [SerializeField] private string defaultParticipantId = "anon";
+        [Tooltip("Keep this logger, and its session, through scene loads. Off: it closes its session when its scene unloads, e.g. a tutorial that hands over to an experience with its own logger.")]
+        [SerializeField] private bool persistAcrossScenes;
 
         public static string SessionsDirectory => Path.Combine(Application.persistentDataPath, "sessions");
 
@@ -32,12 +32,17 @@ namespace ECDA.VRTutorialKit
         private StreamWriter writer;
         private readonly StringBuilder line = new StringBuilder(256);
 
-        protected override bool PersistAcrossScenes => true;
+        protected override bool PersistAcrossScenes => persistAcrossScenes;
 
         protected override void OnSingletonAwake()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             if (startOnAwake) StartSession();
+        }
+
+        protected override void OnDuplicateDestroyed()
+        {
+            Debug.Log($"[SessionLogger] A logger from an earlier scene is still running; the one in {gameObject.scene.name} is ignored.");
         }
 
         protected override void OnDestroy()
@@ -47,15 +52,13 @@ namespace ECDA.VRTutorialKit
             base.OnDestroy();
         }
 
-        public void StartSession() => StartSession(defaultParticipantId);
-
         // Closes any open session first, so calling this on experience reset is enough.
-        public void StartSession(string participantId)
+        public void StartSession()
         {
             EndSession();
 
-            if (string.IsNullOrWhiteSpace(participantId)) participantId = defaultParticipantId;
-            CurrentSessionId = $"{DateTime.UtcNow:yyyyMMdd_HHmmss}_{SafeFileName(participantId)}";
+            // The random part keeps two headsets that start in the same second apart.
+            CurrentSessionId = $"{DateTime.UtcNow:yyyyMMdd_HHmmss}_{Guid.NewGuid().ToString("N").Substring(0, 8)}";
 
             Directory.CreateDirectory(SessionsDirectory);
             var path = Path.Combine(SessionsDirectory, CurrentSessionId + ".jsonl");
@@ -63,9 +66,10 @@ namespace ECDA.VRTutorialKit
             writer = new StreamWriter(path, true, new UTF8Encoding(false)) { AutoFlush = true };
             if (Application.isEditor) Debug.Log($"[SessionLogger] Writing to {Path.GetFullPath(path)}");
 
+            var profile = ParticipantProfile.Instance;
             Log("session_start", new SessionInfo
             {
-                participantId = participantId,
+                profile = profile != null ? profile.GetSnapshot() : default,
                 project = Application.productName,
                 appVersion = Application.version,
                 device = SystemInfo.deviceModel,
@@ -122,18 +126,11 @@ namespace ECDA.VRTutorialKit
 
         private static string Escape(string s) => (s ?? string.Empty).Replace("\\", "\\\\").Replace("\"", "\\\"");
 
-        private static string SafeFileName(string s)
-        {
-            var sb = new StringBuilder(s.Length);
-            foreach (var c in s.Trim())
-                sb.Append(char.IsLetterOrDigit(c) || c == '-' ? c : '_');
-            return sb.ToString();
-        }
-
         [Serializable]
         private struct SessionInfo
         {
-            public string participantId, project, appVersion, device, scene;
+            public ParticipantProfile.Snapshot profile;
+            public string project, appVersion, device, scene;
             public bool isEditor;
         }
 

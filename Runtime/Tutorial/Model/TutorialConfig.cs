@@ -8,5 +8,6 @@ namespace ECDA.VRTutorialKit
     {
         public List<TutorialStep> tutorialSteps = new List<TutorialStep>();
         [Scene] public string startingScene;
+        public bool allowSkip = true;
     }
 }

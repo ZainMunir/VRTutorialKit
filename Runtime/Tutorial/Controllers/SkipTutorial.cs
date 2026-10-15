@@ -20,7 +20,7 @@ namespace ECDA.VRTutorialKit
         public void Skip()
         {
             if (tutorialManager == null) return;
-            tutorialManager.FinishTutorial();
+            tutorialManager.ExitTutorial(TutorialManager.ExitReason.Skipped);
         }
     }
 }

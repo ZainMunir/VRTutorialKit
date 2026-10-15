@@ -39,7 +39,7 @@ namespace ECDA.VRTutorialKit
             if (m_IdleTime < m_IdleDelay) return;
 
             m_IdleTime = 0f;
-            m_Respawnable.Respawn();
+            m_Respawnable.Respawn(RespawnableObject.Cause.Idle);
         }
 
         private bool IsIdle()

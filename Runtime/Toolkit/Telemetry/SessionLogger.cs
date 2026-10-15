@@ -3,6 +3,8 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
 namespace ECDA.VRTutorialKit
@@ -37,6 +39,7 @@ namespace ECDA.VRTutorialKit
         protected override void OnSingletonAwake()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
+            LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
             if (startOnAwake) StartSession();
         }
 
@@ -48,6 +51,7 @@ namespace ECDA.VRTutorialKit
         protected override void OnDestroy()
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
+            LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
             EndSession();
             base.OnDestroy();
         }
@@ -74,6 +78,7 @@ namespace ECDA.VRTutorialKit
                 appVersion = Application.version,
                 device = SystemInfo.deviceModel,
                 scene = SceneManager.GetActiveScene().name,
+                locale = LocaleCode(LocalizationSettings.SelectedLocale),
                 isEditor = Application.isEditor,
             });
 
@@ -124,13 +129,21 @@ namespace ECDA.VRTutorialKit
             Log("scene_loaded", new SceneInfo { scene = scene.name });
         }
 
+        // Raised only when the language is switched, not for the startup choice; session_start carries that.
+        private void OnLocaleChanged(Locale locale)
+        {
+            Log("locale_changed", new LocaleInfo { locale = LocaleCode(locale) });
+        }
+
+        private static string LocaleCode(Locale locale) => locale != null ? locale.Identifier.Code : string.Empty;
+
         private static string Escape(string s) => (s ?? string.Empty).Replace("\\", "\\\\").Replace("\"", "\\\"");
 
         [Serializable]
         private struct SessionInfo
         {
             public ParticipantProfile.Snapshot profile;
-            public string project, appVersion, device, scene;
+            public string project, appVersion, device, scene, locale;
             public bool isEditor;
         }
 
@@ -138,6 +151,12 @@ namespace ECDA.VRTutorialKit
         private struct SceneInfo
         {
             public string scene;
+        }
+
+        [Serializable]
+        private struct LocaleInfo
+        {
+            public string locale;
         }
     }
 }

@@ -15,6 +15,8 @@ namespace ECDA.VRTutorialKit
     public class SessionUploader : MonoBehaviour, IBeforeSceneChange
     {
         private const float MinLiveUploadInterval = 10f;
+        private const int MaxAttempts = 2;
+        private const float RetryDelaySeconds = 1f;
         private const string ApiKeyResource = "SessionUploaderKey";
 
 
@@ -138,23 +140,46 @@ namespace ECDA.VRTutorialKit
                     foreach (var path in live ? OpenFile() : PendingFiles())
                     {
                         var sessionId = Path.GetFileNameWithoutExtension(path);
+                        var stopPass = false;
 
-                        var operation = Send(path, sessionId);
-                        if (operation == null) break;
-                        using var request = operation.webRequest;
-                        yield return operation;
-
-                        if (request.result == UnityWebRequest.Result.Success)
+                        for (var attempt = 1; attempt <= MaxAttempts; attempt++)
                         {
-                            if (live) continue;
-                            MoveToUploaded(path);
-                            Debug.Log($"[SessionUploader] Uploaded {sessionId}");
-                            continue;
+                            var operation = Send(path, sessionId);
+                            if (operation == null)
+                            {
+                                stopPass = true;
+                                break;
+                            }
+                            using var request = operation.webRequest;
+                            yield return operation;
+
+                            if (request.result == UnityWebRequest.Result.Success)
+                            {
+                                if (!live)
+                                {
+                                    MoveToUploaded(path);
+                                    Debug.Log($"[SessionUploader] Uploaded {sessionId}");
+                                }
+                                break;
+                            }
+
+                            // No response at all, e.g. a pooled connection the server had already closed: worth one more try.
+                            // A response (401, 400, 500) would come back the same, so it is not retried.
+                            var noResponse = request.result != UnityWebRequest.Result.ProtocolError;
+                            if (noResponse && attempt < MaxAttempts)
+                            {
+                                Debug.Log($"[SessionUploader] {sessionId} failed: {request.error}; retrying.");
+                                yield return new WaitForSecondsRealtime(RetryDelaySeconds);
+                                continue;
+                            }
+
+                            Debug.LogWarning($"[SessionUploader] {sessionId} failed: {request.error} {request.downloadHandler.text}");
+                            // Server unreachable: the rest would fail the same way, try again next time.
+                            if (request.result == UnityWebRequest.Result.ConnectionError) stopPass = true;
+                            break;
                         }
 
-                        Debug.LogWarning($"[SessionUploader] {sessionId} failed: {request.error} {request.downloadHandler.text}");
-                        // Server unreachable: the rest would fail the same way, try again next time.
-                        if (request.result == UnityWebRequest.Result.ConnectionError) break;
+                        if (stopPass) break;
                     }
                 }
             }

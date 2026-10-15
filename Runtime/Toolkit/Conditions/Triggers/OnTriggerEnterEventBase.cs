@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,6 +7,8 @@ namespace ECDA.VRTutorialKit
     [RequireComponent(typeof(Collider))]
     public abstract class OnTriggerEnterEventBase : MonoBehaviour
     {
+        public static event Action<OnTriggerEnterEventBase, GameObject> AnyTriggered;
+
         private Collider m_collider;
 
         [Tooltip("Time in seconds to wait after enabling before checking for collisions. Prevents triggering on spawn.")]
@@ -39,6 +42,7 @@ namespace ECDA.VRTutorialKit
             {
                 onTriggered?.Invoke();
                 onTriggeredWith?.Invoke(matched);
+                AnyTriggered?.Invoke(this, matched);
             }
         }
 

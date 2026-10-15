@@ -7,6 +7,10 @@ namespace ECDA.VRTutorialKit
 
     public class TutorialManager : SingletonBehaviour<TutorialManager>
     {
+        public enum StepChangeReason { Next, Previous, Skip, ConfigChanged }
+
+        public enum ExitReason { Finished, Skipped }
+
         public TutorialConfig tutorialConfig;
 
         private int currentStepIndex = 0;
@@ -18,6 +22,16 @@ namespace ECDA.VRTutorialKit
         public Action<bool> OnTutorialFinished;
 
         public Action<bool> OnTutorialStepChanged;
+
+        // Raised after the new config is set and before its first step can complete.
+        public Action<TutorialConfig> OnTutorialConfigChanged;
+
+        public Action<ExitReason> OnTutorialExited;
+
+        public int CurrentStepIndex => currentStepIndex;
+
+        // Why the step last changed; read it from an OnTutorialStepChanged handler.
+        public StepChangeReason LastStepChangeReason { get; private set; }
 
 
         void Start()
@@ -84,6 +98,7 @@ namespace ECDA.VRTutorialKit
             if (!HasPreviousStep)
                 return;
             currentStepIndex--;
+            LastStepChangeReason = StepChangeReason.Previous;
             if (CheckBounds(currentStepIndex))
             {
                 OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
@@ -97,6 +112,7 @@ namespace ECDA.VRTutorialKit
             if (!IsCurrentStepCompleted)
                 return;
             currentStepIndex++;
+            LastStepChangeReason = StepChangeReason.Next;
             if (CheckBounds(currentStepIndex))
             {
                 OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
@@ -105,11 +121,12 @@ namespace ECDA.VRTutorialKit
         }
 
         [ContextMenu("Finish Tutorial")]
-        public void FinishTutorial()
+        public void FinishTutorial() => ExitTutorial(ExitReason.Finished);
+
+        public void ExitTutorial(ExitReason reason)
         {
-            Debug.Log("Tutorial Finished!");
-            SessionLogger.Instance.Log("tutorial_finished");
-            SessionLogger.Instance.EndSession();
+            Debug.Log($"Tutorial exited: {reason}");
+            OnTutorialExited?.Invoke(reason);
             var transitionController = SceneTransitionController.Instance;
             if (transitionController != null)
             {
@@ -123,6 +140,7 @@ namespace ECDA.VRTutorialKit
             if (!HasNextStep)
                 return;
             currentStepIndex++;
+            LastStepChangeReason = StepChangeReason.Skip;
             if (CheckBounds(currentStepIndex))
             {
                 OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);
@@ -134,9 +152,11 @@ namespace ECDA.VRTutorialKit
         {
             tutorialConfig = config;
             currentStepIndex = 0;
+            LastStepChangeReason = StepChangeReason.ConfigChanged;
             if (tutorialConfig != null)
             {
                 stepsCompleted = new bool[TotalSteps()];
+                OnTutorialConfigChanged?.Invoke(tutorialConfig);
                 CheckImmediateCompletion();
                 OnTutorialFinished?.Invoke(false);
                 OnTutorialStepChanged?.Invoke(IsCurrentStepCompleted);

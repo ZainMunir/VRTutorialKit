@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,6 +7,10 @@ namespace ECDA.VRTutorialKit
 
     public class RespawnableObject : MonoBehaviour
     {
+        public enum Cause { Direct, LeftVolume, Idle }
+
+        public static event Action<RespawnableObject, Cause> AnyRespawned;
+
         [SerializeField] private Transform m_SpawnPointOverride;
         [SerializeField] private bool m_FollowSpawnPoint;
         [SerializeField] private bool m_ResetScale;
@@ -53,7 +58,9 @@ namespace ECDA.VRTutorialKit
             }
         }
 
-        public void Respawn()
+        public void Respawn() => Respawn(Cause.Direct);
+
+        public void Respawn(Cause cause)
         {
             // Reset Physics
             if (m_Rigidbody != null && !m_Rigidbody.isKinematic)
@@ -69,6 +76,7 @@ namespace ECDA.VRTutorialKit
                 transform.localScale = m_SpawnScale;
 
             onRespawn?.Invoke();
+            AnyRespawned?.Invoke(this, cause);
         }
     }
 }

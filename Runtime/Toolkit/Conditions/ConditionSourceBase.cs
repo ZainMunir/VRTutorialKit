@@ -10,6 +10,9 @@ namespace ECDA.VRTutorialKit
         [SerializeField] private bool isConditionMet = false;
         public bool IsConditionMet => isConditionMet;
         public event Action<bool> ConditionStateChanged;
+
+        public static event Action<ConditionSourceBase, bool> AnyConditionStateChanged;
+
         public UnityEvent onAction;
         [SerializeField] protected bool triggerOnce = false;
         protected bool hasTriggered = false;
@@ -49,6 +52,7 @@ namespace ECDA.VRTutorialKit
 
             previousConditionState = current;
             ConditionStateChanged?.Invoke(current);
+            AnyConditionStateChanged?.Invoke(this, current);
         }
     }
 }

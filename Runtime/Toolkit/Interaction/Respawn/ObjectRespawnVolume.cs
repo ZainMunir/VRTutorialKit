@@ -72,7 +72,7 @@ namespace ECDA.VRTutorialKit
                     isHeld = interactable != null && interactable.isSelected;
                 }
 
-                target.Respawn();
+                target.Respawn(RespawnableObject.Cause.LeftVolume);
             }
 
             m_PendingRespawns.Remove(target);

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,9 @@ namespace ECDA.VRTutorialKit
 
         public UnityEvent OnSubStepActive;
         public UnityEvent OnSubStepCompleted;
+
+        public static event Action<TutorialSubStep> AnyActivated;
+        public static event Action<TutorialSubStep> AnyCompleted;
 
         private bool m_IsCompleted;
         public bool IsCompleted => m_IsCompleted;
@@ -35,6 +39,7 @@ namespace ECDA.VRTutorialKit
             if (active)
             {
                 OnSubStepActive?.Invoke();
+                AnyActivated?.Invoke(this);
             }
         }
 
@@ -45,6 +50,7 @@ namespace ECDA.VRTutorialKit
 
             m_IsCompleted = true;
             OnSubStepCompleted?.Invoke();
+            AnyCompleted?.Invoke(this);
 
             if (m_Completer != null)
             {

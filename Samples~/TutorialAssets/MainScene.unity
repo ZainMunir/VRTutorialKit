@@ -1162,6 +1162,7 @@ GameObject:
   - component: {fileID: 1195918895}
   - component: {fileID: 1195918894}
   - component: {fileID: 1195918893}
+  - component: {fileID: 1195918896}
   m_Layer: 0
   m_Name: SessionLogger
   m_TagString: Untagged
@@ -1216,6 +1217,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1195918896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195918892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19af0839edd771845b93f29b3bd15766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtoolkit::ECDA.VRTutorialKit.InteractionSessionLog
+  logInteractions: 1
+  logLocomotion: 1
+  logConditions: 1
+  logRespawns: 1
 --- !u!1 &1249617917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,6 +1847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020561983}
   - component: {fileID: 2020561982}
+  - component: {fileID: 2020561984}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -1865,6 +1883,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2020561984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020561981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34b2370e1d0dd9449bc2a6a89fabb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.TutorialSessionLog
 --- !u!1 &2092139007
 GameObject:
   m_ObjectHideFlags: 0

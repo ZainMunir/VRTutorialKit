@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,6 +10,8 @@ namespace ECDA.VRTutorialKit
     {
         [SerializeField] private List<InputActionReference> buttonsToWatch = new List<InputActionReference>();
         public UnityEvent onButtonPressed;
+
+        public static event Action<ActionOnButtonPress, string> AnyButtonPressed;
 
         void OnEnable()
         {
@@ -30,6 +33,7 @@ namespace ECDA.VRTutorialKit
         void OnButtonPressed(InputAction.CallbackContext context)
         {
             onButtonPressed.Invoke();
+            AnyButtonPressed?.Invoke(this, context.action.name);
         }
 
         void OnDestroy()

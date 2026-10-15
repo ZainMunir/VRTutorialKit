@@ -65,8 +65,9 @@ Import **Tutorial Assets** from the Package Manager for a working tutorial scene
 
 `SessionLogger` writes one JSON Lines file per session to `Application.persistentDataPath/sessions`. Add
 `SessionUploader` to the same GameObject to also POST finished sessions to a telemetry server.
-Uploaded files move to `sessions/uploaded/`. Files that fail to upload stay where they are and
-are retried on the next launch or session end.
+Uploaded files move to `sessions/uploaded/`. A request that gets no response at all is retried
+once after a second. Files that still fail stay where they are and are retried on the next launch
+or session end.
 
 ### API key
 
@@ -122,3 +123,58 @@ written whenever it changes. `linkId` is random and joins the tutorial and exper
 Session ids are `yyyyMMdd_HHmmss_<8 random hex>`. A non-persistent uploader holds a
 `SceneTransitionController` scene change, for up to `Timeout Seconds`, while an upload is in
 flight.
+
+### What gets logged
+
+Two components write the events below. Neither needs wiring; add them and they find what they
+listen to.
+
+- **`TutorialSessionLog`** (tutorial scene, next to `TutorialManager`): the tutorial's flow. It
+  ends the session when the tutorial is exited with Finish or Skip, so the tutorial's log runs
+  from start to that button and nothing after it.
+- **`InteractionSessionLog`** (any scene with a `SessionLogger`, including the experience):
+  what the participant does in the scene. Each group of events has its own checkbox
+  (interactions, locomotion, conditions, respawns), checked when the event happens, so they can
+  also be switched at runtime. Disabling the component mutes all of them.
+
+`SessionLogger` itself writes the session, scene and language events, so every session has them
+whichever components are present.
+
+`SessionLogEvent` stays available for one-off moments that neither covers.
+
+Every line is `{"t": <seconds since app start>, "utc": "<ISO 8601>", "event": "<name>", "data": {...}}`.
+Names are GameObject or asset names. Durations are in seconds; `-1` means the start was not
+seen.
+
+| Event | `data` | Written by |
+|---|---|---|
+| `session_start` | `profile`, `project`, `appVersion`, `device`, `scene`, `locale`, `isEditor` | `SessionLogger` |
+| `session_end`, `app_paused`, `app_resumed` | none | `SessionLogger` |
+| `scene_loaded` | `scene` | `SessionLogger` |
+| `locale_changed` | `locale` (e.g. `en`, `nl`), only when the language is switched | `SessionLogger` |
+| `participant_profile` | `participantNumber`, `linkId` | `ParticipantProfile` |
+| `tutorial_started` | `config`, `stepCount` | `TutorialSessionLog` |
+| `config_selected` | `config`, `stepCount` | `TutorialSessionLog` |
+| `step_started` | `index`, `step`, `direction` (`first`, `next`, `previous`, `skip`, `config_changed`) | `TutorialSessionLog` |
+| `step_completed` | `index`, `step`, `seconds` on the step | `TutorialSessionLog` |
+| `substep_active` | `stepIndex`, `subStep` | `TutorialSessionLog` |
+| `substep_completed` | `stepIndex`, `subStep`, `seconds` active | `TutorialSessionLog` |
+| `tutorial_all_steps_completed` | `seconds` since `tutorial_started` | `TutorialSessionLog` |
+| `tutorial_exited` | `reason` (`finished`, `skipped`), `lastStepIndex`, `lastStep`, `seconds` | `TutorialSessionLog` |
+| `grab` | `target`, `hand` (`left`, `right`, `none`), `via` (`near`, `far`, `poke`, `gaze`) | `InteractionSessionLog` |
+| `release` | `target`, `hand`, `via`, `seconds` held, `canceled` | `InteractionSessionLog` |
+| `socket_placed` | `target`, `socket` | `InteractionSessionLog` |
+| `socket_removed` | `target`, `socket`, `seconds` in socket, `canceled` | `InteractionSessionLog` |
+| `activate`, `deactivate` | `target`, `hand` | `InteractionSessionLog` |
+| `respawn` | `target`, `cause` (`left_volume`, `idle`, `direct`) | `InteractionSessionLog` |
+| `condition_met`, `condition_lost` | `source`, `type` (e.g. `ActionOnGaze`) | `InteractionSessionLog` |
+| `button_pressed` | `source`, `action` (input action name) | `InteractionSessionLog` |
+| `trigger_entered` | `trigger`, `matched` | `InteractionSessionLog` |
+| `recenter` | `distance` the camera jumped | `InteractionSessionLog` |
+| `move_started`, `turn_started` | `provider`, `position` | `InteractionSessionLog` |
+| `teleport`, `snap_turn`, `move_ended`, `turn_ended`, `locomotion` | `provider`, `position` after, `distance`, `angle`, `seconds` | `InteractionSessionLog` |
+
+`canceled` is true when the selection ended because something was disabled or destroyed, e.g. a
+step's interaction prefab being replaced, rather than let go. `locomotion` covers providers
+without their own name, such as grab-move and climb. Teleports don't also log a grab of the
+floor or anchor.

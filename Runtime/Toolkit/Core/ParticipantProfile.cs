@@ -36,5 +36,7 @@ namespace ECDA.VRTutorialKit
         {
             public string participantNumber, linkId;
         }
+
+        public bool HasParticipantNumber => !string.IsNullOrWhiteSpace(ParticipantNumber);
     }
 }

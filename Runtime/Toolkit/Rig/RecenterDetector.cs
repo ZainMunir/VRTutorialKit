@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using Unity.XR.CoreUtils;
@@ -12,6 +13,8 @@ namespace ECDA.VRTutorialKit
 
         [Header("Events")]
         public UnityEvent OnRecenterDetected;
+
+        public static event Action<RecenterDetector, float> AnyRecenterDetected;
 
         private XROrigin xrOrigin;
         private Vector3 lastLocalPos;
@@ -45,6 +48,7 @@ namespace ECDA.VRTutorialKit
             if (frameDelta > movementThreshold)
             {
                 OnRecenterDetected?.Invoke();
+                AnyRecenterDetected?.Invoke(this, frameDelta);
                 Debug.Log("XR Recenter Detected!");
             }
 

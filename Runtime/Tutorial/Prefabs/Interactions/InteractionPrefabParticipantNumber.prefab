@@ -108,7 +108,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3094944666895311843, guid: 0bb68029b3999fb47b40f506460b3264, type: 3}
       propertyPath: m_Name
-      value: Numpad
+      value: NumberPad
       objectReference: {fileID: 0}
     - target: {fileID: 4264196866965792506, guid: 0bb68029b3999fb47b40f506460b3264, type: 3}
       propertyPath: m_LocalPosition.x

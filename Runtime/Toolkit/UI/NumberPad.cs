@@ -11,13 +11,18 @@ namespace ECDA.VRTutorialKit
     [RequireComponent(typeof(UIDocument))]
     public class NumberPad : MonoBehaviour
     {
+        // Set both to the same value to require an exact number of digits.
+        [Min(1)]
+        [SerializeField] private int minLength = 1;
         [Min(1)]
         [SerializeField] private int maxLength = 6;
 
         public UnityEvent<string> onSubmitted;
 
         private readonly List<(Button button, Action action)> bindings = new List<(Button, Action)>();
+        private readonly List<Button> digitButtons = new List<Button>();
         private Label display;
+        private Button backspaceButton;
         private Button submitButton;
         private string value = string.Empty;
 
@@ -27,15 +32,15 @@ namespace ECDA.VRTutorialKit
         {
             var root = GetComponent<UIDocument>().rootVisualElement;
             display = root.Q<Label>("Display");
-            submitButton = root.Q<Button>("Submit");
 
             for (var d = 0; d <= 9; d++)
             {
                 var digit = (char)('0' + d);
-                Bind(root, $"Digit{d}", () => Append(digit));
+                var button = Bind(root, $"Digit{d}", () => Append(digit));
+                if (button != null) digitButtons.Add(button);
             }
-            Bind(root, "Backspace", Backspace);
-            Bind(root, "Submit", Submit);
+            backspaceButton = Bind(root, "Backspace", Backspace);
+            submitButton = Bind(root, "Submit", Submit);
 
             if (display == null) Debug.LogWarning($"[NumberPad] No Label named Display on {name}.");
             Refresh();
@@ -45,18 +50,25 @@ namespace ECDA.VRTutorialKit
         {
             foreach (var (button, action) in bindings) button.clicked -= action;
             bindings.Clear();
+            digitButtons.Clear();
         }
 
-        private void Bind(VisualElement root, string buttonName, Action action)
+        private void OnValidate()
+        {
+            maxLength = Mathf.Max(maxLength, minLength);
+        }
+
+        private Button Bind(VisualElement root, string buttonName, Action action)
         {
             var button = root.Q<Button>(buttonName);
             if (button == null)
             {
                 Debug.LogWarning($"[NumberPad] No Button named {buttonName} on {name}.");
-                return;
+                return null;
             }
             button.clicked += action;
             bindings.Add((button, action));
+            return button;
         }
 
         public void Append(char digit)
@@ -81,14 +93,19 @@ namespace ECDA.VRTutorialKit
 
         public void Submit()
         {
-            if (value.Length == 0) return;
+            if (!IsValidLength) return;
             onSubmitted?.Invoke(value);
         }
+
+        private bool IsValidLength => value.Length >= minLength && value.Length <= maxLength;
 
         private void Refresh()
         {
             if (display != null) display.text = value;
-            submitButton?.SetEnabled(value.Length > 0);
+            var canAppend = value.Length < maxLength;
+            foreach (var button in digitButtons) button.SetEnabled(canAppend);
+            backspaceButton?.SetEnabled(value.Length > 0);
+            submitButton?.SetEnabled(IsValidLength);
         }
     }
 }

@@ -140,7 +140,9 @@ listen to.
 `SessionLogger` itself writes the session, scene and language events, so every session has them
 whichever components are present.
 
-`SessionLogEvent` stays available for one-off moments that neither covers.
+`SessionLogEvent` stays available for one-off moments that neither covers. It accepts a string,
+bool, int or float, passed from the event or typed in the Inspector, and stores every value in
+`detail` as text.
 
 Every line is `{"t": <seconds since app start>, "utc": "<ISO 8601>", "event": "<name>", "data": {...}}`.
 Names are GameObject or asset names. Durations are in seconds; `-1` means the start was not

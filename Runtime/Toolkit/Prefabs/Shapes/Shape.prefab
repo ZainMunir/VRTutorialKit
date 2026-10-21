@@ -277,7 +277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.HandedAttachPoint
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 2974951109015007536}
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1
@@ -408,6 +409,7 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
+  m_UnparentTransformOnGrab: 1
   m_RetainTransformParent: 1
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
@@ -446,7 +448,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ecda.vrtutorialkit::ECDA.VRTutorialKit.RespawnableObject
   m_SpawnPointOverride: {fileID: 0}
+  m_FollowSpawnPoint: 0
+  m_ResetScale: 0
   targetTag: {fileID: 0}
+  onRespawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &852799688037268325
 MonoBehaviour:
   m_ObjectHideFlags: 0

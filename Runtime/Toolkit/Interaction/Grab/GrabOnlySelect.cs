@@ -50,7 +50,7 @@ namespace ECDA.VRTutorialKit
         private static bool IsGrabInteractor(IXRSelectInteractor interactor)
         {
             // Ignore sockets; allow direct/ray grabs
-            Debug.Log($"Interactor {interactor}");
+            // Debug.Log($"Interactor {interactor}");
             if (interactor is XRSocketInteractor) return false;
             return true;
         }

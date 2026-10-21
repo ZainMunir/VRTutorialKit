@@ -52,7 +52,7 @@ Two steps, both required before `SimpleOutline` / `HighlightObject` will show an
 
 1. Add an **`Outline` layer** under `Project Settings > Tags and Layers`. `SimpleOutline`
    moves objects onto it to mark them for the outline pass, and logs an error if it is absent.
-2. Add the `Outline Fill` and `Outline Objects` renderer features to the existing render
+2. Add the `Outline Fill` and `Outline Mask` renderer features to the existing render
    pipeline (`Assets/Settings/Project Configuration/Android Preset`). The two feature assets
    ship at `Runtime/Toolkit/Art/`.
 

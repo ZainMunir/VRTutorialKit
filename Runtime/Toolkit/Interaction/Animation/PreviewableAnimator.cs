@@ -27,11 +27,14 @@ namespace ECDA.VRTutorialKit
         [Header("Events")]
         public UnityEvent OnOpened;
         public UnityEvent OnClosed;
+        public UnityEvent<bool> OnOpenChanged;
 
         protected bool isOpen = false;
         protected bool isAnimating = false;
 
         private Coroutine activeRoutine;
+
+        public bool IsOpen => isOpen;
 
         protected float Duration => speed > 0f ? 1f / speed : 0f;
 
@@ -82,6 +85,7 @@ namespace ECDA.VRTutorialKit
         private void InvokeStateEvent(bool open)
         {
             if (open) OnOpened.Invoke(); else OnClosed.Invoke();
+            OnOpenChanged?.Invoke(open);
         }
 
         private IEnumerator AnimateRoutine(bool open, bool revertAfterwards)

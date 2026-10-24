@@ -1,0 +1,269 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2220611463113178737
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 18757405031700027, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_Name
+      value: SimpleInteractorButton Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9043112472906773213}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6095755036461367545}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ECDA.VRTutorialKit.MoveObject, ecda.vrtoolkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable,
+        Unity.XR.Interaction.Toolkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652434938964775507, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652434938964775507, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652434938964775507, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 18757405031700027, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8898701153809615103}
+    - targetCorrespondingSourceObject: {fileID: 18757405031700027, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9043112472906773213}
+    - targetCorrespondingSourceObject: {fileID: 18757405031700027, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4377208298801608985}
+  m_SourcePrefab: {fileID: 100100000, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+--- !u!4 &2184475162416894020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 36559630809214517, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+  m_PrefabInstance: {fileID: 2220611463113178737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2203264754478737482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 18757405031700027, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+  m_PrefabInstance: {fileID: 2220611463113178737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8898701153809615103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203264754478737482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfbf52f1f7f7fe43bb72f253bd2e092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtoolkit::ECDA.VRTutorialKit.ActionOnAllConditions
+  isConditionMet: 0
+  onAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9043112472906773213}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.MoveObject, ecda.vrtoolkit
+        m_MethodName: ResetCondition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4377208298801608985}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.MoveObject, ecda.vrtoolkit
+        m_MethodName: ResetCondition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6095755036461367545}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable,
+          Unity.XR.Interaction.Toolkit
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  triggerOnce: 0
+  conditionSources:
+  - {fileID: 9043112472906773213}
+  - {fileID: 4377208298801608985}
+--- !u!114 &9043112472906773213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203264754478737482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc260b36a787b2c4e977db4d7920b540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtoolkit::ECDA.VRTutorialKit.MoveObject
+  isConditionMet: 0
+  onAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4377208298801608985}
+        m_TargetAssemblyTypeName: ECDA.VRTutorialKit.MoveObject, ecda.vrtoolkit
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerOnce: 0
+  target: {fileID: 2184475162416894020}
+  axes: 2
+  space: 1
+  duration: 0.1
+  previewHoldDuration: 1
+  distance: -0.008
+--- !u!114 &4377208298801608985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203264754478737482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc260b36a787b2c4e977db4d7920b540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ecda.vrtoolkit::ECDA.VRTutorialKit.MoveObject
+  isConditionMet: 0
+  onAction:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerOnce: 0
+  target: {fileID: 2184475162416894020}
+  axes: 2
+  space: 1
+  duration: 0.1
+  previewHoldDuration: 1
+  distance: 0.008
+--- !u!114 &6095755036461367545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5352891773105569416, guid: 8ef5eea19f0f5384c8908c7eee81dbd6, type: 3}
+  m_PrefabInstance: {fileID: 2220611463113178737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203264754478737482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable

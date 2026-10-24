@@ -385,6 +385,16 @@ MonoBehaviour:
       the screen to the right
     m_Metadata:
       m_Items: []
+  - m_Id: 82387171557273600
+    m_Localized: Two handed actions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82387222144774144
+    m_Localized: After grabbing an object, their might be additional actions you
+      can do with your other hand. Try replacing the item you find inside the cube
+      in front of you
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

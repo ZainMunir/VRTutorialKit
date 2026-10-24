@@ -339,6 +339,14 @@ MonoBehaviour:
     m_Key: STEP_PARTICIPANTNUMBER_DESC
     m_Metadata:
       m_Items: []
+  - m_Id: 82387171557273600
+    m_Key: STEP_MULTIHAND_TITLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82387222144774144
+    m_Key: STEP_MULTIHAND_DESC
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

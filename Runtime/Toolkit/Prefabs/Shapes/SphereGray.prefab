@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2546305624178950726, guid: e2aa626a327af704982c4baabbc1eb3e, type: 3}
       propertyPath: m_Name
-      value: Sphere Variant 1
+      value: SphereGray
       objectReference: {fileID: 0}
     - target: {fileID: 2546305624178950727, guid: e2aa626a327af704982c4baabbc1eb3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 068a175e170bf8a42a7927e5d6ce15a4, type: 2}
+    - target: {fileID: 5192563380353415438, guid: e2aa626a327af704982c4baabbc1eb3e, type: 3}
+      propertyPath: socketTag.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192563380353415438, guid: e2aa626a327af704982c4baabbc1eb3e, type: 3}
+      propertyPath: 'socketTag.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d1ef0c052e5002a4e9b7f7a00974e023, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

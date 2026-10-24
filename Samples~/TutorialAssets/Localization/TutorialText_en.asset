@@ -386,13 +386,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 82387171557273600
-    m_Localized: Two handed actions
+    m_Localized: Two-Handed Actions
     m_Metadata:
       m_Items: []
   - m_Id: 82387222144774144
-    m_Localized: After grabbing an object, their might be additional actions you
-      can do with your other hand. Try replacing the item you find inside the cube
-      in front of you
+    m_Localized: While holding an object, you can use your other hand on it. Pick
+      up the cube, turn it to find the button on the back, and press it to open the
+      drawer. Swap the grey sphere inside for the yellow one, then press the button
+      again to close it.
     m_Metadata:
       m_Items: []
   references:

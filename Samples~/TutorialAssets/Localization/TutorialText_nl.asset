@@ -382,7 +382,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 82387171557273600
-    m_Localized: 
+    m_Localized: Tweehandige acties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23999806994558976
+    m_Localized: Acties tijdens vasthouden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23999530250186752
+    m_Localized: Als je een voorwerp vasthoudt, kun je op de trigger drukken om een
+      speciale actie uit te voeren die alleen werkt terwijl je het vasthoudt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82387222144774144
+    m_Localized: Terwijl je een voorwerp vasthoudt, kun je je andere hand gebruiken
+      om er iets mee te doen. Pak de kubus op, draai hem om de knop op de achterkant
+      te vinden en druk erop om de lade te openen. Vervang de grijze bol in de lade
+      door de gele, en druk dan nogmaals op de knop om de lade te sluiten.
     m_Metadata:
       m_Items: []
   references:

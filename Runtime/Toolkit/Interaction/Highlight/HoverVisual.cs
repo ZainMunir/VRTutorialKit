@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,13 +5,17 @@ namespace ECDA.VRTutorialKit
 {
     public class HoverVisual : MonoBehaviour
     {
-        private class RendererData
+        private struct BrightenedMaterial
         {
             public Renderer renderer;
-            public List<(int index, Color originalColor)> colorData;
+            public int index;
+            public Material material;
+            public Color originalColor;
         }
 
-        private List<RendererData> _renderers = new List<RendererData>();
+        private Renderer[] _renderers = new Renderer[0];
+        private readonly List<BrightenedMaterial> _brightened = new List<BrightenedMaterial>();
+        private bool _isHovered;
 
         [SerializeField] private GameObject gameObjectsToHighlightRoot;
 
@@ -22,35 +25,55 @@ namespace ECDA.VRTutorialKit
             {
                 gameObjectsToHighlightRoot = this.gameObject;
             }
-            var renderers = gameObjectsToHighlightRoot.GetComponentsInChildren<Renderer>();
-            foreach (var renderer in renderers)
-            {
-                var colorData = new List<(int, Color)>();
-                for (int i = 0; i < renderer.materials.Length; i++)
-                {
-                    var mat = renderer.materials[i];
-                    if (mat.HasProperty("_Color") && !mat.name.Contains("Outline"))  // Skip outline materials
-                        colorData.Add((i, mat.color));
-                    // else
-                    // Debug.LogWarning($"Material on {renderer.gameObject.name} does not have a _Color property or is an outline material.");
-                }
-                _renderers.Add(new RendererData
-                {
-                    renderer = renderer,
-                    colorData = colorData
-                });
-            }
+            _renderers = gameObjectsToHighlightRoot.GetComponentsInChildren<Renderer>();
         }
 
         public void SetHover(bool isHovered)
         {
-            foreach (var data in _renderers)
+            if (_isHovered == isHovered) return;
+            _isHovered = isHovered;
+
+            if (isHovered) Brighten();
+            else Restore();
+        }
+
+        private void Brighten()
+        {
+            _brightened.Clear();
+            foreach (var renderer in _renderers)
             {
-                foreach (var (index, originalColor) in data.colorData)
+                if (renderer == null) continue;
+
+                var materials = renderer.materials;
+                for (int i = 0; i < materials.Length; i++)
                 {
-                    data.renderer.materials[index].color = isHovered ? originalColor * 1.2f : originalColor;
+                    var mat = materials[i];
+                    if (!mat.HasProperty("_Color") || mat.name.Contains("Outline")) continue;  // Skip outline materials
+
+                    _brightened.Add(new BrightenedMaterial
+                    {
+                        renderer = renderer,
+                        index = i,
+                        material = mat,
+                        originalColor = mat.color
+                    });
+                    mat.color *= 1.2f;
                 }
             }
+        }
+
+        // Skips any slot whose material was swapped while hovered, so the new material keeps its own color.
+        private void Restore()
+        {
+            foreach (var entry in _brightened)
+            {
+                if (entry.renderer == null) continue;
+
+                var current = entry.renderer.sharedMaterials;
+                if (entry.index < current.Length && current[entry.index] == entry.material)
+                    entry.material.color = entry.originalColor;
+            }
+            _brightened.Clear();
         }
     }
 }
